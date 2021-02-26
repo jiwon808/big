@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table#top{background-color:lightgray;}
+        td{background-color:white;}
+        table{border:1px solid gray;}
+    </style>
+</head>
+<body>
+    <form action="" method="get">
+        <table id="top"> <!-- id="top"  id를 지정하면 위css입힐때 특정한 이 table만 입힙 -->
+            <tr>
+                <td>아이디</td>
+                <td>
+                    <input type="text" name="id" size="5" /> <!--1행2열  입력창 (여기서name은 파라미터. 다음으로 넘거가게하는 것)-->
+                    <input type="button" value="중복확인" />
+                </td>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td><input type="password" name="pw" /></td>
+            </tr>
+            <tr>
+                <td>전화번호</td>
+                <td>
+                    <input type="tel" name="phone1" size="3" />-
+                    <input type="tel" name="phone2" size="3" />-
+                    <input type="tel" name="phone3" size="3" />
+                </td>
+            </tr>
+            <tr>
+                <td>경력</td>
+                <td><input type="number" name="career" min="0" max="40" /></td><!-- 0.0000015 = 0.15e-5   15000000000=0.15e11-->
+            </tr>
+            <tr>
+                <td>이메일</td> <!-- abc@hong.com-->
+                <td><input type="email" name="email" /></td>
+            </tr>
+            <tr>
+                <td>사진</td>
+                <td><input type="file" name="filename" /> </td>
+            </tr>
+            <tr>
+                <td>성별</td>
+                <td>
+                    <input type="radio" name="gender" value="m" checked="checked" /> 남       <!--checked-->
+                    <input type="radio" name="gender" value="f" /> 여  <!--파라미터 이름 반드시 똑같이  name="gender" -->
+                </td>
+            </tr>
+            <tr>
+                <td>사용언어</td>
+                <td>
+                    <input type="checkbox" name="lang" value="kor" checked="checked" /> 한글   <!--checkbox-->
+                    <input type="checkbox" name="lang" value="eng" />영어
+                    <input type="checkbox" name="lang" valuue="chi" />중국어
+                </td>
+            </tr>
+            <tr>
+                <td>국적</td>
+                <td>
+                    <select name="nation">
+                        <option value="null"></option>
+                        <option value="kor">대한민국</option> <!--value안쓰면 대한민국으로 넘어가-->
+                        <option value="usa">미국</option>
+                        <option>중국</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>좋아하는 음식</td>
+                <td>
+                    <select name="food" multiple="multiple" size="3">
+                        <!--size="3"해서 화면에 3개만 보임-->
+                        <!--  multiple="multiple" 여러개 동시에 선택할 수 있는 combobox가 생김-->
+                        <option>김치찌개</option>
+                        <option>부대찌개</option>
+                        <option>된장찌개</option>
+                        <option>섞어찌개</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>자기소개</td>
+                <td>
+                    <textarea name="intro" cols="25" rows="5">소개</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>생일</td>
+                <td><input type="date" name="birth" /></td>
+            </tr>
+            <tr>
+                <td>sns URL</td>
+                <td><input type="url" name="sns" /></td>
+            </tr>
+            <tr>
+                <td>좋아하는 색상<br />좋아하는 정도</td>
+                <td>
+                    <input type="color" name="color" /></br>
+                    0<input type="range" name="range" min="0" max="100" step="5" /> 100
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="입력" />
+                    <input type="reset" value="초기화" />
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>

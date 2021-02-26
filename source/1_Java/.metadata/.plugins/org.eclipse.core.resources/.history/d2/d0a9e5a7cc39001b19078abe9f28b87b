@@ -1,0 +1,5 @@
+package com.lec.ex04;
+
+public interface I2 {
+
+}

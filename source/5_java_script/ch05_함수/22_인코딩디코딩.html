@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<!--https://www.google.com/search?q=%EC%8B%A0%EC%B4%8C&rlz=1C1CHZN_koKR928KR928&oq=%EC%8B%A0%EC%B4%8C&aqs=chrome..69i57j0i131i433j0l3j0i395l5.646j1j7&sourceid=chrome&ie=UTF-8
+//외래어는 통신시 항상 감싸
+//encoding
+//encoding를 해석을 decoding이라고함  -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script> 
+        //인코딩 해서 전송
+        //받는 측에서는 받은 데이터를 디코딩해서 원본으로 해석함
+        var str = '신촌';
+        document.write('str: ' + str + '<br>')
+        var encodeStr = encodeURIComponent(str);
+        document.write('인코딩된 str: ' + encodeStr + '<br>');
+        var decodeStr = decodeURIComponent(encodeStr);
+        document.write('디코딩된 str:' + decodeStr + '<br>');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

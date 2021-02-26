@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<!--작은 그림이 있는 parent-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var child;
+        function openBig() {
+             child = open('4_big.html', '', 'width=500, height=610');  //var child를 밖으로 빼놓는 이유:  access할 수 없어서 밖으로 빼놓음. 그래야 child.close가 적용됨
+                                                                        //4_big.html로 연결됨
+                                                                    //*****왼쪽이면 열렸다 닫았다는 이유: 마우스가 새창에 있을때 열리고 새창에 없을때 닫아. 지금 상태는 마우스가 새창에 있다 없다 반복 위치가 겹쳐서
+            if (!child) {
+                alert('팝업차단 해제하세요');
+            }
+        }
+        function closeBig() {
+            child.close();
+        } //밑에 openBig()  closeBig() 두개. 따라서 여기function도 두개 
+    </script>
+</head>
+<body>
+    <h2>작은 그림의 parent창</h2>
+    <img src="ch09_img/small.jpg" alt="작은 그림"
+         onmouseover="openBig()"
+         onmouseout="closeBig()"/>  <!-- 작은 그림에 mouse갖다대면-->
+</body>
+</html>

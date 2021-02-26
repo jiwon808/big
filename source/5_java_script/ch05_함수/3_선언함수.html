@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="3.js"></script> <!--이것을 반드시 위에 -->
+    <script>
+        fun(); //**선언적 함수는 위에서 실행가능 ** '익명함수'는 반드시 위에 있어야하는데, '선언적 함수'는 scipt안에만 있으면됨
+        function fun() { //선언적 함수
+            alert('함수A');
+        }
+        fun(); //선언적 함수 호출   여기fun()은 함수. 그러나 변수처럼 alert나타남
+        alert(fun);  //원래  /*function fun() { //선언적 함수  alert('함수A');} 다나옴    마치  var fun = function fun(){alert('함수A')}*
+        alert(alert); //내장객체의 내장함수는 소스를 볼 수 없음    여기안에 있는 alert도 내가 만든게 아니고, 원래 시스템안에 있는 alert. 
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>

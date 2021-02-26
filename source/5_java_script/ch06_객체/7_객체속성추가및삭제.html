@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var student = { name: '홍길동' };
+        student['name'] = '김길동';
+        student.name = '신길동';  // 기존 객체의 속성값 변경 
+        student.kor = 100; //객체의 속성 추가 
+        student.mat = 90;
+        student.hobby = '프로그래밍';
+        student.toString = function () {
+            var output = '';
+            for (var key in this) {
+                if (key != 'toString') {
+                    output += key + ':' + this[key] + '<br>'; //this는 나의 객체. 여기서 student   
+                                                //근데 여기[]를 넣는 이유  student['name']  과 student.name이 같음. 그러나 this.key로 할 수 없는 이유가 
+                                                // 만약에 this.key가 된다면 student.'name'이되어야함. 근데 안됨
+                }                                               //key is just a variable that holds an array index.
+                                                            // 여기서 key  'name, kor, mat,hobby'  
+                                                
+
+            }
+            return output;
+        };
+        document.write(student);
+             //기존 객체안에 있는 데이터, 메소드 다 바꿀 수 있다 
+        delete (student.hobby); //객체안의 hobby 속성 제거 
+        document.write('<h2>속성제거 후</h2>')
+        document.write(student);
+        //student 객체 안에 name, kor, mat, hobby, toString
+    </script>
+</head>
+<body>
+
+</body>
+</html>

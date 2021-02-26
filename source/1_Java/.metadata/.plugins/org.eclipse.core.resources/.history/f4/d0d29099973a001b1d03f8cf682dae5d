@@ -1,0 +1,60 @@
+package com.lec.ex10Test;
+
+public class BookLib extends BookInfo implements Ilendable { //super생성자 BookInfo내용을 가져와 
+	private String borrower; //대출인 (입력)
+	private String checkOutDate; //대출일(입력)
+	private byte state;
+    
+	public BookLib(String bookNo, String bookTitle, String writer) {
+		super(bookNo, bookTitle, writer);
+
+	}
+	@Override
+	public void checkOut(String borrower, String checkOutDate) {
+		if(state!=STATE_NORMAL) {
+			System.out.println("대출중인 도서입니다");
+			return; //아무값없이 그냥 나를 호출한 곳으로 감; return 0은 안됨 왜냐하면 지금은 void
+		}
+		this.borrower = borrower;
+		this.checkOutDate = checkOutDate;
+		state = STATE_BORROWED;
+		System.out.println(" \" "+getBookTitle()+"도서가 대출되었습니다"); // \"는  쌍따움표를 string으로 인식 
+	}
+	@Override
+	public void checkIn() {
+		if(state !=STATE_BORROWED) {
+			System.out.println("대출 중인 도서가 아닙니다.새로 입력해 주십시오.");
+			return;
+		}
+		//반납 처리 로직 
+		borrower = null;
+		checkOutDate= null;
+		state = STATE_NORMAL;
+		//"자바"도서가 반납처리 되었습니다.
+		System.out.println("\""+getBookTitle()+"\"도서가 반납되었습니다");	
+	}
+	@Override
+	public void printState() {
+		if(state == STATE_NORMAL) {
+			System.out.printf("%s, %s저 - 대출가능\n",
+								getBookTitle(), getWriter());
+		}else if (state == STATE_BORROWED) {
+			System.out.printf("%s,%s저 - 대출중 \n",
+								getBookTitle(),getWriter());
+		}else {
+			System.out.printf("%s,%s - 유령상태입니다\n",
+							getBookTitle(),getWriter());
+		}
+		
+	}
+	public String getBorrower() {
+		return borrower;
+	}
+	public String getCheckOutDate() {
+		return checkOutDate;
+	}
+	public byte getState() {
+		return state;
+	}
+}
+

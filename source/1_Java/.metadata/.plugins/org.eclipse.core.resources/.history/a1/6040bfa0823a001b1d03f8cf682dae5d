@@ -1,0 +1,34 @@
+package com.lec.ex09lib;
+
+import java.util.Scanner;
+
+//배열에다. 책. DB //요즘은 다 웹버전
+public class LibMain {
+
+	public static void main(String[] args) {
+		Book[] books = {new Book("890ㄱ-100","java","아무개"),
+						new Book ("890ㄱ-101","hadoop","저무개"),
+						new Book ("890ㄱ-102","oracle","이무개"),
+						new Book ("890ㄱ-103","python","김무개"),
+						new Book ("890ㄱ-104","spark","신무개")
+		};
+		Scanner sc = new Scanner (System.in);
+		int fn, idx=0; // 기능번호(1:대출,2:반납...), 인덱스(books의)
+		String bTitle, borrower, checkOutDate; // 책제목, 대출인, 대출일 
+		do {
+			System.out.println("1:대출 | 2:반납 | 3:도서현황 | 0:종료");
+			fn = sc.nextInt();
+			switch(fn) {
+			case 1: // 책이름 --> 배열(0번부터 끝index까지)에서 책 조회 --> 해당책의 상태 --> 대출인, 대출일 -->대출
+				System.out.println("대출진행");
+				break;
+			case 2: // 책이름 --> 책조회 -->반납
+				System.out.println("반납진행");
+				break;
+			case 3: //for문을 이용해서 도서상태 출력
+				System.out.println("도서들 상태 출력");
+			}
+		}while(fn!=0);  //도서1,2,3계속나와
+		System.out.println("시스템 종료");
+	}	
+}

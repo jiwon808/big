@@ -1,0 +1,12 @@
+package com.lec.ex1_string;
+
+// 다양한 String의 method들 
+public class Ex02 {
+	public static void main(String[] args) {
+
+		String str1 = "abcXabc";
+		String str2 = new String("ABCXabc");
+		String str3 = " ja va ";
+		System.out.println("1.concat:" + str1.concat(str2)); // abcXabcABCXabc
+	}
+}

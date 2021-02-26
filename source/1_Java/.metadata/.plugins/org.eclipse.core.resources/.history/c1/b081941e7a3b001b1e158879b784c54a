@@ -1,0 +1,17 @@
+package strategy2.step5.modularization;
+
+import strategy2.step5.component.*;
+
+//Accent 차  : 저급엔진(EngineLow).     연비 20Km/l(Km20). 경유(FuelDiesel).
+public class Accent extends Car_same_part {
+	public Accent() {
+		setEngine(new EngineLow);
+		setKm(new Km20);
+		setFuel(new FuelDiesel());
+		
+	}
+	@Override
+	public void shape() {
+		System.out.println("Accent의 차모양은 door, sheet, handle로 이루어져 있습니다.");
+	}
+}

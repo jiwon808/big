@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<!--속성값 가져옴-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table td{ width: 100px; height: 100px; background-color:#AAFFAA;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(function () {
+            $('td').click(function () {
+                var who = $(this).attr('class'); //내가 클릭한 아이의class를 가져와
+                $('.result').html('당신은 '+who+'선택');
+            });
+        });
+    </script>
+</head>
+<body>
+    <table>
+        <tr><td class="Ki">Ki</td><td class="Lee">Lee</td></tr>
+        <tr><td class="Park">Park</td><td class="Kwon">Kwon</td></tr>
+    </table>
+    <p class="result"></p>
+</body>
+</html>

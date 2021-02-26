@@ -1,0 +1,7 @@
+package com.lec.ex08robot;
+
+public class DrawRobot implements Robot { // 형을 일치 시킬려고 implement //?
+	public void draw() {
+		System.out.println("그림을 그립니다");
+	}
+}

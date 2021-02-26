@@ -1,0 +1,27 @@
+package com.lec.ex2_date;
+
+import java.util.Date;
+
+public class Ex09_Sawon2 {
+	private int number;
+	private String name;
+	private String part;
+	private Date enterDate;
+	public Ex09_Sawon2(int number, String name, String part) {
+		this.number = number;
+		this.name = name;
+		this.part = part;
+		enterDate
+	}
+	public int getNumber() {
+		return number;
+	}
+	public String getName() {
+		return name;
+	}
+	public String getPart() {
+		return part;
+	}
+
+	
+}

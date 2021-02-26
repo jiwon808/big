@@ -1,0 +1,47 @@
+package strategy1.step4.modularization;
+//날수있음. 미사일쏨. 레이저검
+
+import strategy1.step4.component.*;  //*이면 내용 다 들어옴 
+
+public class SuperRobot extends Robot_same_part {
+	private IFly     fly;
+	private IMissile missile;
+	private IKnife   knife;
+	public SuperRobot() {
+		// 부품들 생성   //클래스 가지고 객체 생성
+		fly = new FlyYes();  //이거 안넣으면 다 null값              //setFly(new FlyYes());
+		missile = new MissileYes();                  //setMissile(new MissileYes());
+		knife = new KnifeLazer(); 					//setFly(new KnifeLazer());
+
+		
+	}
+	@Override
+	public void actionFly() {
+		fly.fly();//부품호출부분                      날 수 있는 부품의 메소드를 여기다 넣는다 
+
+	}
+
+	@Override
+	public void actionMissile() {
+		missile.missile();// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void actionKnife() {
+		knife.knife();// TODO Auto-generated method stub
+
+	}
+	
+	//getter
+	public IFly getFly() {
+		return fly;
+	}
+	public IMissile getMissile() {
+		return missile;
+	}
+	public IKnife getKnife() {
+		return knife;
+	}
+
+}

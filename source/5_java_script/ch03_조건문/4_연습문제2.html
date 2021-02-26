@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+    var kor, math, avg;
+    while (isNaN(kor) || kor <= 0 || kor > 100) {
+      kor = Number(prompt('국어점수(1~100점)'));
+    }
+    while (isNaN(math) || math <= 0 || math > 100) {
+      math = Number(prompt('수학점수(1~100점)'));
+    }
+    avg = (kor+math)/2;
+    switch (Math.trunc(avg / 10)) {
+      case 10:                          //100점  
+      case 9: alert('수'); break;       //90점대
+      case 8: alert('우'); break;       //80점대
+      case 7: alert('미'); break;       //70점대
+      case 6: alert('양'); break;       //60점대
+      default:
+        alert('가'); break;
+    }
+    if (90 <= avg && avg <= 100) {
+      document.write("수");
+    } else if (80 <= avg && avg < 90) {
+      document.write('우');
+    } else if (70 <= avg && avg < 80) {
+      document.write('미');
+    } else if (60 <= avg && avg < 70) {
+      document.write('양');
+    } else {
+      document.write('가');
+    }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

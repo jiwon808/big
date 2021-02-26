@@ -1,0 +1,65 @@
+package com.lec.ex10Test;
+
+import java.util.Scanner;
+
+public class LibMain {
+	public static void main(String[] args) {
+		BookLib[]books = {new BookLib("300ㄱ100","Physics","김지원"),
+					   new BookLib("300ㄱ101","Chemistry","김지원"),
+					   new BookLib("300ㄱ102","Biology","김지원"),
+					   new BookLib("300ㄱ103","Psychology","김지원"),
+					   new BookLib("300ㄱ104","Economics","김지원")
+		};
+		Scanner sc = new Scanner(System.in);
+		int fn, idx=0;
+		String bTitle, borrower, checkOutDate;
+		do {
+			System.out.println("1:대출| 2:반납|3:도서현황 |0.종료 ");
+			fn = sc.nextInt();
+			switch(fn) {
+			case 1:
+				System.out.println("대출할 책이름을 입력하십시오.");
+				bTitle = sc.next();
+				for(idx=0; idx<books.length; idx++) {
+					if(bTitle.equals(books[idx].getBookTitle())) {
+						break;
+					}
+				}
+				// 책조회에서 책을 찾았는지 못찾았는지 보고 대출 진행
+				if(idx==books.length) {
+					System.out.println("본 도서관에는 해당 도서가 존재하지 않습니다");
+				}else if(books[idx].getState()==Ilendable.STATE_BORROWED) {
+					System.out.println(bTitle+"도서는 대출중입니다");
+				}else { 
+					//대출 가능이니 대출인, 대출일 입력받고 대출진행
+					System.out.println("대출인을 입력하십시오");
+					borrower=sc.next();
+					System.out.println("대출일을 입력하십시오");
+					checkOutDate = sc.next();
+					books[idx].checkOut(borrower,checkOutDate);
+				}
+				break;
+			case 2: // 책이름->책조회->반납 
+				System.out.println("반납할 책이름을 입력하십시오");
+				bTitle = sc.next();
+				for(idx=0; idx<books.length; idx++) {
+					if(bTitle.equals(books[idx].getBookTitle())) {
+						break;
+					}
+				}
+				if(idx==books.length) {
+					System.out.println("본 도서관에는 해당 도서가 존재하지 않습니다");
+				}else {
+					books[idx].checkIn();
+				}
+				break;
+			case 3: // for문을 이용해서 도서상태 출력
+				for(BookLib book : books) {
+					book.printState();
+				}
+			}		
+		}while(fn!=0);
+		System.out.println("시스템종료");
+		
+	}
+}

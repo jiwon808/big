@@ -1,0 +1,20 @@
+package com.lec.ex1_string;
+// https://www.epochconverter.com/clock
+public class Ex10_speedChk {
+	public static void main(String[] args) {
+		String str = "A";
+		//시작시간 측정
+		long start = System.currentTimeMillis();
+		for(int i=0; i<50000; i++) {
+			str = str.concat("a");
+		}
+		//끝나는 시간 측정
+		long end = System.currentTimeMillis();
+		System.out.println("스트링 변경 시간: "+(end-start));
+		StringBuffer strBuff = new StringBuffer("A");       // strBuf = "A" X    이러면stringbuffer가 아니라 stirng
+		for(int i=0; i<50000; i++) {
+			strBuff.append("a");
+		}
+		StringBuilder strBuil = new StringBuilder("A");
+	}
+}

@@ -1,0 +1,16 @@
+package com.lec.ex2_date;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+public class Ex09_Sawon_TestMain {
+	public static void main(String[] args) {
+		Sawon s1 = new Sawon(11,"홍길동","IT");
+		Sawon s2 = new Sawon(11,"홍길동","IT", 2020,12,14);
+		Date date = new Date();
+		GregorianCalendar enterDate= new GregorianCalendar();
+		System.out.println(s1.toString());
+		System.out.println(s2.toString());
+	}
+}

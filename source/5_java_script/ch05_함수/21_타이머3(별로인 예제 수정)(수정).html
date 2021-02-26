@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<!--12(forEach문),16(자기호출함수)파일 참조-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script> 
+        //자기 호출함수, 배열(forEach)등을 이용하여 수정
+        // 바꿀 경고창 순서 0 -> 1->2
+        //현재 경고창 순서 3 ->3->3
+
+        for (var i = 0; i < 3; i++) {
+            setTimeout(function () { alert(i) }, 0);
+        }  //다끝난시점에 뿌려서 3,3,3 ***********
+        //alert먼저 수행 후 -->setTimeout
+        //**************alert가 다 끝난시험은 3로 끝남. 괄호 밖에 alert=3이 유효. 따라서 3,3,3    [중요!!!!!]
+
+        for (var i = 0; i < 3; i++) {
+            (function (j) { setTimeout(function () { alert(j); }, 0); })(i); //함수 하나 선언됨 --> //전체 자기호출함수*******
+        } //0초 후에 j를 뿌려 
+          //**************여기는 j값이 밖에서 유효하지 않아. 안에서 만 존재. 따라서 1,2,3     [중요!!!!!]
+        
+
+
+        // 배열 forEach()함수를 이용하여 수정
+        // 바꿀 경고창 순서: 0-->1-->2 
+        [0, 1, 2].forEach(function (data, idx) {
+            setTimeout(function () { alert(data); }, 0); //0초 후에 수행하라
+        }); //콜백함수
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

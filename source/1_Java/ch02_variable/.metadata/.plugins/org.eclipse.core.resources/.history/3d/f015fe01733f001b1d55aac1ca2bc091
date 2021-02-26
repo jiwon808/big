@@ -1,0 +1,21 @@
+package com.lec.ex5_Book;
+
+public class BookMain {
+
+	public static void main(String[] args) {
+		Book[] books = { new Book("890ㄱ-100","Psychology","김지원"),
+				new Book("890ㄱ-100","Psychology","김지원"),
+				new Book("890ㄱ-100","Psychology","김지원");
+	try {
+		book.checkOut("kim");
+		book1.checkout("lee");
+		book.setCheckOutDate(new Date(
+			new GregorianCalendar(2020, 10, 30).getTimeInMills()));//대출일조작
+			book.checkIn();
+	}catch(Exception e){
+		System.out.println(e.getMessage());
+	}//try
+	System.out.println(book);
+	System.out.println(book1);
+	}//main
+}//class

@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function append() {
+            /*var h1 = document.createElement('h1');
+            var textNode = document.createTextNode('HEADER');
+            h1.appendChild(textNode);
+            document.body.appendChild(h1);*/
+            document.body.innerHTML += '<h1>HEADER</h1>';
+        }
+
+        //remove메소드
+        function remove() {
+            var h1 = document.getElementsByTagName('h1'); //** 철자주의!! getElementsByTagName     tagname통해 가져올시 getElement뒤에s가 있다!!
+            var wrap = document.getElementById('wrap'); //********중요!! 이것을 꼭 가져와야 밑에  wrap.removeChild(h1[idx]);이 실행가능
+            for (var idx = h1.length - 1; idx >= 0; idx--) {
+                wrap.removeChild(h1[idx]);
+
+            }   // ************ 꼭 끝방부터 제거해야하는지 이유: 만약에 0번방부터 제가하면 0번째방께 우선 제거됨, 
+            //그러면 다음으로 1번방꺼제거해야.그러나 원래1번방은 지금 0번방이됨.따라서 현재 있는 0번방이 제가가되지 않고 이를 건너뛰어 1번방을 제거하게됨.
+
+
+           /* var h1 = document.querySelectorAll('h1');
+            for (var idx = 0; idx < h1.length; idx++) {
+                //h1[idx]       //h1에idx있는 아이
+                document.body.removeChild(h1[idx]);
+            }*/
+        }
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <button onclick="remove()"> h1 태그 싹 없애기</button>
+        <button onclick="append()">h1 태그 하나씩 추가하기</button>
+        <h1>HEADER</h1>
+        <h1>HEADER</h1>
+        <h1>HEADER</h1>
+        <h1>HEADER</h1>
+     </div>
+</body>
+</html>

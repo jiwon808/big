@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function Rectangle(w, h) {
+            if (w < 0) {
+                throw '음수 가로 길이는 없습니다'; //예외발생
+            } else {
+                var width = w;
+            }
+            if (h < 0) {
+                throw '음수 높이는 없습니다' //예외발생
+            } else {
+                var height = h;
+            }
+            //var width = w; //**************왜 this.width로 하지 않는지??
+            //var height = h;
+            this.getWidth = function () { return width; }
+            this.getHeight = function () { return height; }
+            this.setWidth = function (w) {
+                if (w < 0) {
+                    throw '음수 길이로 수정 불가';
+                } else {
+                    width = w;
+                } //if
+            }//setWidth
+            this.setHeight = function (h) {
+                height = h;
+            }
+        }
+
+        //***프로토타입
+        Rectangle.prototype.getArea = function () {
+            //return width안됨 위에 function안에 있는 아이 
+            return this.getWidth() * this.getHeight();
+         }; //생성자함수의 프로토타입 완성 
+
+
+
+
+        //****생성자
+        function Square(length) {
+                this.base = Rectangle;
+                this.base(length, length);
+        }
+        Square.prototype = Rectangle.prototype;
+
+        //*****객체
+        var rect = new Rectangle(5, 7);
+        document.write('rect의 가로 : ' + rect.getArea() + '<br>');
+        var square = new Square(10);
+        document.write('square의 넓이 : ' + square.getArea() + '<br>');
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

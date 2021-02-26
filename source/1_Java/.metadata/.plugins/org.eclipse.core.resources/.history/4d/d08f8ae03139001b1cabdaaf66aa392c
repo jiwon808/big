@@ -1,0 +1,24 @@
+package com.lec.ex08Employee;
+
+public abstract class HourlyEmployee extends Employee {
+	private String name;
+	private int hoursWorked;
+	private int moneyPerHour;
+	private int computePay;
+	public HourlyEmployee(String name, int computeIncentive, int computePay) {
+		super(name, computeIncentive, computePay);
+	}
+	@Override
+	public void computePay() {
+		System.out.println("****************");
+		System.out.println("성함: "+name());
+		System.out.println("월급: "+annualSalary());
+		if(annualSalary()<200) {
+		System.out.println("수고하셨습니다");
+		System.out.println("****************");
+	}
+	private String name() {
+		return null;
+	}
+
+}

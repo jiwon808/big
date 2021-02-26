@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script> /*var  변수선언 한것*    'al_pha ' 꼭 underbar가 있어야*/
+        //var al_pha;  선언하기만함
+        console.log(1);
+        al_pha = 20; //숫자형 변수가 생김 
+        console.log(2);
+        alert('al_pha값은' + al - pha); //[******error!!!!******]  [right: al_pha]
+                                        //scipt가 하나라면 안되면 바로 티가나. 그러나 script가 여러개여서 티가 잘안난다. error메세지 안 뿌려준다
+                                        //<error찾는법1>:  f12키 -elements혹은 console 눌러서 찾아 빨간색x가 뜬다
+        console.log(3);
+        al_pha = 'Hello'; //문자형 변수 
+        console.log(4);
+        console.log('al_pha값은' + al_pha);
+        console.log(5);                 //<error찾는법2>: 중간중간 하나하나 밑에 console.log()를 넣어서  check
+    </script>
+    <script>
+        document.write('바뀐 al_pha값은' + al_pha + "<br>");
+        al_pha = 40;
+    </script>
+</head>
+
+<body>
+    <script>
+        document.writeln('최종 al_pha값은'+al_pha+'<br>DONE'); //writeln이라고 개행되지 않아 //script를 벗어나도 변수 유지
+    </script>
+</body>
+</html>

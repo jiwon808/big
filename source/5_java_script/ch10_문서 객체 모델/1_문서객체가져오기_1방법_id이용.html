@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<!--전체 중에 하나를 pick-->
+<!--방법1: id로 access-->
+<!--방법1:id이용 (id는1개) 방법2:class는 2개 이상. 2개 동시에 가져와서 고치고 싶을때.
+    방법3: tag  // 방법4: name   name=id  //방법5: 선택자 방법6: 똑같은 선택자 여러개 (선택자 여러개 가져오는 방법)-->
+<!--toggle:(토글 키로) 켰다 껐다 하다// (on/off처럼 두 상태 중 하나를 선택하는 데 쓰는 키) **********meansThe toggle() method toggles between hide() and show() for the selected elements. This method checks the selected elements for visibility. show() is run if an element is hidden.-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var id, header1; //(8) *id를 밖에다 선어. 그래야 access가능                            <2> 타이머 여기서 중지
+        var toggle1 = 0; toggle2 = 0; //기본값 toggele이0. *toggle철자주의
+        window.onload = function () {
+            header1 = document.getElementById('header-1');
+            header1.innerHTML = '시간';
+            var header2 = document.getElementById('header-2');
+            header2.innerHTML = new Date().toLocaleString(); //window access될때  header1과 header2바꿈
+
+            id = setInterval(function () { //(6)id로정의                                      <3>따라서 타이머 여기서 중지
+                header2.innerHTML = new Date().toLocaleString();  //위에 것을 여기 안에
+            }, 1000);//****시간 동기화
+            //(3) 여기다 change라는function함수를 넣으면. 함수안에 함수면 nav그러나 외부access불가
+        }; //(4) 따라서 밖에다 선언
+        function change(n) { //(5) 1이 들어오면 header-1바꾸고,2들어오면 header2바뀜
+            //*****clearInterval(id); //(7)*************왜 clear id해야하는지??
+            if (n == 1) { //(9)
+                if (toggle1 == 0) {
+                    header1.innerHTML = '바꿔';
+                    toggle1 = 1;
+                } else if (toggle1 == 1) {
+                    header1.innerHTML = 'HEADER-1';
+                    toggle1 = 0;
+                }
+            } else if (n == 2) {
+                var header2 = document.getElementById('header-2'); //(10) 왠만하면 밖에다 선언. 그래야access가능
+                if (toggle2 == 0) { // if (toggle2 == 0) 추가
+                    header2.innerHTML = '바꿔';
+                    clearInterval(id);                                                           //<1> 타이머 중지
+                    toggle2 = 1;
+                } else if (toggle2 == 1) {
+                    header2.innerHTML = 'HEADER=2';
+                    toggle2 = 0;
+                }
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 id="header-1">HEADER-1</h1>
+    <h1 id="header-2">HEADER-2</h1>
+    <button onclick="change(1)">바꿔-1</button>                   <!--(1)버튼-->
+    <button onclick="change(2)">바꿔-2</button> <!--(2)change라는 함수에 2를 넣어서 실행/ 따라서 change라는 function필요-->
+
+</body>
+</html>

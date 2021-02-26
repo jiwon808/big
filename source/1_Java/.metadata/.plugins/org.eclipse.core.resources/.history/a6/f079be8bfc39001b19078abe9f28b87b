@@ -1,0 +1,13 @@
+package com.lec.ex06toy;
+
+public class MarzingerToy implements IMissile, IMoveArmLeg {
+	public Mazinger Toy() {
+		System.out.println("마징가 장난감입니다.");
+		canMissile();
+		canMoveArmLeg();
+		System.out.println("===============");
+	}
+	
+	@Override
+	public void canMoveArmleg
+}

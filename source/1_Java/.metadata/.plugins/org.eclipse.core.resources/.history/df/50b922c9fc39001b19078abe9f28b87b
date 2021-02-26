@@ -1,0 +1,18 @@
+package com.lec.ex06toy;
+
+public class Pooh implements IMoveArmLeg {
+	public Pooh() {
+		System.out.println(:"곰돌이 푸입니다.");
+		canMoveArmLeg();
+		System.out.println("===============");
+	}
+	
+	@Override
+	public String toString() {
+		return "팔다리 움직이는 곰돌이 푸";
+	}
+	@Override
+	toString
+	return "미사일쏘고 팔다리 움직이는 마징가 장난감";
+	}
+}

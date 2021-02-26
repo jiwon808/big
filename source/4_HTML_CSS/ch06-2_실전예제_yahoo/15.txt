@@ -1,0 +1,51 @@
+오전 까지 yahoo 필요한 이미지 파일 (노트파일 내일 날짜)
+background image (해골,아이콘,학원홈페이지 로고,주소)
+
+
+
+<header> = 위
+	header nav     해골(오른쪽 float right)  메뉴(왼쪽 float left)   width잡아두고. 
+	header info  -  logo,search (버튼. background이미지깔고,흰글자.), service부분  (font입혀야)
+		info box(input상자)
+
+	할머니단에 overflow:hidden;
+
+<contents>
+	ul li
+
+
+
+
+보라색  (3번쨰 div)
+
+맨오른쪽  banner 5개 (div 5개)
+
+<footer>
+
+
+
+image,css,font설정 (css)     
+
+
+-해골 어느정도지나서 안줄어들어야 안떨어져  
+header 100%다써. 
+header nav다써 
+min-width:1000px (최소 1000px을유지한다)
+
+
+a tag에 감싸 있는것:
+menu, 위 메뉴도, 검색버튼, 'my yahoo sign in mail', '해고', 중간 메뉴, 
+
+form tag   https://search.yahoo.com/search         /input type text        submit   /
+파라미터 이름 p
+
+맨위만 100%  나머지 다 1000px;
+
+클릭할때 생기는 border 
+outline: 0;
+
+--> focus될때  border생김.   outline:0;   [search button]
+
+
+----------------------
+테블렛 layout

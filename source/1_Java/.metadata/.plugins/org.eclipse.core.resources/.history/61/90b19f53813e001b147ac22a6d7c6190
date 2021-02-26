@@ -1,0 +1,11 @@
+package com.lec.ex4_Object;
+
+public class Person {
+	private long juminNo;// ex.980812-1234568
+	//생성자
+	public Person(long juminNo) {
+		this.juminNo = juminNo;
+	}
+	
+	
+}

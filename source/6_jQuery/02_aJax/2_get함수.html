@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<!--$.get(URL, callback);-->
+<!--The $.get() method loads data from the server using a HTTP GET request.-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(function () {
+            $('button').click(function () {
+                var mId = $('#mId').val();
+                //$.get('idConfirm.jsp?mId='+mId,콜백함수)
+                $.get('idConfirm.html?mId=' + mId, //링크안 mId 파라미터    idConfirm.html에 '사용가능한id'라고 입력됨
+                    function (data, status) {           //************중요**************
+                        // data:요청 페이지 결과 데이터
+                        // status: 요청 상태 (success,error,...)
+                        if (status == 'success') {
+                            $('#result').html(data);
+                        } else {
+                            alert('실패');
+                        }
+                    }); //**************get함수: body안에다 넣어줌************
+                //get함수가 result를 가져와서 <span id="result">      </span>  여기 사이에다 넣어줌 (idConfirm.html 화면전체)
+            });
+            //$('#mId').keyup(); //키보드 누를때마다The keyup event is sent to an element when the user releases a key on the keyboard.
+
+
+            //추가
+            $('#mid').keyup(function () {
+                var mId = $('#mId').val();
+                //$.get('idConfirm.jsp?mId='+mId,콜백함수)
+                $.get('idConfirm.html?mId=' + mId, //링크안 mId 파라미터    idConfirm.html에 '사용가능한id'라고 입력됨
+                    function (data, status) {           //************중요**************
+                        // data:요청 페이지 결과 데이터
+                        // status: 요청 상태 (success,error,...)
+                        if (status == 'success') {
+                            $('#result').html(data);
+                        } else {
+                            alert('실패');
+                        }
+                    }); //**************get함수: body안에다 넣어줌************
+                //get함수가 result를 가져와서 <span id="result">      </span>  여기 사이에다 넣어줌 (idConfirm.html 화면전체)
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>
+        아이디<input type="text" name="mId" id="mId" />
+        <button>중복확인</button>
+    </p>
+    <span id="result"></span>
+</body>
+</html>

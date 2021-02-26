@@ -1,0 +1,37 @@
+package com.lec.ex5_Book;
+
+import java.util.Date;
+
+public class BookLib implements Ilendable {
+	private String bookNo;
+	private String bookTitle;
+	private String writer;
+	private String borrower;
+	private Date checkOutDate;
+	private byte state;
+	public BookLib(String bookNo, String bookTitle, String writer) {
+		this.bookNo = bookNo;
+		this.bookTitle = bookTitle;
+		this.writer = writer;
+		state = STATE_NORMAL;
+	}
+	
+	@Override
+	public void checkOut(String borrower, String checkOutDate) throws Exception {
+		if(state!=STATE_NORMAL) {
+			throw new Exception("대출중인 도서입니다");
+		}
+		this.borrower = borrower;
+		this.checkOutDate=checkOutDate;
+		state = STATE_BORROWED;
+		System.out.println(" \" "+bookTitle+"도서가 대출되었습니다");
+	}
+	@Override
+	public void checkIn() throws Exception{
+		if(state != STATE_BORROWED) {
+			throw new Exception("대출 중인 도서가 아닙니다. 이상합니다.")
+			
+		}
+	}
+	
+}

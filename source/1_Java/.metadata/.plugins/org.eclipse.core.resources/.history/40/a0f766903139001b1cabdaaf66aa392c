@@ -1,0 +1,39 @@
+package com.lec.ex08Employee;
+//name, annualSalary, computePay() ; 월급계산. 월급은 연봉/14로 한다
+public class SalaryEmployee extends Employee {
+	private String name;
+	private int annualSalary;
+	private int computePay;
+	public SalaryEmployee(String name, int computeIncentive, int computePay, String name2, int annualSalary,
+			int computePay2) {
+		super(name, computeIncentive, computePay);
+		name = name2;
+		this.annualSalary = annualSalary;
+		computePay = computePay2;
+	}
+	
+	@Override
+	public void computePay() {
+		System.out.println("****************");
+		System.out.println("성함: "+name());
+		System.out.println("월급: "+annualSalary());
+//		System.out.println("상여금: "+computePay());
+		if(annualSalary()>200) {
+			computePay += (annualSalary()-200)*0.1;
+		}
+		System.out.println("상여금: " + computePay);
+		System.out.println("****************");
+	}
+
+	private String name() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private int annualSalary() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+}

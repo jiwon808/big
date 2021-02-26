@@ -1,0 +1,29 @@
+package com.lec.ex05;
+
+public class Radio implements IVolume {
+
+	@Override
+	public void volumeUp() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void volumeUp(int level) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void volumeDown() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void volumeDown(int level) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

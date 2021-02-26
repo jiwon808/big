@@ -1,0 +1,28 @@
+package strategy3.step5.modularization;
+
+import strategy3.step5.component.*;
+
+//학원운영업무를 합니다(JobMng).	   월급을 받습니다(GetSalary).      	ID,이름,부서을 출력함
+public class Staff extends Same_Part {
+	private String part;
+
+	public Staff(String id, String name, String part) { // 중요!! TestMain과 형식 같기 위해
+		super(id, name);
+		this.part = part;
+		setJob(new JobMng());
+		setGet(new GetSalary());
+//		setJobMng(new JobMng());  는 틀림 
+//		setGetSalary(new GetSalary());
+	}
+
+	@Override
+	public void print() {
+		super.print();
+		System.out.println("\t[부서]" + part);
+	}
+
+	@Override
+	public String toString() {
+		return super.toString() + "\t[부서]" + part;
+	}
+}

@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script> /*아무데나 넣어도되*/
+        function chk() {
+            /*frm.title.value, firm.name.value가 입력 여부 판단*/
+            if (!frm.title.value) {/*빈string이면 안됨  js,r,python는0, 빈string, null을False로 판단  |js  에러메세지 다 안떠*/
+                alert("제목을 꼭 입력하세요");
+                frm.title.focus(); /*frm.title에 커서가 깜빡깜빡*/
+                return false;
+            } else if (!frm.name.value) {
+                alert("작성자를 꼭 입력하세요");
+                frm.name.focus();
+                return false;
+            } /*else if (frm.name.value.length<2) {
+                alert("작성자명은 2글자 이상 꼭 입력하세요");*/
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form action="" method="get" name="frm" onsubmit="return chk()"> <!--onsubmit == submit버튼을 누르면 무엇을 해라-->
+        <table border="1">
+            <caption><h2>게시판</h2></caption>
+            <tr>
+                <td>제목</td>
+                <td><input type="text" name="title" size="29" /></td>
+            </tr>
+            <tr>
+                <td>작성자</td>
+                <td><input type="text" name="name" size="29" /></td>
+            </tr>
+            <tr>
+                <td>내용</td>
+                <td><textarea name="content"rows="5" cols="30"></textarea></td> <!--type이varchar면 1000글자  영문은2000자 밖에 못써-->
+            </tr>
+                <td>첨부파일</td>
+                <td><input type="file" name="file" /></td>
+            <tr>
+                <th colspan="2">
+                    <input type="submit" value="입력완료" />
+                    <input type="submit" value="입력취소" />
+                </th>
+            </tr>
+            <tr></tr>
+
+        </table>
+
+    
+    </form>
+</body>
+</html>

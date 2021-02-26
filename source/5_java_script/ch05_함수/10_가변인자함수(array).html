@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script> 
+        var arr1 = array();  //[] 
+        var arr2 = array(3); //[,,,]  //******얘떄문에 밑에가 수행 ****** argument배열 자동적으로 잡힘 //위 -->아래로감
+        var arr3 = array(273, 2, 'hello'); // [273, 2, 'hello']                     //3번
+        document.write(arr1 + '의 방 갯수:' + arr1.length + '<br>'); //방 갯수가 index 갯수 
+        document.write(arr2 + '의 방 갯수:' + arr2.length + '<br>');
+        document.write(arr3 + '의 방 갯수:' + arr3.length + '<br>');
+        // arguments is an Array -like object accessible inside functions that contains the values of the arguments passed to that function.
+        // 인자가 0개: 빈배열 
+        // 인자가 1개: 방의 갯수가 인자인 배열
+        // 인자가 2개 이상: 인자 자체가 배열
+            //array(); //-> arguments:[]  5번빈가push
+            //array(1, 2); // arguments:[1,2]
+        function array() { //arguments:함수내 매개변수 배열       argument는 예약어
+            var result = [];
+            if (arguments.length == 1) {  //argument0방만 값이 있다
+                //인자 1개일 때 명령어 
+                for (var cnt = 1; cnt <= arguments[0]; cnt++) {
+                    result.push('');
+                }
+            } else if (arguments.length >= 2) {                                    //3번  273 push, 2push  idx가2가며뇌면 heelo push, idx가3이되면 forans더이상 수행하지 않고 내려옴. result는 똑같은 배열이 되어서 return
+                //인자 2개 이상일 때 명령어 
+                for (var idx = 0; idx < arguments.length; idx++) {
+                    result.push(arguments[idx]);
+                }
+            }
+            return result; //argument가 없으면 바로 리턴. 그러나 1개 이상이 있으면 
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+package com.lec.ex12_account;
+
+public class CheckingAccount extends Account {
+	private String cardNo;
+	public void pay (String accountNo, String ownerName, int amount) {   //method만들기 . deposit&withdraw
+		super(accountNo, ownerName, amount);
+	} //String,String,int,String
+	new CheckingAccount(“111-1111”,”김길동”,[1000,] ”1234-1234-1234-1234”);
+
+	ca.
+	public void pay(String cardNo)
+
+// 내 계좌잔액과 비교. 작액 만원. 물건가격5000원 
+//string비교  .equals 가 안전 
+//data,생성자,method,getter&setter  순으로

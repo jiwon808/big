@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function chk() {
+            if (!frm.id.value) {
+                alert('ID를 입력하세요');
+                frm.id.focus();
+                return false;
+            } else if (!frm.pw.value) {  /*우선 내용 쳤는지 물어보고 (2) 그 다음 확인*/
+                alert('비밀번호를 입력하세요');
+                frm.pw.focus();
+                return false;
+            } else if (frm.pw.value != frm.pwChk.value) {
+                alert('비밀번호를 확인하세요');
+                /*frm.pw.value = "";
+                frm.pwChk.value = "";*/    /*다시 새blank로 돌아오기*/
+                frm.pw.focus();
+                return false;
+            }
+            return true; /*를 해야 실행됨*/
+        }
+    </script>
+</head>
+<body>
+    <form name="frm" onsubmit="return chk()"> <!--비번확인--> <!--method안쓰면 get방식으로 넘어가-->
+        <table>
+            <tr>
+                <th>아이디</th>
+                <td><input type="text" name="id" value="아이디" /></td>
+            </tr>
+            <tr>
+                <th>비밀번호</th>
+                <td><input type="password" name="pw" /></td>
+            </tr>
+            <tr>
+                <th>비밀번호체크</th>
+                <td><input type="password"  name="pwChk"/></td> <!--js도 대소문자 구분-->
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="전송" /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

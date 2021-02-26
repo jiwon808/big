@@ -1,0 +1,16 @@
+package com.lec.ex1_string;
+
+public class Ex01 {
+	public static void main(String[] args) {
+		String str1 = "java";
+		String str2 = "java";
+		String str3 = new String ("java");
+//		 int     i  =   10;
+//		'변수안에 들어 있는 값' 같니?
+		if(str1==str2) {
+			System.out.println("str1과str2는 같은 주소");
+		}else {
+			System.out.println("str1과str2는 다른 주소");
+		}
+	}
+}

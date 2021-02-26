@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function Student(name, kor, mat, eng, sci) {
+            this.name = name;
+            this.kor = kor;
+            this.mat = mat;
+            this.eng = eng;
+            this.sci = sci;
+        } //공통인 getSum,getAvg,toString은 프로토타입 공간에다 뺀다
+        //*모든 메서드 prototype안에 들어있다
+        Student.prototype.getSum = function () {
+            return this.kor + this.mat + this.eng + this.sci;  //꼭this.붙여야 아니면undefined로됨
+        };
+        Student.prototype.getAvg = function () {
+            return this.getSum() / 4;
+        };
+        Student.prototype.toString = function () {
+            var output = '';
+            for (var key in this) {
+                if (key != 'toString' && key != 'getSum' && key != 'getAvg') {
+                    output += key + ':' + this[key] + '<br>';
+
+                } else if (key == 'getSum') {
+                    output += '총점: ' + this.getSum() + '<br>';
+                } else if (key == 'getAvg') {
+                    output += '평균: ' + this[key]() + '<br>';
+                }// if
+            }//for
+            return output;
+        };// 생성자함수와 프로토타입 내의 함수 완성 
+
+        var students = [];
+        students.push(new Student('홍길동', 100, 100, 100, 100));
+        students.push(new Student('마길동', 99, 90, 78, 100));
+        students.push(new Student('윤길동', 80, 88, 88, 100));
+        students.push(new Student('박길동', 70, 77, 98, 100));
+        students.push(new Student('신길동', 60, 66, 67, 100));
+        students.forEach(function (data) {
+            document.write(data + '<hr>');
+        });
+        students[0].kor = 0; students[0].mat = 0; students[0].eng = 0;
+        document.write('<h2>홍길동 점수 변동 후</h2>');
+        document.write(students[0]); //캡슐화되지 않았다.  
+    </script> 
+</head>
+<body>
+
+</body>
+</html>

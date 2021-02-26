@@ -1,0 +1,7 @@
+package com.lec.ex3_set;
+
+public class Stuent {
+	private String name; //set에 stuent type의 객체를 넣어
+	private int grade;
+	
+}

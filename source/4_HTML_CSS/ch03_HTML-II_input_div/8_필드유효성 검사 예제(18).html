@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        b{color:red;}
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>필드 유효성 검사</legend>
+            <ul>
+                <li>
+                    <label for="name">이름<b>*</b></label> <!--bold체-->
+                    <input type="text" name="name" id="name" required="required" autofocus="autofocus" /> <!--이름을 click해도 id="name"과 똑같은 -->
+                    <!--autofocus="autofocus" input중에 하나만 해야 커서깜빡깜빡-->
+                </li>
+                <li>
+                    <label for="id">아이디<b>*</b></label>
+                    <input type="text" name="id" id="id"  required="required" /> <!-- id="id"   한글아이디가 id와 같음 이라는 뜻 label for="id"와 같다는 뜻-->
+                </li>
+                <li>
+                    <label for="pw">비밀번호<b>*</b></label>
+                    <input type="password" name="pw" id="pw" required="required" />
+                </li>
+                
+            </ul>
+            
+        </fieldset>
+
+        <fieldset>
+            <legend>추가입력사항</legend>
+            <ul>
+                <li>
+                    <label for=" tel">전화번호</label>
+                    <input type="tel" name="tel" id="tel" />
+                </li>
+                <li>
+                    <label for="email">이메일</label>
+                    <input type="email" name="email" id="email" />
+                </li>
+            </ul>
+            <p>
+                <input type="submit" value="제출" />
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>

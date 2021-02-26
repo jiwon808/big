@@ -1,0 +1,29 @@
+package strategy2.step5.modularization;
+//소나타의 연료를 전기하이브리드(FuelHybrid)로 바꾸고 연비를 20km/l(Km20)로 바꾸는 부분을 추가합니다.
+public class TestMain {
+
+	public static void main(String[] args) {
+		Car_same_part genesis   = new Genesis();
+		Sonata sonata = new Sonata();
+		Accent accent = new Accent();
+		Car_same_part[] cars = {genesis,sonata,accent};
+		for(Car_same_part car: cars) {
+			car.shape();
+			car.drive();
+			car.isEngine();
+			car.isKm();
+			car.isFuel();
+		}//for
+		System.out.println("소나타의 연료를 하이브리드로, 연비를 20km/l");
+		sonata.setFuel(new Fuelhybrid_new()); //연료 업그레이드
+		sonata.setKm(new Km()); //연비 업그레이드
+		for(Car_same_part car: cars) {
+			car.shape();
+			car.drive();
+			car.isEngine();
+			car.isKm();
+			car.isFuel();
+		}//for
+	}//main
+
+}//class

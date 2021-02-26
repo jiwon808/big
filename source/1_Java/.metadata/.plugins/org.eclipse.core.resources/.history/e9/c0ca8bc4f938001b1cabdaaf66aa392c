@@ -1,0 +1,13 @@
+package com.lex.ex13final;
+
+public class TestMain {
+	public static void main(String[] args) { //main함수 써야 실행
+		Animal animal = new Animal();
+		animal.running();
+		animal.running();
+		animal.stop();
+		Dog dog = new Dog();
+		Animal dog2 = new Dog();
+		Object dog3 = new Dog();
+	}
+}

@@ -1,0 +1,17 @@
+package com.lec.ex3_set;
+
+public class Customer {
+	private String name;
+	private Integer phone;
+	private String address;
+	public Customer(String name, Integer phone, String address) {
+		this.name = name;
+		this.phone = phone;
+		this.address = address;
+	}
+	@Override
+	public String toString() {
+		
+		return super.toString();
+	}
+}

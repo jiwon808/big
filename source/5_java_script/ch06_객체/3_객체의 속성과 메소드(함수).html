@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var f = function () { };
+        var arr = [273,3,'hello'];
+        var person = {
+            name: '홍길동',
+            age: 35,
+            eat: function (food) {
+                alert(this.age + '살 ' + this.name + "은 " + food + "를 먹는다");
+            },  // (******중요!!)
+        }
+        person.eat('덮밥'); //person의age는 몇살, person의 이름은 뭐뭐, 덮밥을 먹는다  (******중요!!)
+        document.write('person:' + person + '<br>'); //*******왜object Object 나오는지??
+        document.write('arr:' + arr + '<br>'); //273부터'hello'까지 뿌림
+    </script>
+</head>
+<body>
+
+</body>
+</html>

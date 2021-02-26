@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<!--말줄임tag,  search-->
+<!--POSITION잡고 패딩 방식으로 -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" name="viewport" content="width=devuce-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=0.7" />
+    <!--device의 width를 따른다. 확대축소default yes-->
+    <title></title>
+    <style>
+        /****************페이지 초기화****************/
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif /*1번째꺼 없으면 2번째꺼 실행 2번째 없으면 3번째꺼 실행*/
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+        /****************header***************/
+        header {
+            height: 100px;
+            background-color: #ea8f00;
+        }
+            /***header의 #logowrap*/
+            header #logo_wrap {
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                position: relative; /*img두개가 logo에 벗어나지 않게 하는게 목적*/ /*!!중요!!*/
+            }
+
+                header #logo_wrap a {
+                    color: #FFFFFF;
+                }
+
+                header #logo_wrap img.menu {
+                    position: absolute;
+                    top: 0;
+                    left: 10px;
+                }
+
+                header #logo_wrap img.myinfo {
+                    position: absolute;
+                    top: 0;
+                    right: 10px;
+                }
+            /****header의#search*/ /*돋보기 세로 가로 상관없이  이미지 사이즈가 똑같아야. 변경되면 안됨*/
+            header #search {
+                height: 50px;
+                position: relative; /*돋보기 이미지를 search 안에*/
+            }
+
+                header #search input[type='text'] { /* {type=text} */
+                    width: 100%;
+                    height: 50px;
+                    border: 3px solid #ea8f00;
+                    outline: 3px solid #ea8f00;
+                    box-sizing: border-box; /*딱100%*/
+                    padding: 5px 55px 5px 5px;
+                    font-size: 1.3em;
+                }
+
+                header #search input[type='submit'] {
+                    background: url('0120_imgEx2/search.png') /*no-repeat안해도됨 .사이즈 딱 지정해줄 것이기 때문에*/;
+                    width: 50px;
+                    height: 50px;
+                    border: 0;
+                    outline: 0;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+
+        #lnb ul {
+            overflow: hidden;
+            margin: 7px 0; /*위아래만 여백 7px로*/
+        }
+
+            #lnb ul li {
+                float: left;
+                width: 16.6666%;
+                border-right: 1px solid #ea8f00;
+                box-sizing: border-box; /*!!이걸해야 밑으로 안떨어짐!!*/
+                text-align: center;
+            }
+
+                #lnb ul li:last-child {
+                    border: 0;
+                }
+        /******#section의 #section1******/
+        #section1 .row1, #secion1 .row2, #section1 .row3 {
+            overflow: hidden;
+        }
+
+        .row1 div, .row2 div, .row3 div {
+            float: left;
+            width: 50%; /*각각 50%나눠가져*/
+            height: 135px;
+            border: 2px solid white;
+            box-sizing: border-box; /*스마트폰 레이아웃에 많이써*/
+        }
+
+        #section1 img {
+            width: 100%;
+            height: 100%; /*부모의 width, height다 써라!!*/
+        }
+        /*******section의 #seciton2****/
+        section #section2 {
+            margin: 7px 0;
+        }
+
+            section #section2 ul li {
+                padding: 8px;
+                border: 1px solid lightgray;
+                /*말줌임 태그(ellipsis)*/
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        /*******section의 #seciton3************/
+        section #section3 ul li {
+            border: 1px solid lightgray;
+            height: 120px;
+            padding: 10px;
+            margin: 7px;
+            position: relative;
+        }
+
+            section #section3 ul li p.img {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                width: 100px;
+                height: 100px;
+            }
+
+            section #section3 ul li p.txt {
+                width: 100% -20px; /*padding빼기*/
+                padding: 10px 20px 10px 120px; /*왼쪽 120px빼는것은 왼쪽에 100x100짜리 그림이 있어서*/ /*그러면100x100그림 안찌그러져*/
+            }
+
+        #section #section3 ul li p.txt span:first-child {
+            display: block;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: darkblue;
+            /*말줄임태그*/
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        footer {
+            background-color: #ea8f00;
+            text-align: center;
+        }
+
+            footer p:last-child {
+                margin: 5px;
+                padding: 10px;
+            }
+    </style>
+</head>
+<body>
+    <!-- 검색 img가 있는 공간   %로 나누면 이미지가 퍼져서 보기 안좋다.    여기서 '검색창' & 'logo'만 %사용하지 않는다-->
+    <!--돈보기가 항상 같은 비율로 뜨게-->
+    <header>
+        <div id="logo_wrap">
+            <img src="0120_imgEx2/menu.png" class="menu" alt="메뉴 아이콘" />
+            <a href="ex2.html" class="logo">mobile logo</a>
+            <img src="0120_imgEx2/myinfo.png" class="myinfo" alt="내정보" />
+        </div>
+
+        <div id="search">
+            <form action="">
+                <input type="text" name="query_word" />
+                <input type="submit" value="" />
+            </form>
+        </div>
+    </header>
+
+    <!----------------lnb------>
+    <div id="lnb">
+        <ul>
+            <li><a href="#">lnb1</a></li>
+            <li><a href="#">lnb2</a></li>
+            <li><a href="#">lnb3</a></li>
+            <li><a href="#">lnb4</a></li>
+            <li><a href="#">lnb5</a></li>
+            <li><a href="#">lnb6</a></li>
+        </ul>
+    </div>
+
+
+    <section>
+        <!--http://placehold.it/100x100-->
+        <div id="section1">
+            <div class="row1">
+                <div>
+                    <a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=101&oid=031&aid=0000580111">
+                        <img src="http://placehold.it/100x100" alt="1행1열" />
+                    </a>
+                </div>
+
+                <div>
+                    <a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=101&oid=031&aid=0000580111">
+                        <img src="http://placehold.it/100x125" alt="1행2열" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="row2">
+                <div>
+                    <a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=101&oid=031&aid=0000580111">
+                        <img src="http://placehold.it/200x200" alt="2행1열" />
+                    </a>
+                </div>
+
+                <div>
+                    <a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=101&oid=031&aid=0000580111">
+                        <img src="http://placehold.it/200x215" alt="2행2열" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="row3">
+                <div>
+                    <a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=101&oid=031&aid=0000580111">
+                        <img src="http://placehold.it/300x300" alt="3행1열" />
+                    </a>
+                </div>
+
+                <div>
+                    <a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=101&oid=031&aid=0000580111">
+                        <img src="http://placehold.it/400x400" alt="3행2열" />
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ***************secion2***************-->
+        <div id="section2">
+            <ul>
+                <li>
+                    <a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=101&oid=031&aid=0000580111">
+                        [바이든 시대] 친환경에너지·배터리 사업 날개다나
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=101&oid=031&aid=0000580111">
+                        [바이든 시대] 친환경에너지·배터리 사업 날개다나
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=101&oid=031&aid=0000580111">
+                        [바이든 시대] 친환경에너지·배터리 사업 날개다나
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=101&oid=031&aid=0000580111">
+                        [바이든 시대] 친환경에너지·배터리 사업 날개다나
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+
+
+
+
+
+        <!-- ***************secion3***************-->
+        <div id="section3">
+            <ul>
+                <li>
+                    <p class="img"><img src="http://placehold.it/100x100" /></p>
+                    <p class="txt">
+                        <span>첫번째 span은 말줄임 할 예정입니다.첫번째 span은 말줄임 할 예정입니다.</span>
+                        <span>두번째 span은 말줄임 안 할 예정입니다.두번째 span은 말줄임 안 할 예정입니다.</span>
+                    </p>
+                </li>
+
+                <li>
+                    <p class="img"><img src="http://placehold.it/100x100" /></p>
+                    <p class="txt">
+                        <span>첫번째 span은 말줄임 할 예정입니다.첫번째 span은 말줄임 할 예정입니다.</span>
+                        <span>두번째 span은 말줄임 안 할 예정입니다.두번째 span은 말줄임 안 할 예정입니다.</span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- ***************footer***************-->
+    <footer>
+        <p><img src="0120_imgEx2/logo.png" alt="회사로고" /></p>
+        <p>서울시 마포구 노고산동 XX빌딩 704호</p>
+    </footer>
+</body>
+</html>

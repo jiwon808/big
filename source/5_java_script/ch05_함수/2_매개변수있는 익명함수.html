@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="2.js"></script>    <!--(1) 2.js가 이부분에 속 들어옴-->
+    <script>
+        var su = prompt('i값은?'); // (2)prompt 입력창 나옴
+        funVar(su); // (3)수 입력
+    </script>
+    <!--2.js를 밑에다/여기다 넣으면 안되는 이유: 위에 funVar(su) 이 단계 실행시 선언한 변수가 없음. 따라서 실행이 안된다 -->
+</head>
+<body>
+
+</body>
+</html>

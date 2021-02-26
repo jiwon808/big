@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #row1,#row2{width:600px; margin:0 auto;
+                    border:10px solid gray;
+                    overflow:hidden; /*부모단*/
+        }
+        #row1 div{float:left; /*first가 왼쪽. second가 오른쪽*/
+                  width:100px; height:100px;
+                  margin:10px; padding:10px;
+                  border:1px solid red;
+        }
+        #row2 div{float:right; /*first가 오른쪽. second가 왼쪽*/
+                  width:100px; height:100px;
+                  margin:10px; padding:10px;
+                  border:1px solid red;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="row1">
+        <div id="first">first</div>
+        <div id="second">second</div>
+    </div>
+    <div id="row2">
+        <div id="first">first</div>
+        <div id="second">second</div>
+    </div>
+
+</body>
+</html>

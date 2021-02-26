@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function sumAll() {
+            var result;
+            var result = 0;
+            if (arguments.length == 0) {
+                result = -999;
+            } else {
+                //for (var idx = 0; idx < arguments.length; idx++) {}
+                for (var idx in arguments) {
+                    result += arguments[idx];
+                }
+            }
+            return result;
+        }
+
+  </script>  <!--반드시 위에-->
+    <script>
+        //for in 문 
+        var arr = [10, 20, 30];
+        var sum = 0; //0 + 0방+1방+2방 //곱해서할거면 1를 넣어야 
+        for (var idx in arr) { //for in 문   0방부터 끝방까지 for문에 누적
+            sum += arr[idx];
+        }
+        //일반for문
+        /*for (var idx = 0; idx < arr.length; idx++) {
+        }*/
+        alert(sum);
+    </script>
+
+    <script>
+
+        var sum = sumAll(); //-999(매개변수가 없으면 -999를 리턴)
+        document.write('sumAll()' + sum + '<br>')
+        var sum = sumAll(1); //1 (매개변수가 1개 이상이면 누적값리턴)
+        document.write('sumAll(1)' + sum + '<br>')
+        var sum = sumAll(1, 2, 3, 4, 5); //15
+        document.write('sumAll(1, 2, 3, 4, 5)' + sum + '<br>')
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

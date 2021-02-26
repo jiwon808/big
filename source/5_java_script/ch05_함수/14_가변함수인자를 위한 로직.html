@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        //for in 문
+        var arr = [10, 20, 30];
+        var sum = 0; //0 + 0방+1방+2방 //곱해서할거면 1를 넣어야
+        for (var idx in arr) { //for in 문   0방부터 끝방까지 for문에 누적
+            sum += arr[idx];
+        }
+        //일반for문
+        /*for (var idx = 0; idx < arr.length; idx++) {
+        }*/
+        alert(sum);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

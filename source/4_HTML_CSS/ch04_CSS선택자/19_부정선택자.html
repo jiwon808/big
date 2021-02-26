@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #wrap{
+            width:800px; margin:0 auto;
+        }
+        #wrap #header{
+            font-size:25px;
+            font-weight:bold; /*h1태그처럼*/
+            text-align:center;
+            border-bottom:1px solid #cccccc;
+            padding-bottom:20px;
+        }
+        ul li{text-decoration:none;}
+        #wrap #con ul li a{
+            text-decoration:none; /*a태그의 밑줄 없앰*/  /*밑줄은 a태그때문에 생기는 것이기 때문에 a태그에서 밑줄없애야*/
+            color:blue;
+         }
+        #wrap #content ul li a:after{ /*링크선택자*/
+            content: '-' attr(href);
+        }
+
+        /*부정선택자*/
+        #content ul li:not(.web){
+            background-color:yellow;
+        } /*web만 background-color안바뀜*/
+
+        /*a:visited{color:red;}
+        a:active{color:black;}  링크선택자*/
+        /*#wrap #content{
+            border-bottom:1px solid #cccccc;
+        }*/ 
+
+         /*block태그를 수평으로*/
+        #footer ul{
+            border-top:1px solid #cccccc;
+            overflow:hidden;
+        }
+        #footer ul li{
+            float:left;
+            list-style:none;
+            margin:5px 20px; /*밖여백 상우하좌*/
+        }
+        #footer ul li:first-child{
+         /*padding:10px 0 0 0; 안여백 상우하좌*/
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            Weekly connect Website
+        </div>
+        <div id="content">
+            <ul>
+                <li><a href="http://www.naver.com" target="_blank">네이버</a></li>
+                <li><a href="http://www.google.com" target="_blank">구글</a></li>
+                <li><a href="http://www.daum.net" target="_blank">다음</a></li>
+                <li><a href="http://www.yahoo.com" target="_blank">야후</a></li>
+                <li class="web"><a href="http://www.tjoeun.co.kr" target="_blank">더조은</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="footer">
+        <ul>
+            <li><img src="0115/logo.png" alt="회사로고" /></li>
+            <li><img src="0115/address.png" alt="회사주소" /></li>
+        </ul>
+    </div>
+</body>
+</html>

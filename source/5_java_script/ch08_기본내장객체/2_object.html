@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        Object.prototype.test1 = function () {
+            alert(this); //this는 내 객체  //test찾아
+        };//object내장객체. 공동prototype
+        var num = 273; //varnum = new Number(273);
+        num.test1();
+
+        var str = 'Hello, JS'; // var str = new String ('Hello,JS');
+        str.test1();
+
+        var obj = {
+            name: '홍길동', age: 25,
+            toString: function () {
+                return this.name + '은' + this.age;
+            },
+        };
+        obj.test1();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

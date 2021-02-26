@@ -1,0 +1,7 @@
+package com.lec.ex04_abc;
+
+import com.lec.ex04_abc_s;
+
+public class C extends ex04_abc_s {
+
+}

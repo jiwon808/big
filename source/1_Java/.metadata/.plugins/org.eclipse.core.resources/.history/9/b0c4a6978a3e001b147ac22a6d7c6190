@@ -1,0 +1,33 @@
+package com.lec.ex4_Object;
+
+public class Customer {
+	private String goodCode;
+	private String goodName;
+	private int price;
+	private int stockNum;
+	
+	private String tel;
+	private String name;
+	private int point;
+	private int amount;
+	
+
+	public Customer(String goodCode, String goodName, int price, int stockNum) {
+		this.goodCode = goodCode;
+		this.goodName = goodName;
+		this.price = price;
+		this.stockNum = stockNum;
+	}
+	public Customer(String goodCode, String goodName, int price, int stockNum, String tel, String name, int point,
+			int amount) {
+		this.goodCode = goodCode;
+		this.goodName = goodName;
+		this.price = price;
+		this.stockNum = stockNum;
+		this.tel = tel;
+		this.name = name;
+		this.point = point;
+		this.amount = amount;
+	}
+	
+}

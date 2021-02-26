@@ -1,0 +1,7 @@
+package com.lec.ex4_Object;
+
+public class Ex01_Person {
+	public static void main(String[] args) {
+		
+	}
+}

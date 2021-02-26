@@ -1,0 +1,13 @@
+package com.lec.ex10Test;
+
+public class BookLib extends BookInfo {
+	private String borrower; //대출인 (입력)
+	private String checkOutDate; //대출일(입력)
+	private byte state;
+	public BookLib(String bookNo, String bookTitle, String writer) {
+		super(bookNo, bookTitle, writer);
+
+	}
+}
+
+//super생성자 BookInfo내용을 가져와 

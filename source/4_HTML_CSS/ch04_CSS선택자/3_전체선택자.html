@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        * { /*페이지 초기화 용도:전체 페이지 디자인 초기화*/ /*header,h1,nav,ul,li,section,p,footer,body 여기에 나오는 모든tag*/
+            margin: 0; /*밖여백*/
+            padding: 0; /*안여백*/
+            color: saddlebrown;
+        }
+        header,nav,section,footer {
+            width: 500px; /*가로사이즈*/
+            margin: 20px auto; /*상우하좌*/ /*전부다 20px  20px  20px  20px이면    20px한번만 쓰면됨 */
+                                /*auto면 자동적으로 계산해서 가운데로 오게한다*/
+            border: 1px solid gray;
+        } 
+        nav ul{overflow:hidden;} /*수평으로 하고 픈 태그 부모단!!*/
+            nav ul li {
+                list-style: none; /*list style를 제거*/
+                float: left; /*block타입 태그를 수평으로*/
+                padding: 10px 20px 10px 30px; /*상 우 하 좌*/
+            }
+        section{
+            clear: both; /*overflow:hidden;을 잘 했으면 생략가능/
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>00 주식회사</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>회사소개</li>
+            <li>서비스소개</li>
+            <li>고객센터</li>
+            <li>공지사항</li>
+        </ul>
+    </nav>
+    <section>
+        <p>우리 회사는 50년 전통의 뛰어난 기술을 바탕으로 한 좋은 회사</p>
+    </section>
+    <footer>
+        <p>서울시 마포구 신촌로94 그랜드빌딩 704호</p>
+    </footer>
+</body>
+</html>

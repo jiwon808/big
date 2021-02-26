@@ -1,0 +1,8 @@
+package com.lec.ex02;
+
+public class TestMain {
+	public static void main(String[] args) {
+		//추상클래스 객체 못만들어. 추상메소드때문에 . 무조건override해야하기때문에 
+		//Super s = new Super(); 불가
+	}
+}

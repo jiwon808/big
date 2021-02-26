@@ -1,0 +1,5 @@
+package strategy3.step5.modularization;
+import strategy3.step5.component.*;
+public class Staff extends Same_Part {
+	private part;
+}

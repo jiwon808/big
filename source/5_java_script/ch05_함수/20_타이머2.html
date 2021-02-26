@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<!--※	setInterval(function, millisecond) ;  일정시간 마다 반복 수행 -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var id = setInterval(function () {
+            document.write(new Date() + '<br>');
+        }, 1000); //**1초마다 실행 **setInterval(): 일정시간마다 콜백함수 실행
+        setTimeout(function () {
+            clearInterval(id);
+            document.write('DONE'); //timerInterval가 중지되어서 끝났구나
+        }, 10000); //setTimeout():일정시간 후 한번 콜백함수 실행  **중지 **10초 후 중지
+    </script>
+</head>
+<body>
+
+</body>
+</html>

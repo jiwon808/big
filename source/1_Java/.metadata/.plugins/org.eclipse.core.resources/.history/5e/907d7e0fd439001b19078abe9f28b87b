@@ -1,0 +1,8 @@
+package com.lec.ex05;
+
+public interface Radio {
+	public void volumeUp();
+	public void volumeUp(int level);
+	public void volumeDown();
+	public void volumeDown(int level);
+}

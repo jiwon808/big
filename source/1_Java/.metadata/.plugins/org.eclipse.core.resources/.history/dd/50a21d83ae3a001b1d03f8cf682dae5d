@@ -1,0 +1,11 @@
+package singleton.step1;
+
+public class TestMain {
+
+	public static void main(String[] args) {
+		SingletonClass obj1 = SingletonClass.getInstance();
+		SingletonClass obj2 = SingletonClass,getInstance();
+	}
+
+}
+//class를 가지고, 객체를 만드는데, 그 객체는 하나만 

@@ -1,0 +1,10 @@
+package com.lec.ex3_math;
+//69.56반올림 
+public class Ex02_round {
+	public static void main(String[] args) {
+		System.out.println("소수점에서 반올림, 올림, 버림");
+		System.out.println("9.12을 올림: "+(int)Math.ceil(9.12));
+		System.out.println("9.12을 올림: "+Math.round(9.12));
+		System.out.println("9.12을 올림: "+(int)Math.floor(9.12));
+	}
+}

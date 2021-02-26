@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onkeyup = function () { //onkeyup눌렀다가 뜰때의 상태
+            var p = document.getElementsByTagName('p')[0];
+            if (event.keyCode > 48 && event.keyCode <= 57) { //keyCode 여기서 C 대문자
+                //1로 눌렀으면49  (누른수에 -48하면됨)
+                //윗 숫자 키보드의 0을 누르면 48로 출력. 오른쪽키보드0을 누르면96출력 (각자 숫자는 고유의 아스키코드를 가지고 있다)
+                p.innerHTML += '위 키보드 수 : ' + (event.keyCode - 48) + '의 아스키코드:' + event.keyCode + '<br>';
+
+            } else if (event.keyCode >= 96 && event.keyCode <= 105) { //48에서57이 아니면
+                p.innerHTML += '옆 키보드 수: ' + (event.keyCode - 96) + '의 아스키보드:' + event.keyCode + '<br>';
+
+            } //숫자 안누르면 아무것도 안뜨고. 숫자를 눌렀으면 뜬다
+           
+        };
+            
+    </script>
+</head>
+<body>
+    <p></p>
+</body>
+</html>

@@ -1,0 +1,11 @@
+package com.lec.ex2_date;
+
+import java.util.GregorianCalendar;
+
+public class Ex09_Sawon_TestMain {
+	public static void main(String[] args) {
+		Date date = 
+		GregorianCalendar enterDate= new GregorianCalendar();
+		System.out.println(s);
+	}
+}

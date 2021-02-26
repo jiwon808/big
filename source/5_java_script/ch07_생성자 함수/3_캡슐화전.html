@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function Rectangle(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+        Rectangle.prototype.getArea = function () { //함수는 prototype로빼
+            return this.width * this.height;
+        };
+        var rect = new Rectangle(5, 7);
+        rect.height
+        document.write('가로: ' + rect.width + ', 세로: ' + rect.height)
+        document.write('넓이: ' + rect.getArea()); //캡슐화되지 않는 예제 
+        //캡슐회되면 setWidth를 통해 바꿔야. 바로 rect.height=9; 이렇게 안됨 
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<!--setTimeout(function,millisecond) 몇 초 후에 딱 한번 이거 하세요-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>  //window내장객체 아니면 반드시 앞에 전부 다써줘야 예:document.write()
+        setTimeout(function () {
+            alert('3초 지났다');
+        }, 3000); //30000miliseconds (3s) *****밀리세컨이 지난 다음에 실행.  timeout딱 한번 실행 *******
+        var cnt = 0;
+        nowTime = new Date().getTime(); //현재 밀리세컨 
+
+        while (new Date().getTime() < nowTime + 1000) {
+            cnt++;
+        } //1초동안 계속 while문을 돌면서
+        document.write('1초 동안' + cnt + '번 while문 반복수행'); //(1)이거부터 나타나고 '확인'버튼를 누른후 (2)3초후 3초지났다alert창 뜬다
+    </script>
+</head>
+<body>
+
+</body>
+</html>

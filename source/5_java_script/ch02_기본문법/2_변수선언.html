@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var varString; //변수선언          //var로 선언하면 문자형 아닌지?
+        document.write('1.varString의 타입: ' + typeof (varString) + '-값:' + varString + '<br>'); // undefined나옴 왜냐하면 앞에 = .. 안함(값이 없었다)
+        var varString = '홍길동';
+        document.write('2.varString의 타입: ' + typeof (varString) + '-값:' + varString + '<br>');
+        varString = 10.5;
+        document.write('3.varString타입:' + typeof (varString) + '-값:' + varString + '<br>');
+        varString = true;
+        document.write('4.varString타입:' + typeof (varString) + '-값:' + varString + '<br>');
+        varString = function () { alert('함수속'); };
+        document.write('5.varString타입:' + typeof (varString) + '-값:' + varString + '<br>');
+        varString = function () { alert('함수속'); };
+        //varString();
+        //object변수
+        varString = { name: '홍길동', age: 28 };
+        document.write('6.varString타입:' + typeof (varString) + '-값:' + varString + '<br>');
+        varString = [10, '홍', function () { }, true, {name:'홍'}, [1,2,3]];
+    </script>
+</head>
+<body>
+
+</body>
+</html>

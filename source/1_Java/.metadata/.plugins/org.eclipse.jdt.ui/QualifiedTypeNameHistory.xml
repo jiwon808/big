@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="com.lec.ex.Arithmetic"/>
+<fullyQualifiedTypeName name="com.lec.ex.CarMain"/>
+<fullyQualifiedTypeName name="com.lec.ex3_accessTest.AccessTest"/>
+<fullyQualifiedTypeName name="com.lec.cons.PiClass"/>
+<fullyQualifiedTypeName name="java.lang.Void"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="com.acom.ex.Emp"/>
+<fullyQualifiedTypeName name="com.lec.cons.PriceTable"/>
+<fullyQualifiedTypeName name="com.lec.cons.CarSpec"/>
+<fullyQualifiedTypeName name="singleton.step1.SingletonClass"/>
+<fullyQualifiedTypeName name="strategy1.step4.component.FlyYes"/>
+<fullyQualifiedTypeName name="strategy2.step5.component.IEngine"/>
+<fullyQualifiedTypeName name="strategy2.step5.component.FuelDiesel"/>
+<fullyQualifiedTypeName name="strategy2.step5.component.EngineLow"/>
+<fullyQualifiedTypeName name="strategy2.step5.component.Km15"/>
+<fullyQualifiedTypeName name="strategy2.step5.component.EngineMid"/>
+<fullyQualifiedTypeName name="strategy2.step5.component.Km20"/>
+<fullyQualifiedTypeName name="strategy3.step5.component.JobStudy"/>
+<fullyQualifiedTypeName name="strategy3.step5.component.Iget"/>
+<fullyQualifiedTypeName name="strategy3.step5.component.IJob"/>
+<fullyQualifiedTypeName name="strategy3.step5.component.IGet"/>
+<fullyQualifiedTypeName name="java.util.StringTokenizer"/>
+<fullyQualifiedTypeName name="java.util.Calendar"/>
+<fullyQualifiedTypeName name="com.lec.ex1_string.Friend"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.util.TimerTask"/>
+<fullyQualifiedTypeName name="java.util.Timer"/>
+<fullyQualifiedTypeName name="java.text.DecimalFormat"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.GregorianCalendar"/>
+<fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+</qualifiedTypeNameHistroy>

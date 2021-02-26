@@ -1,0 +1,29 @@
+package com.lec.ex4_Object;
+
+public class Rectangle {
+	private int width;
+	private int height;
+	private String color;
+	public Rectangle(int width, int height, String color) {
+		this.width = width;
+		this.height = height;
+		this.color = color;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if(this ==obj) {
+			return true;
+		}
+		if(obj !=null && obj instanceof Rectangle) {
+			boolean widthChk = this.width ==((Rectangle)obj).width;
+			boolean heightChk = this.height ==((Rectangle)obj).height;
+			boolean colorChk = this.color ==((Rectangle)obj).color;
+			return widthChk && heightChk && colorChk;
+		}
+		return false;
+	}
+	@Override // object 클래스를 override. 왜냐하면 object class에 있는 format이 가독성이 떨어져서 
+	public String toString() {
+		return "가로: "+ width + "\t" + "새로: "+ "\t" +height+ "\t"+ "컬러: "+color;
+	}
+}

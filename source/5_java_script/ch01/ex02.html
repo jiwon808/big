@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<!--이 방법으로 error찾아-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        document.write('<h2>첫번째 줄</h2>');
+    </script>
+</head>
+<body>
+    <!--error가 나면 딱 거기까지만 실행-->
+    <h2>두번째 줄</h2>
+    <script>
+        document.write('<h2>세번째 줄</h2>');
+    </script>
+    <h2>네번째 줄</h2>
+    <script>
+        document.write('<h2>다섯번째 줄</h2>');
+    </script>
+    <h2>여섯번째 줄</h2>
+
+</body>
+</html>
+<script>
+    document.write('<h2>일곱번째 줄</h2>');
+</script>

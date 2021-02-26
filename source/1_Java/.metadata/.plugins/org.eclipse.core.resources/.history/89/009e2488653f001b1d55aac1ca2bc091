@@ -1,0 +1,13 @@
+package com.lec.ex5_Book;
+
+import java.util.Date;
+
+public class BookLib implements Ilendable {
+	private String bookNo;
+	private String bookTitle;
+	private String writer;
+	private String borrower;
+	private Date checkOutDate;
+	private byte state;
+	
+}

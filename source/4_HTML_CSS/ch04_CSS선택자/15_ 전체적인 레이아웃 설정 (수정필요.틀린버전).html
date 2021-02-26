@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        /*전체 레이아웃 잡음*/
+        div{background-color:lightgray;}
+
+        #header, #center, #footer {
+            margin: 0 auto;
+            width: 1000px;
+            overflow: hidden;
+        }
+        
+        /*화면 up right left down의  margin:0(밖여백이0)*/
+
+
+        /*전체float: left */
+
+        .left, .right {
+            background-color: lightgray;
+            border:1px solid gray;
+            float: left;
+        }
+
+        .center {
+            background-color: lightgray;
+            border: 1px solid gray;
+            float: left;
+        }
+
+       
+        /*전체 가로 길이*/
+        #header .center, #section .center, #footer.center{
+            width:693px;
+        }
+
+        #header .left, #header .right, #section .left, #section .right, #footer .left, #footer .right {
+            width: 150px;
+        }
+
+        /*전체 세로 길이*/
+        #section .left,#section .center,#section .right{
+            height:300px;
+        }
+
+        #header .left, #header .center, #header .right,
+        #footer .left, #footer .center, #footer .right {
+            height: 150px;
+        }
+
+        /* ********가로 세로 길이 측정 끝  ******** */
+
+
+        /*중간 글자부분*/
+        #section .center ul {
+            overflow: hidden;
+        }
+        #section .center ul li {
+            list-style:none;
+            float:left;
+            padding: 10px;
+            font-size: 20px; 
+        }
+        #section .center h2{
+            text-align:center;
+        }
+        #section .center p {
+            text-align: center;
+        }
+        #section .center {
+            clear: both; /*float 속석을 제거 역할*/
+        }
+        /* ********중간 글자부분 끝  ******** */
+
+        #section .right ol li.c{ color:red;}
+        /* ********오른쪽 글자부분 끝  ******** */
+
+
+
+         #header .left {
+            border-radius: 0 20px 20px 0;
+        }
+
+        #header .left, #section .left, #footer .left {
+        }
+
+        #header .center {border-radius: 0,0,30px,30px;}
+        #section .center {border-radius: 30px;}
+        #footer .center {border-radius: 30px,30px,0px,0px;}
+
+        #section .left{border-radius:0, 30px, 30px, 0;}
+        #section .right{border-radius:30px, 0, 0, 30px;}
+
+        #header .left, #footer .right {
+            border-radius: 30px,0;
+        }
+        #header .right, #footer .left {border-radius: 0,30px;} 
+
+ 
+        /* ********둥글 부분 끝 ******** */
+
+
+
+
+        /* header안에left class,center class,right class  (div3개나눠져. width,height. border더 진한gray. border radius뒹굴)|| 
+            contents          lef,center,right         ul       h2     p     clearbooth하고   ,  right에 있는 아이 ol li
+            footer 안에 공간3개 left,center,right
+            전체 1000을 놓고.    152(border포함)    152            1002로
+
+        */
+    </style>
+</head>
+<body>
+    <div id="wrap">
+
+        <div id="header">
+            <div class="left">
+
+            </div>
+            <div class="center">
+
+            </div>
+            <div class="right">
+
+            </div>
+        </div>
+
+
+        <div id="section">
+            <div class="left">
+
+            </div>
+            <div class="center">
+                <ul>
+                    <li>menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                </ul>
+                <br /><br />
+                <h2> 빅데이터 UI 전문가 양성</h2>
+                <p>본 과정은 좋다. 아주 좋다. 친구들 좋다</p>
+            </div>
+            <div class="right">
+                <ol type="1">
+                    <li>태그</li>
+                    <li>전체(*)</li>
+                    <li>id,class</li>
+                    <li>속성</li>
+                    <li>후손,자손(>)</li>
+                    <li>동위</li>
+                    <li>반응</li>
+                    <li>상태</li>
+                    <li>구조</li>
+                    <li class="c">문자</li>
+                    <li class="c">링크</li>
+                    <li class="c">부정</li>
+
+                </ol>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="footer">
+        <div class="left">
+
+        </div>
+        <div class="center">
+
+        </div>
+        <div class="right">
+
+        </div>
+    </div>
+</body>
+</html>

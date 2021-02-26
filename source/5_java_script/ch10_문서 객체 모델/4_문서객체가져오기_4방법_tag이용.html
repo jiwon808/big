@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onload = function () {
+            var head = document.getElementsByTagName('h1');
+            //****head.forEach()불가능.  내가 선언한 배열에서만 사용가능 (중요!!!)
+            for (var idx in head) {
+                head[idx].innerHTML = '바꿔'; //0번 바뀌고 1번바뀌고 
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1>HEADER</h1>
+    <h1>HEADER</h1>
+</body>
+</html>

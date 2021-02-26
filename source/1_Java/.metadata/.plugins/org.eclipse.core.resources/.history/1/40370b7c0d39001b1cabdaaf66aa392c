@@ -1,0 +1,11 @@
+package com.lec.ex03;
+
+public class GrandChildClass extends ChildClass {
+	@Override
+	public void method1() {
+		System.out.println("GrandChild의 method1()");
+	}
+}
+
+
+//ChildClass - 추상 method1(), method2(), method3()  내가 추상메소드가 되던지, 아니면 추상메소드로 재정의 하던지

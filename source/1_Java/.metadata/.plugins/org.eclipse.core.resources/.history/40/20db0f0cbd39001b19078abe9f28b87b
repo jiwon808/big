@@ -1,0 +1,5 @@
+package com.lec.ex01;
+
+public interface TestMain {
+
+}

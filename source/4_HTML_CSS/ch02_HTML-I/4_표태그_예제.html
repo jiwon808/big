@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table{background-color:red;}      /* #FF0000*/
+        tr{background-color:yellow;}
+        caption{background-color:lightyellow;}  /* #누르면 color pick가능*/
+    </style>
+</head>
+<body>
+    <table>
+        <caption>table ex1</caption>
+        <tr>
+            <th>국어</th>   <th>영어</th>  <th>수학</th>             <!--th는 header열-->
+        </tr>
+
+        <tr>
+            <td>100</td>    <td>60</td>    <td>80</td>
+        </tr>
+    </table>
+
+
+    <table>
+        <caption>table ex2</caption>
+        <tr>
+            <th>국어</th>  <th>영어</th>   <th>수학</th>  
+        </tr>
+        <tr>
+            <th>100</th>  <th>60</th>   <th>80</th>  
+        </tr>
+        <tr><th colspan="2">평균</th>    <th>80</th>    </tr>
+
+    </table>
+
+
+    <table>
+        <caption>table ex3</caption>
+        <tr>
+            <th rowspan="3">중간고사 성적</th>   <!-- 1,2,3행 병합-->
+            <th>국어</th>
+            <th>영어</th>
+            <th>수학</th>
+        </tr>
+        <tr><td>100</td>      <td>60</td>      <td>80</td> </tr>
+        <tr><th colspan="2">평균</th>    <td>80</td>   </tr>
+    </table>
+
+</body>
+</html>

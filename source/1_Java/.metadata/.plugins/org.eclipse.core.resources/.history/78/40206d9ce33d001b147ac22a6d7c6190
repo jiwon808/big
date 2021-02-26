@@ -1,0 +1,29 @@
+package com.lec.ex2_date;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Sawon {
+	private int number;
+	private String name;
+	private String part;
+	private Date enterDate;
+	public Sawon(int number, String name, String part) {
+		this.number = number;
+		this.name = name;
+		this.part = part;
+		SimpleDateFormat sdf = new SimpleDateFormat("yy-MM-dd(E) HH:mm");
+		
+	}
+	public int getNumber() {
+		return number;
+	}
+	public String getName() {
+		return name;
+	}
+	public String getPart() {
+		return part;
+	}
+
+	
+}

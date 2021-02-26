@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #header, #wrap, #footer {
+            width: 600px;
+            margin: 0 auto;
+            border: 1px solid gray; /*여기서 부터 여기 이 영역*/
+        }
+
+        #header { /* !!*/
+            overflow: hidden;
+        }
+
+            #header .logo { /*후손 선택자*/
+                float: left;
+                padding: 10px 30px 10px 100px;
+            }
+
+            #header > .copy { /*자손 선택자*/
+                float: left;
+                padding: 17px 100px 10px 30px;
+            }
+
+        #wrap {
+            clear: both;
+        }
+        /**/
+
+        float한 파트 양쪽 float한것 없애 /*중요!!!*/
+        div p { /* space 하나 주면  '후손선택자' (자손선택자 포함)*/
+            font-size: 25px;
+        }
+
+        div > p { /*자손 선택자*/
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="logo">
+            <h1>LOGO</h1>
+        </div>
+        <div class="copy">
+            <h2>00주식회사</h2>
+        </div>
+    </div>
+    <div id="wrap">
+        <!--wrap의 자식은 p,ul      ul의 자식은li      li의p--> <!--!!자식은 바로 밑   후손은 밑에 다 포함 (자식은 후손에 포함됨)-->
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,</p>
+        <ul>
+            <li><p>Lorem Ipsum is simply dummy text</p></li>
+            <li><p>Lorem Ipsum is simply dummy text</p></li>
+            <li><p>Lorem Ipsum is simply dummy text</p></li>
+        </ul>
+    </div>
+    <div id="footer">
+        <p>서울시 마포구</p>
+    </div>
+</body>
+</html>

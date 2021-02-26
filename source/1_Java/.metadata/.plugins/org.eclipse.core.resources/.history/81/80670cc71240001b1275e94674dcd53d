@@ -1,0 +1,12 @@
+package com.lec.ex1_list;
+
+public class AClass {
+	private String strA = "A";
+	@Override
+	public String toString() {
+		return "strA="+strA;
+	}
+}
+
+//data, constructor, override / customer arraylist  do while문         \n전까지 
+//차곡차곡 쌓아도되. 중복있어도 상관없음. 그래서 arraylist

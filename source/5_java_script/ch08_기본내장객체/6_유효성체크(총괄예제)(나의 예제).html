@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<!-- indexOf  @ 비밀번호쳤으면 두개가 같아야 한다. submit버튼. 메일 반드시@끝에있어도 안되고 없어도 안됨. 영어숫자 특수문자 -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table{
+            border: 1px solid #385d81;  
+        }
+        input {
+            margin-top: 10px;
+            border: 1px solid #385d81;
+            
+        }
+
+    </style>
+    <script>
+        var patternSpe = /[~!@#$%^&*()-_=+{}|\[]]/; 
+        var patternNum = /[0-9]/;
+        var patternEng = /[a-zA-Z]/;
+        var patternKor = /[가-힣ㄱ-ㅎㅏ-ㅣ]/;
+        function chk() {
+            if (patternSpe.test(frm.name.value) == true || patternNum.test(frm.name.value) == true) {  //**중요!! if true   if false 
+                    alert('특수문자와 숫자는 못옵니다');
+                    frm.name.focus();
+                    return false;
+            } else if (!frm.mail.value) {
+                alert('이메일를 입력하세요');
+            } else if (frm.mail.value.indexOf('@') == -1 || frm.mail.value.indexOf('@') == 0 ||    //여기서 0이 첫번째
+                frm.mail.value.indexOf('@') != frm.mail.value.lastIndexOf('@') ||                  //위치가 다르면 안됨(2개이상안된다는뜻)
+                frm.mail.value.lastIndexOf('@') == frm.mail.value.length-1 //@가 맨뒤
+            ) {
+                //-1은 없다, 0은 0번째,1은 첫번째,  마지막은 length-1 왜냐하면 숫자 0,1,2,3
+                alert('이메일형식에 맞추세요');
+
+            }else if (frm.pw.value != frm.pwchk.value) {
+                alert('비밀번호를 확인하세요');
+                frm.pw.focus();
+                return false;
+            } else if (frm.pwchk.value.length < 1) {
+                alert('확인용 비밀번호는 1글자 이상 입력해야됩니다.');
+                frm.pwchk.focus();
+            } 
+        }
+    </script>
+</head>
+<body>
+    <!--index, lastindexof, 같는지-->
+    <form action="#" method="get" name="frm" onsubmit="return chk()">
+        <table>
+            <tr>
+                <th>이  름&nbsp; &nbsp;</th>
+                <td>
+                    <input type="text" name="name" id="name"
+                           placeholder="특수문자와 숫자 못와" />
+                </td>
+
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="mail">메  일 &nbsp; &nbsp;</label>
+                    <input type="email" name="mail" id="mail"
+                           placeholder="메일형식에 맞추세요"
+                           pattern="[a-zA-Z가-힣0-9]+@\w+[\.\w+]+" />   <!--input type,pattern*****-->
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="pw">비밀번호</label>
+                    <input type="password" name="pw" id="pw" />
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="pwchk">비밀번호</label>
+                    <input type="password" name="pwchk" id="pwchk" />
+                </th>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <center>
+                        <input type="submit" value="회원가입" />
+
+                        <input type="reset" value="취소" />
+
+                        <input type="button" value="로그인" onclick="chk()" />
+                    </center>
+                </td>
+            </tr>
+
+        </table>
+
+
+       
+    </form>
+
+</body>
+</html>

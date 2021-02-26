@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>      <!--***중요: 다운로드한 min.js용도: 이게 있어야 밑에 작동-->
+    <!-- <script src="js/jquery-3.5.1.min.js"></script> -->
+    <script>
+        /*window.onload = funciton(){
+            var p = document.getElementById('p1');
+            p.onclick = function(){
+                p.innerHTML = '<b>내용 바꿔</b>';
+            };
+         }javascript방법*/
+
+        $(document).ready(function () {                // ${‘selector’).action()
+            //jQuery문법 사용 가능
+            $('#p1').click(function () {
+                $('#p1').text('내용 바꿔');
+                /*$('#p1').html('<b>내용 바꿔</b>');*/
+            });
+        }); //내장객체가 준비되었을때 이 일을 하라 $(document).ready();
+        $(function () {
+            //jQuery 문법 사용 가능
+        });
+    </script>
+</head>
+<body>
+    <p id="p1">p태그 하나</p>
+</body>
+</html>

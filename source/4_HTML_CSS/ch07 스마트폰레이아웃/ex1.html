@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<!-- html   f12        ctrl+shift+m (모바일버전)         f11로복귀-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,
+          initial-scale=1.0, user-scalable=no" /> <!-- name="viewport" 꼭 설정해야-->
+    <!--(1)height는 무한 scroll. 따라서 설정x (2) user-scalable=no 화면확대 출소 불가.   yes로했으면 몇배로 키울건지 줄일건지 설정)-->
+    <title></title>
+    <style>
+        /****페이지 초기화***/
+        *{padding:0; margin:0;}
+        li{list-style:none;}
+        a{text-decoration:none;}
+        /*********header**********/
+        header {
+            height: 45px; /*배경이미지에 맞춰*/
+            line-height: 45px;
+            text-align: center; /*글씨 가운데*/
+            background: url('0120_imgEx1/bg_header.png');
+            position:relative; /*자식단이 부모단에 벗어나지 않게. 부모단relative. 자식단absolute*/
+        }
+         header .left {position:absolute; left:10px; top:7px;}
+         header .right{position:absolute; right:10px; top:7px;}
+        /***********gnb디자인**********/
+        #gnb ul{overflow:hidden; border:5px solid gray;}
+        #gnb ul li{ /*gnb에 li 8개 + border*/
+            float:left; width:10%; margin:1.25%;/*원래 width 12.5%   그라나 나눠서 width 10% margin 1.25% */  /*2.5/2=1.25*/
+            border:1px solid gray;
+            box-sizing:border-box; /*margin을 못줘*/
+            text-align:center;
+        }
+        /***********checkbox checked일 경우만 gnb가 display:block;**********/
+        #gnb{display:none;}
+        #toggle:checked ~ #gnb{display:block;}                                           /******중요!!*****/
+        #toggle{display:none;}
+        /***********lnb**********/
+        #lnb ul{overflow:hidden;}
+        #lnb ul li{
+            float:left; width:20%;
+            border:1px solid #FFFFFF;
+            box-sizing:border-box;
+            background-color:#137163;
+            height:60px; line-height:60px; text-align:center;
+            font-weight:bold;
+        }
+        #lnb ul li a{color:white;}
+        /*************#content************/      /*padding정도 약간 줄 수 있음. margin(x)*/
+        #content{
+            padding:10px; color:#333333;
+        }
+        #content #content_header{
+            padding:10px;
+            border-bottom:1px solid gray;     /*홍길동과 border-bottom 사이 떨어트릴려고 padding*/
+        }
+        #content #content_body p:first-child{
+            color:deepskyblue;
+            font-weight:bold;
+            padding:10px 0;
+            /*말줄임 태그 (ellipsis)*/
+            white-space:nowrap;overflow:hidden; text-overflow:ellipsis;    /*중요!!! 말줄임 태그 1줄이상 경우*/
+        }
+        #content #content_body p:last-child{
+            background:url('0120_imgEx1/bg_image.jpg') -500px 0;  /*외쪽을 -500px로 맞춤*/ /*중요!!*/
+            padding:10px;
+            font-weight:bold;
+            }
+        footer .logo{
+            text-align:center; /*글씨나 이미지를 가운데로*/
+            border-top: 1px solid lightgray;
+            border-bottom:1px solid lightgray;
+            margin-top:10px 0; /*위아래 밖여백만 10px; 좌우여백은0px*/
+        }
+        #footer.logo img{
+            width:200px;
+        }
+        #footer .info { /* #footer .info   이 둘 사이 space있어야 .info가 적용된다*/
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        #footer .address{
+            text-align:center;
+            font-size:.8em;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="toggle" /> <!--toggle 뜻  한번누르면 체크하고 한번누르면 해제하고-->
+    <header>
+        <a href="#" class="left">  <!--왼쪽에 뜨는 부분-->
+            <img src="0120_imgEx1/category.png" />
+        </a>
+        <h1>Mobile</h1>
+        <label for="toggle" class="right">
+            <img src="0120_imgEx1/menu.png" />
+        </label>
+    </header>
+
+    <div id="gnb">
+        <ul>
+            <li> <a href="#">gnb1</a></li>
+            <li> <a href="#">gnb2</a></li>
+            <li> <a href="#">gnb3</a></li>
+            <li> <a href="#">gnb4</a></li>
+            <li> <a href="#">gnb5</a></li>
+            <li> <a href="#">gnb6</a></li>
+            <li> <a href="#">gnb7</a></li>
+            <li> <a href="#">gnb8</a></li>
+        </ul>
+    </div>
+    <div id="lnb">
+        <ul>
+            <li> <a href="#">lnb1</a></li>
+            <li> <a href="#">lnb2</a></li>
+            <li> <a href="#">lnb3</a></li>
+            <li> <a href="#">lnb4</a></li>
+            <li> <a href="#">lnb5</a></li>
+
+        </ul>
+    </div>
+    <div id="content">
+        <div id="content_header">
+            <h1>홍길동</h1>
+        </div>
+
+        <div id="content_body">
+            <p>조선 시대의 농민무장대의 지도자. 1500년(연산군 6)을 전후하여 서울 근처에서 활약하던 농민무장대의 지도자. 양반지주층을 중심으로 토지</p>
+            <p>1500년(연산군 6)을 전후하여 서울 근처에서 활약하던 농민무장대의 지도자. 양반지주층을 중심으로 토지소유가 확대되면서, 토지를 잃고 지배층의 착취에 시달리던 농민들은 자기가 살던 곳에서 도망쳤다. 이들은 산속으로 피해 무장대의 기본성원이 되어 양반지주나 관청을 습격했는데, 지배층들은 이들을 「도적」이라 했다. 15세기 말에서 16세기 초 연산군 통치기간에는 전국 곳곳에서 이러한 농민무장대가 일어났고, 그 가운데 대표적인 것이 홍길동이 이끄는 무장대였다. 홍길동은 양반관리의 복장을 하고 스스로 「첨지」라 하면서 무장한 많은 농민을 지휘해 여러 고을의 관청들을 습격했다. 결국 체포되어 의금부에서 취조당한 기록이 남아 있다. 뒤에 그에 대한 이야기는 <홍길동전>으로 소설화되기도 한다.</p>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="logo">
+            <img src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png" alt="로고" />
+        </div>
+
+        <div class="info"> XX주식회사</div>
+        <div class="address">서울시 마포구 노고산동 xx빌딩 704호</div>
+    </footer>
+
+</body>
+</html>

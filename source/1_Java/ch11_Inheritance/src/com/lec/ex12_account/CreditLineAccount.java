@@ -1,0 +1,46 @@
+package com.lec.ex12_account;
+
+public class CreditLineAccount extends CheckingAccount {
+
+	// [data]
+	private long creditLine; // long can store a single 64-bit signed integer. Therefore, if a variable or
+								// constant may potentially store a number larger than 2,147,483,647 (231 ÷ 2),
+								// it should be defined as a long instead of an int
+	// [constructor (생성자)]
+
+	public CreditLineAccount(String accountNo, String ownerName, String cardNo, int creditLine) {
+		super(accountNo, ownerName, cardNo);
+		this.creditLine = creditLine; // this를쓰지 않으면 null 값으로 인출
+	}
+
+	public CreditLineAccount(String accountNo, String ownerName, int balance, String cardNo, long creditLine) {
+		super(accountNo, ownerName, balance, cardNo);
+		this.creditLine = creditLine;
+	}
+
+	// [method]
+	@Override
+	public void pay(String cardNo, int amount) {
+		if (getCardNo().equals(cardNo)) { // T인경우
+			if (amount > creditLine) {
+				System.out.println(getOwnerName() + "님, 한도초과입니다.");
+			} else {
+				creditLine -= amount;
+				System.out.println(getOwnerName() + "님," + amount + "원 출금(잔여 한도액: " + creditLine + "원)");
+			}
+		} else { // 위에가 F인 경우 이 단계로 넘어와
+			System.out.println("카드번호가 일치하지 않습니다.");
+		}
+	}
+
+	@Override
+	public void printAccount() {
+		super.printAccount();
+		System.out.println("카드 한도액:" + creditLine);
+	}
+
+	// [getter&setter]
+	public long getCreditLine() {
+		return creditLine;
+	}
+}

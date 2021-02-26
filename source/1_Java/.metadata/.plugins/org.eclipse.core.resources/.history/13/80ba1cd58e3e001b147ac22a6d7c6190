@@ -1,0 +1,20 @@
+package com.lec.ex4_Object;
+
+public class Customer {
+	
+	private String tel;
+	private String name;
+	private int point;
+	private int amount;
+	public Customer(String tel, String name, int point, int amount) {
+		super();
+		this.tel = tel;
+		this.name = name;
+		this.point = point;
+		this.amount = amount;
+	}
+	@Override
+	
+
+	
+}

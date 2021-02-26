@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style> /*한개150x5=750  앞뒤 공간 그럼800*/
+        ul{
+            width:800px;
+            margin:0 auto;
+            border:1px solid lightgray;
+            overflow:hidden;
+        }
+            ul li {
+                /*display:inline-block; /*inline속성(margin,속성, top & bottom안들어가!)되면서block속성(width,height)*/
+                float: right;
+                list-style: none;
+                width: 150px; /*바짝안붙게*/
+                height: 60px;
+                line-height: 60px; /*height와line-height를 맞춰야 가운데 정렬*/
+                text-align: center; /*수평 가운데 정렬*/
+                margin: 20px 0;
+                font-size: 1.5em;
+                /* *******그라데이션css******* */
+                /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fac695+0,f5ab66+53,ef8d31+100 */
+                background: #fac695; /* Old browsers */
+                background: -moz-linear-gradient(top, #fac695 0%, #f5ab66 53%, #ef8d31 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top, #fac695 0%,#f5ab66 53%,#ef8d31 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom, #fac695 0%,#f5ab66 53%,#ef8d31 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fac695', endColorstr='#ef8d31',GradientType=0 ); /* IE6-9 */
+            }
+        ul li a{text-decoration:none; color:black;} /*a tag에 글자 color를 바꿔야. 발생이유가 a tag이기 때문에*/
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#menu1">menu1</a></li>
+        <li><a href="#menu2">menu2</a></li>
+        <li><a href="#menu3">menu3</a></li>
+        <li><a href="#menu4">menu4</a></li>
+        <li><a href="#menu5">menu5</a></li>
+    </ul>
+</body>
+</html>

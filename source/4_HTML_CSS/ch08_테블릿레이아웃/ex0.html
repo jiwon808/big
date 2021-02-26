@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<!--TABLET 700X1000 왔다갔다-->
+<!--왼쪽 메뉴 항상 200. 오른쪽은 WIDTH에 따라 조정됨-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{margin:0; padding:0;}
+        #section{
+            overflow:hidden; 
+            background:orange;}
+        #section #nav{
+            float:left;
+            width:200px;
+            /*div 블록타입이라 부모width다쓰기때문에,width지정해야 floatleft가 보여*/
+        }
+            #section #content_wrap {
+                float: left;
+                width: 100%; /****tablet******/
+                margin-right: -200px;   /*menu bar의 width가 200px이기때문에 그래야 content-wrap이 들어갈 공간이 있어서    좌-메뉴 우-콘텐츠로 보임*/
+                
+                /*margin-right:100px; 주기위해 #content_wrap */
+                /*width:100%;공간이 부족해서 안달라붙어 || width: 500px; 하면 달라붙는다(메뉴바와 콘텐츠 바로 달라붙어)????*/
+                /*총 100% +100px;*/
+                /*margin이 +면 오른쪽으로 들어옴. || margin이 -면 그만큼 '화면밖으로빠져'*/
+                /*거기에다 padding 넣고 싶으면  right는 200+10  따라서 210px || 상후좌는 10px 우는210px*/
+                background-color: lightyellow;
+                /*padding:10px 210px 10px 10px; 공간이 더 필요해서 안달라붙는다????*/
+            }
+     #section #content_wrap #content{
+         padding: 10px 210px 10px 10px; /*브라우저의width에 상관없이 padding공간들어감*/
+     }
+    </style>
+</head>
+<body>
+    <div id="section">
+        <div id="nav">   <!--왼쪽으로 들어가 200px고정-->
+            <ul>
+                <li><a href="">메뉴1</a></li>
+                <li><a href="">메뉴2</a></li>
+            </ul>
+        </div>
+
+        <div id="content_wrap"> <!--오른쪽으로 들어가 800px-->
+            <div id="content">
+                <img src="0121_imgTab/img.jpg" />
+                <p>
+                    What is Lorem Ipsum?
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

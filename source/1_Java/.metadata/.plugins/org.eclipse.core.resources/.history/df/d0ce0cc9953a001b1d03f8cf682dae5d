@@ -1,0 +1,17 @@
+package com.lec.ex10Test;
+
+import java.util.Scanner;
+
+public class LibMain {
+	public static void main(String[] args) {
+		BookInfo[]books = {new BookInfo("300ㄱ100","Physics","김지원"),
+					   new BookInfo("300ㄱ101","Chemistry","김지원"),
+					   new BookInfo("300ㄱ102","Biology","김지원"),
+					   new BookInfo("300ㄱ103","Psychology","김지원"),
+					   new BookInfo("300ㄱ104","Economics","김지원")
+		};
+		Scanner sc = new Scanner(System.in);
+		
+		
+	}
+}

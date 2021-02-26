@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table{background-color:black;}  /* #00 00 00  RGB다 0이면 black */ 
+        tr{background-color:white}  /* 테이블은black tr를white로 하면   (테이블-tr)보더가 black처럼보여 */ 
+        /* td{padding:10px;}/*안에 여백*/
+        td{padding: 5px 10px 4px 9px;} /*위 우 하 좌 안여백*/ /*Up R D L In*/  /*Up부터  시계방향*/
+    </style>
+</head>
+<body>
+    <table>
+        <!--border="1" 보더 보임 -->
+        <caption><h2>표제목 </h2></caption>  <!--caption 표제목-->
+        <tr><td>1행1열</td><td>1행2열</td><td>1행3열</td></tr>
+        <tr><td>2행1열</td><td>2행2열</td><td>2행3열</td></tr>
+        <tr><td>3행1열</td><td>3행2열</td><td>3행3열</td></tr>
+    </table>
+
+    <table>
+        <!--border="1" 보더 보임 -->
+        <caption><h2>표제목 </h2></caption>  <!--caption 표제목-->
+        <tr><td colspan="2">1행1,2열</td> <td>1행3열</td></tr>             <!--열병합(colspan  == column span)-->
+        <tr><td>2행1열</td><td>2행2열</td><td>2행3열</td></tr>
+        <tr><td>3행1열</td><td>3행2열</td><td>3행3열</td></tr>
+    </table>
+
+    <table>
+        <!--border="1" 보더 보임 -->
+        <caption><h2>표제목 </h2></caption>  <!--caption 표제목-->
+        <tr><td colspan="2">1행1,2열</td> <td>1행3열</td></tr>               <!--열병합(colspan  == column span)-->
+        <tr><td>2행1열</td><td>2행2열</td><td rowspan="2">2,3행3열</td></tr> <!--행병합(rowspan  == row span)-->
+        <tr><td>3행1열</td><td>3행2열</td></tr>
+    </table>
+
+    TEST <!--table 밑 자동 개행됨-->
+
+
+</body>
+</html>

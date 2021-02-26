@@ -1,0 +1,24 @@
+package com.lec.ex3_set;
+//hash는key를 set는data를
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class CustomerMain {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String answer, name, phone, address;
+		ArrayList<Customer> customers = new ArrayList<Customer>();
+		HashMap<Integer,String> hashmap = new HashMap<Integer, String>();
+		while(Iterator.hasNext()) {
+			hashmap.put(010-9999-9999 , "서울시 용산구");
+			hashmap.put(010-8888-8888 , "서울시 종로구");
+			Iterator<Integer> iterator = hashmap.keySet().iterator();
+			System.out.println(key+"\t"+);
+		}
+
+	}
+
+}

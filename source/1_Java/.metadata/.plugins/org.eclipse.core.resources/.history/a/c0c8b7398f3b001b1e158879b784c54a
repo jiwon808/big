@@ -1,0 +1,8 @@
+package com.lec.ex1_string;
+
+public class Ex03quiz {
+	public static void main(String[] args) {
+		Ex03quiz ex= new Ex03quiz();
+		System.out.println(ex.getClass().getName());
+	}
+}

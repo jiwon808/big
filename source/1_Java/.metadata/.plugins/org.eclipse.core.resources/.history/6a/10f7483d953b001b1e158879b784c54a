@@ -1,0 +1,5 @@
+package strategy3.step5.component;
+
+public interface Iget {
+	public void get();
+}

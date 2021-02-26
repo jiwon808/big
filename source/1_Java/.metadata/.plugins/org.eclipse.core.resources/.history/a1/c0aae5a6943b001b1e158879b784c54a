@@ -1,0 +1,15 @@
+package strategy3.step5.modularization;
+//강의를 합니다(JobLec).             월급을 받습니다(GetSalary).       	ID,이름,과목을 출력함
+import strategy3.step5.component.*;
+public class Lecturer extends Same_Part {
+	private subject;
+	public Lecturer() {
+		setJobLec=(new JobLec());
+		setGetSalary=(new GetSalary();)
+	}
+	@Override
+	public void person() {
+		System.out.println("");
+	}
+	
+}

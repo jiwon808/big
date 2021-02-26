@@ -1,0 +1,13 @@
+package com.lec.ex4_Object;
+
+public class Ex01_Person {
+	public static void main(String[] args) {
+		Person p1 = new Person(9811111111111L);
+		Person p2 = new Person(9811111111111L);
+		if(p1.equals(p2)) {
+			System.out.println("같은 객체다");
+		}else {
+			System.out.println("다른 객체다");
+		}//if
+	}
+}

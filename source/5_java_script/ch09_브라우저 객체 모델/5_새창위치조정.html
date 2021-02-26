@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var child = open('', '', 'width=300,height=200');
+        child.moveTo(0, 0);
+        setInterval(function () {
+            child.moveBy(10, 10); //*********좌표값이동   window.moveBy(deltaX, deltaY)
+            /*deltaX is the amount of pixels to move the window horizontally. Positive values are to the right, while negative values are to the left.
+deltaY is the amount of pixels to move the window vertically. Positive values are down, while negative values are up.*/
+        }, 100);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<!--TABLET 700X1000 왔다갔다-->
+<!--왼쪽 메뉴 항상 200. 오른쪽은 WIDTH에 따라 조정됨-->
+<!--webfx color picker-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+        /******초기화*****/
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        body {
+            min-width: 980px;
+        }
+        /*140x7=980 gnb한개당 140 총7개*/
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        /******header*****/
+        #header {
+            height: 100px;
+            line-height: 100px;
+            padding: 10px;
+            background-color: purple;
+            color: white;
+            font-size: 200%; /*h1과 효과 같음*/
+            font-weight: bold;
+        }
+
+        /******gnb*****/
+        #gnb {
+            overflow: hidden;
+            background-color: #2b2b2b;
+            height: 80px;
+            line-height: 80px, /*글자가 들어와야해서*/
+        }
+
+            #gnb ul:first-child {
+                float: left;
+            }
+
+            #gnb ul:last-child {
+                float: right;
+            }
+
+            #gnb ul li {
+                float: left;
+            }
+                /*li두개 있는데 둘다 float left*/
+                #gnb ul li a {
+                    display: block; /*inline tag라 글자밖에 클릭안됨. 따라서 block으로 바꿔야 그 rectangle공간에 클릭가능*/
+                    text-align: center;
+                    width: 140px; /*다닥 달라붙지 않기 위해서*/
+                    border-right: 1px solid gray;
+                    box-sizing: border-box;
+                    color: white;
+                    font-size:1.5em;
+                }
+            /*gnb5와gnb6사이의 공간 만들기*/
+            #gnb ul:last-child li:first-child { /*gnb6*/ /*minwidth:980  따라서 중간 공간 늘어날 수 있음*/
+                border-left: 1px solid gray;
+            }
+        /*************************section**************************/
+        #section {
+            overflow: hidden;
+            background-color: #e1e262;
+        }
+        /******lnb*****/
+        #section #lnb {
+            float: left; /*전체화면의 왼쪽*/
+            width: 200px;
+        }
+        #section #lnb ul li a {
+             display: block;                                     /*위아래 margin 먹고. 공간확장됨 네모공간, a tag공간확장*/
+             padding: 20px; /*안여백20px*/
+             border-bottom: 1px dashed brown;
+             color:saddlebrown;
+             text-align:center;
+             font-size:1.5em;
+             font-weight:bold;
+         }
+        /******content_wrap*****/ 
+        #section #content_wrap{
+            float:left;
+            width:100%;
+            margin-right:-200px;                                              /*margin-right:-200px; 복습!!!!!!   100%  -200px만큼 붙음. 떨어지지 않고  */
+            background:#fcffce;
+            color:black;
+            }
+        #section #content_wrap #content{
+            padding: 20px 220px 20px 20px;                                      /*content안에다 빠져나간200padding을 포함시킴. 원래있는 20과 더하면 우:220px
+                                                                                중요 복습!!!!!!    */
+        }
+        #section #content_wrap #content #div{  /*content안에 part1,2,3 paragraph부분*/
+            margin-bottom:30px; /*단락 밑 공간 생김*/
+            overflow:hidden;
+        }
+                               /*image &paragraph*/
+        #section #content_wrap #content div img{ /*div의 모든 img적용*/
+            border-radius:20px; margin:10px; /*그림의 border radius 둥굴게. 밖여백 10px (paragraph와 살짝 떨어지게)*/
+        }
+        #section #content_wrap #content div p::first-line{                    /*중요 복습!!!!!!  :: 무엇을의미??  */
+            font-size:1.5em;
+            color:orangered;
+        }
+            /*::first-line. ::first-line is a pseudo-element used to select the first formatted line in a block-level element (such as a paragraph <p> ). As with all pseudo-elements, it does not match any real HTML element.*/
+        #section #content_wrap #content div p::first-letter{
+            font-size:1.5em;
+            font-weight:bold;
+        }
+        #section #content_wrap #content div:nth-child(1)            /*각paragraph의 header*/
+            img{float:left; margin-right:20px;}  /*그림 오른쪽 공간확보*/
+        #section #content_wrap #content div:nth-child(2)
+            img{float:right; margin-left:20px;}                        
+        #section #content_wrap #content div:nth-child(4)
+        {overflow:hidden;
+         border-top:1px dashed gray;
+         padding-top:10px;
+        }
+        #section #content_wrap #content div:nth-child(4) img{
+            margin:5px; float:left;
+        }
+
+        
+        /******footer*****/
+        #footer {
+            height: 200px;
+            background-color: lightgray;
+            border-top: 1px solid gray;
+            text-align: center;
+            color:black;
+        }
+        #footer p:first-child{
+            font-size:1.2em; font-weight:bold; margin:20px 0 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <!--위width:700px;-->
+        <p>Website for Tablet-PC</p>
+        <!--*******gnb*******-->
+        <div id="gnb">
+            <ul>
+                <li><a href="#">Gnb1</a>
+                <li>
+                <li><a href="#">Gnb2</a>
+                <li>
+                <li><a href="#">Gnb3</a>
+                <li>
+                <li><a href="#">Gnb4</a>
+                <li>
+                <li><a href="#">Gnb5</a>
+                <li>
+                    <!--왼쪽left에 붙는 메뉴 5개-->
+            </ul>
+            <ul>
+                <li><a href="#">Gnb6</a>
+                <li>
+                <li><a href="#">Gnb7</a>
+                <li>
+                    <!--오른쪽right에 붙는 메뉴-->
+            </ul>
+        </div>
+        <div id="section">
+            <div id="lnb">
+                <ul>
+                    <li><a href="#">Btn1</a>
+                    <li>
+                    <li><a href="#">Btn2</a>
+                    <li>
+                    <li><a href="#">Btn3</a>
+                    <li>
+                    <li><a href="#">Btn4</a>
+                    <li>
+                    <li><a href="#">Btn5</a>
+                    <li>
+                    <li><a href="#">Btn6</a>
+                    <li>
+                    <li><a href="#">Btn7</a>
+                    <li>
+                    <li><a href="#">Btn8</a>
+                    <li>
+                </ul>
+            </div> <!--200px고정 왼쪽메뉴-->
+            <div id="content_wrap">
+                <div id="content">
+                    <!--오른쪽 메뉴 width에따라 변경됨 / tablet보는법에 따라-->
+                    <!--part1-->
+                    <div>
+                        <h1>What is Lorem Ipsum?</h1>
+                        <img src="0121_imgTab/img.jpg" alt="삽화" />
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                    <!--part2-->
+                    <div>
+                        <h1>What is Lorem Ipsum?</h1>
+                        <img src="0121_imgTab/img.jpg" alt="삽화" />
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                    <!--part3-->
+                    <div>
+                        <h1>What is Lorem Ipsum?</h1>
+                        <img src="0121_imgTab/img.jpg" alt="삽화" />
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                    <!--part4-->
+                    <div>
+                        <h1>Why do we use it?</h1> <!--내가 추가-->
+                        <img src="0121_imgTab/100.jpg" alt="부를 부르는 이미지" />
+                        <img src="http://placehold.it/150x150" alt="더미이미지" />
+                        <img src="0121_imgtab/150.jpg" alt="부를 부르는 이미지" />
+                        <p>
+                            Why do we use it?
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <p>홍길동 주식회사</p>
+            <p>copyrightⓒ tjoeun.Co.,All rights reserved </p>
+        </div>
+
+    </div>
+</body>
+</html>
+<!--메뉴 공간이 늘어나는 것이 아니라. gnb 중간 gnb5과gnb6사이가 늘어나. 빈여백이 늘어나-->

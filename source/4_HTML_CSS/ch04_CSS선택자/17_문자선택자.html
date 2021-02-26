@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #wrap{width:800px; margin:0 auto;} /*wrap을 가운데에 넣기때문에* 전체글자 가운데 정렬*/
+        #header{text-align:center;
+                border-bottom:1px solid #cccccc;
+        }
+        #content p:nth-child(2)::first-line,
+        #content p:nth-child(3)::first-line{ /*문자선택자*/
+            color:blue; font-weight:bold; 
+        }
+        #content p:nth-child(2):first-letter{
+            font-size:2em; /*글씨크기를 원래 사이즈의 2배*/
+        }
+        #content p:last-child span{ /*문자선택자를 모를 경우*/
+            font-size:2em;
+        }
+        #content p:nth-child(2)::selection{
+            background-color:violet;
+            color:yellow;
+        }
+        /*block태그를 수평으로*/
+        #footer ul{
+            border-top:1px solid #cccccc;
+            overflow:hidden;
+        }
+        #footer ul li{
+            float:left;
+            list-style:none;
+            margin:5px 20px; /*밖여백 상우하좌*/
+        }
+        #footer ul li:first-child{
+         /*padding:10px 0 0 0; 안여백 상우하좌*/
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1>제목이나 회사명</h1>
+        </div>
+        <div id="content">
+            <p>17일 한국거래소와 금융정보업체 에프앤가이드에 따르면 지난 14일 기준 삼성그룹과 현대차그룹, SK그룹, LG그룹 등 4대 그룹 59개 상장계열사의 합산 시총은 1244조원을 기록했다. 지난 2019년 말 이들 기업의 시가총액이 778조원 수준인 것을 고려하면 1년여 만에 466조원(59.9%)이나 폭증한 것이다.</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p><span>L</span>orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <div id="footer">
+            <ul>
+                <li><img src="0115/logo.png" alt="회사로고" /></li>
+                <li><img src="0115/address.png" alt="회사주소" /></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+package com.lec.ex08Employee;
+//이 예시는  return /  int값만 가져온거라서   TestMain에 출력
+public abstract class TestMain {
+	public static void main(String[] args) {
+		Employee saralyEmployee = new SalaryEmployee("홍길동",2800); 
+		Employee hourlyEmployee = new HourlyEmployee("신길동",100,8500);
+						
+		System.out.println("****************");
+		System.out.println("성함: "+name());
+		System.out.println("월급: "+annualSalary());
+		if(annualSalary()>200) {
+			computePay += (annualSalary()-200)*0.1;
+			System.out.println("상여금: " + computePay);
+		}else {
+		System.out.println("수고하셨습니다");
+	}
+		System.out.println("****************");
+	}
+}

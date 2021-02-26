@@ -1,0 +1,19 @@
+package strategy2.step5.modularization;
+
+public class TestMain {
+
+	public static void main(String[] args) {
+		Car genesis   = new Genesis();
+		Sonata sonata = new Sonata();
+		Accent accent = new Accent();
+		Car[] cars = {genesis,sonata,accent};
+		for(Car car: cars) {
+			car.shape();
+			car.drive();
+			car.isEngine();
+			car.isKm();
+			car.isFuel();
+		}//for
+	}//main
+
+}//class

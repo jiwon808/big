@@ -1,0 +1,13 @@
+package com.lec.ex11_store;
+
+public class TestMain {
+	public static void main(String[] args) {
+		HeadQuarterStore st = new HeadQuarterStore ("==본사==");
+		System.out.println(st.getName());
+		st.kimchi();
+		st.bude();
+		st.bibib();
+		st.sunde();
+		st.bab();
+	}
+}

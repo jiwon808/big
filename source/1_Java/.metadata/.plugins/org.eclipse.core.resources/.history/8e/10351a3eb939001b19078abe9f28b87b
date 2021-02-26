@@ -1,0 +1,5 @@
+package ch13_interface;
+
+public interface InterfaceEx1 {
+
+}

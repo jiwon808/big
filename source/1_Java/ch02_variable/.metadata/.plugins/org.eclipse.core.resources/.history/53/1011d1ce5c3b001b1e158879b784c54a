@@ -1,0 +1,11 @@
+package strategy1.step4.component;
+
+public class MissileYes implements IMissile {
+
+	@Override
+	public void missile() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

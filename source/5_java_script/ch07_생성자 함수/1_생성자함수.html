@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<!--The push() method adds new items to the end of an array, and returns the new length. 끝에서부터 쌓아짐
+    pop:은 끝에서부터 지워짐-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function Student(name, kor, mat, eng, sci) {
+            this.name = name;
+            this.kor = kor;
+            this.mat = mat;
+            this.eng = eng;
+            this.sci = sci;
+            this.getSum = function () {
+                return this.kor + this.mat + this.eng + this.sci;
+            }; //this. 반드시 붙여야
+            this.getAvg = function () {
+                return this.getSum() / 4;
+            };
+            this.toString = function () {
+                var output = '';
+                for (var key in this) {
+                    if (key != 'toString' && key != 'getSum' && key != 'getAvg') {
+                        output += key + ':' + this[key] + '<br>';
+
+                    } else if (key == 'getSum') {
+                        output += '총점: ' + this.getSum() + '<br>';
+                    } else if (key == 'getAvg') {
+                        output += '평균: ' + this[key]() + '<br>';
+                    }// if
+                }//for
+                return output;
+            };// toString
+
+        } //생성자함수(Student)      *function안에 this가 있으면 생성자 함수로 인지
+        students = [new Student('홍길동', 99, 88, 77, 76),
+        new Student('신길동', 98, 88, 78, 68),
+        new Student('윤길동', 95, 94, 82, 90),
+        new Student('지워죠', 11, 22, 55, 68)];
+        students.pop(); //지워죠 pop
+        students.forEach(function (data, idx) {
+            document.write(idx + '번째<br>' + data + '<hr>');
+            //똑같은게  memory에 겹쳐저 
+        });
+    </script>
+    
+</head>
+<body>
+
+</body>
+</html>

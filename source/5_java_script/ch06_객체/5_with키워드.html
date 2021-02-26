@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var student = {
+            name: '홍길동',
+            kor: 92, mat: 93, eng: 100, sci: 98,
+            output: '객체안에 output',
+        }
+        var output = ''; //**뒤에 출력format을 위해 초기화.  이 단계를 하지 않으면 제대로된 결과가 나오지 않고 object Object 이렇게 나옴
+                        //안에는 선언된 변수 student밑 window의output
+        with(student){ //with블록에서 그냥 변수가 있으면 student. 이라고 인식한다 
+            window.output += '이름은 ' + name + '<br>'; //***window.을 치는 이유: 외부로 인식하라는 뜻. 
+                                                //앞에 window.을 치지 않으면 위 student의 out '객체안에 output' 이것으로 인식
+            window.output += '국어점수:' + kor + '<br>';
+            window.output += '수학점수:' + mat + '<br>';
+            window.output += '영어점수:' + eng + '<br>';
+            window.output += '과학점수:' + sci + '<br>';
+        }
+        document.write(output);
+        document.write('name in student :' + ('name' in student));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+package strategy1.step4.modularization;
+
+public class StandardRobot extends Robot_same_part {
+
+	@Override
+	public void actionFly() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void actionMissile() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void actionKnife() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

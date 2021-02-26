@@ -1,0 +1,25 @@
+package com.lec.ex10Test;
+
+public class BookInfo {
+	private String bookNo; // 책청구번호ex. 890 ㄱ-102나
+	private String bookTitle; //책제목 ex.자바
+	private String writer;   //저자
+	public BookInfo(String bookNo, String bookTitle, String writer) {
+		this.bookNo = bookNo;
+		this.bookTitle = bookTitle;
+		this.writer = writer;
+	}
+	public String getBookNo() {
+		return bookNo;
+	}
+	public String getBookTitle() {
+		return bookTitle;
+	}
+	public String getWriter() {
+		return writer;
+	}
+
+}
+	
+	//getter필요. 다른파일에서 책제목,넘버 비교 필요
+

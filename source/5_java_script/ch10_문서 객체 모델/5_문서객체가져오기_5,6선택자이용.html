@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onload = function () {
+            // .header( 선택자)를 첫번째 하나 가져오기 -5번째 방법
+            var header1 = document.querySelector('.header');                        //하나가져오기
+            header1.innerHTML = '바꿔';
+            // .header( 선택자) 다가져오기 -  6방법
+            var head = document.querySelectorAll('.header');                          //다가져오기. 배열
+                                                       //주의: .header (왜냐하면 body부분을 보면 class="header")
+            for (var idx in head) {
+                //head[idx].style.color = 'red';
+                //head[idx].style.backgroundColor = 'yellow';
+
+                head[idx].style.cssText = 'color:red; background-color:yellow;';
+                //document.body.style.backgroundColor
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1 class="header">HEADER1</h1>
+    <h1 class="header">HEADER2</h1>
+</body>
+</html>

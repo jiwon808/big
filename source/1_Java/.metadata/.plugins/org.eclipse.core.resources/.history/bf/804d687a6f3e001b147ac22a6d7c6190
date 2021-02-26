@@ -1,0 +1,13 @@
+package com.lec.ex2_date;
+
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+public class Ex10_dayCal {
+	public static void main(String[] args) {
+		Date checkoutDate 
+			= new Date(new GregorianCalendar(2020,10,15).getTimeInMillis()); //	Date는1900년도가 기준 (110,11,15)    = new Date();
+											//실제 2020년11월15일
+		Date now = new Date();
+	}
+}

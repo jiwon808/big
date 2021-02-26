@@ -1,0 +1,24 @@
+package com.lec.ex1_list;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+public class Ex03_arrayListvsLinkedList {
+	public static void main(String[] args) {
+		ArrayList<String> array = new ArrayList<String>();  //0인 arraylist가 메모리에 잡힘
+		LinkedList<String> linked = new LinkedList<String>();
+		System.out.println("arrayList 끝인멕스로 순차적 추가 시간:"+addSeqTime(array));
+		System.out.println("linkedList 끝인멕스로 순차적 추가 시간:"+addSeqTime(linked));
+	}
+	private static long addSeqTime(List<String> list) {
+		long start = System.currentTimeMillis(); // 시작시간
+		for(int i=0; i<5000000; i++) {
+			list.add("순차적으로 추가"); 
+		}
+		
+		long end = System.currentTimeMillis(); // for문 수행 후 시간
+		return end - start;
+		
+	}
+}

@@ -1,0 +1,15 @@
+package strategy3.step5.modularization;
+import strategy3.step5.component.*;
+//학원운영업무를 합니다(JobMng).	   월급을 받습니다(GetSalary).      	ID,이름,부서을 출력함
+public class Staff extends Same_Part {
+	private part;
+	public Staff() {
+		setJobMng(new JobMng());
+		setGetSalary(new GetSalary());
+	}
+	
+	@Override
+	public void person() {
+		System.out.println("ID,이름,과목을 출력함");
+	}
+}

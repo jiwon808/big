@@ -1,0 +1,19 @@
+package com.lec.ex3_set;
+
+import java.util.HashSet;
+
+public class Ex01_HashSet {
+	public static void main(String[] args) {
+		HashSet<String> hashset = new HashSet<String>();
+		//"str0","str1", "str2","str3","str2"   //마지막에 있는 str2안들어가    중복되었기 때문에 
+		hashset.add("str0");
+		hashset.add("str1");
+		hashset.add("str2");
+		hashset.add("str3");
+		System.out.println(hashset);
+		System.out.println("hashset사이즈: "+hashset.size());
+		hashset.add("str2");
+		System.out.println(hashset);
+		System.out.println("hashset사이즈: "+hashset.size());
+	}
+}

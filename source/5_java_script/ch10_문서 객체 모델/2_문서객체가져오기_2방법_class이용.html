@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onload = function () {
+            //getElementByClassName의 return은 배열
+            var clock1 = document.getElementsByClassName('clock1');
+            // var clock1 = document.getElementsByClassName('clock1')[0]; 하나만 있어도 배열로 받아. 배열로return하기때문에
+            clock1[0].innerHTML = '날짜:' + new Date().toLocaleDateString();
+            var clock2 = document.getElementsByClassName('clock2');
+            clock2[0].value = "시간 : " + new Date().toLocaleTimeString();
+        }; //input만 value를 넣는다          innerHTML로 넣는게 아님
+
+
+
+        
+
+    </script>
+</head>
+<body>
+    <h1 class="clock1"></h1>  <!--날짜 -->
+    <input type="text" class="clock2" /> <!--시간-->
+</body>
+</html>

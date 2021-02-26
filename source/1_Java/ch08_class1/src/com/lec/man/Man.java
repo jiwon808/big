@@ -1,0 +1,72 @@
+package com.lec.man;
+// Man kim = new Man(20,170,60,"010-1234-9999");
+// Man yi = new Man(20,170,60);
+
+public class Man {
+	private int age;
+	private int height;
+	private int weight;
+	// 전화번호 무조건 string으로, 넘버로 하면 앞에0 사라져
+	private String tel;
+
+	public Man() {
+	} // 디폴트 생성자
+
+	public Man(int age, int height, int weight, String tel) {
+		this.age = age;
+		this.height = height;
+		this.weight = weight;
+		this.tel = tel;
+	}
+
+	public Man(int age, int height, int weight) {
+		this.age = age;
+		this.height = height;
+		this.weight = weight;
+	}
+
+	public Man(int age, String tel) {
+		this.age = age;
+		this.tel = tel;
+	}
+
+	// BMI지수를 반환하는 메소드
+	public double calculateBMI() {
+		double result = weight / ((height * 0.01) * (height * 0.01));
+		return result;
+	}
+
+	// (age,height,weight,tel)의 setter & getter
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setHeight(int height) {
+		this.height = height;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public void setWeight(int weight) {
+		this.weight = weight;
+	}
+
+	public int getWeight() {
+		return weight;
+	}
+
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
+
+	public String getTel() {
+		return tel;
+	}
+
+}

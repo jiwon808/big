@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var i = Number(prompt('i값은?', '0'));
+        var j = Number(prompt('j값은?', '0'));
+        document.write('i(' + i + ')의 j(' + j + ')승은' + pow(i,j)+'<br>');  //첫번쨰 매개변수(i)는x로, 두번째 매개변수(j)는y로
+        //선언된 매개변수 보다 많은 매개변수. 뒷부분은 무시됨 
+        document.write('pow(2,3,10)=' + pow(2, 3, 10) + '<br>'); //***이부분 구체적인 설명********** ???
+        //선언된 매개변수 보다 적은 매개변수: undefined로 할당
+        //(가변인자 함수. 함수갯수 다름)
+        function pow(x, y) { // x의 y승을 리턴하는 함수 
+            var result = 1; //이것을 선언해야 '숫자'와 '숫자'끼리 곱할 수 있다. 선언하지 않으면  숫자가 무엇과 곱하는지 몰라서 에러
+            for (var cnt = 1; cnt <= y; cnt++) { //y번 반복 //선언된 매개변수 보다 적은 매개변수(y가 없을경우) :cnt랑undefined는 비료가 안됨. 따라서 한번도 for문을 돌지 않아. 따라서 결과 무조건1로 나옴
+                result *= x; //result = result * x;
+            } //***이부분 구체적인 설명********** 1*2   2*2   2*3까지  y가3이면 
+            return result;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var score = prompt('점수를 입력해 주세요', '0~100점 사이');
+        if (score == null) {  //flase하면 null이 return됨. 따라서 설정
+            alert('점수를 입력하세요');
+        } else {      //아스키코드 비교  ex. (A)60px (B) 70px  그럼B가 더커  
+            sc = Number(score); //숫자로 바꾸는 함수
+            result = sc > 70 ? '잘했다' : '못했다';        //if문에서   숫자입력 -->else로안가고 result로 빠짐  70보다크면 '잘했다'라고 나옴
+        }
+        document.write(result); 
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

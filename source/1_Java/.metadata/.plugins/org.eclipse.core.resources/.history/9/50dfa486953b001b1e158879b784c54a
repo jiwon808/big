@@ -1,0 +1,43 @@
+package strategy3.step5.modularization;
+
+import strategy3.step5.component.Iget;
+
+//교육생 Student은  "ID(id), 이름(name), 반(ban)" 데이터를 갖습니다.
+//강사는  Lecturer  "ID(id), 이름(name), 강의과목(subject)" 데이터를 갖습니다.
+//스탭은  Staff  "ID(id), 이름(name), 부서(part)" 데이터를 갖습니다.
+
+public abstract class Same_Part {
+	private String id;
+	private String name;
+	private IJob job;
+	private Iget get;
+	public Person(String id, String name) {
+		this.id = id;
+		this.name= name;
+	}
+	
+	//생성자
+	public void job() {
+		job.job;
+	}
+	public void get() {
+		get.get();
+	}
+	public void print() {
+		System.out.println("[ID]"+id+"\t[이름]+name");
+	}
+	
+	
+
+	//setter-Student
+	public void setId(String id) {
+		this.id = id;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setBan(String ban) {
+		this.ban = ban;
+	}
+
+}

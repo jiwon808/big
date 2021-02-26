@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="9_date_interval.js"></script>
+    <script>
+        var today = new Date(); // 21-01-27 15:37
+        var limitday = new Date(2021, 3, 30, 18, 20, 0); //수료시점  *************0월 1월 2월   시스템은 0월부터 시작  그래서4월 표시는 3을 넣는다
+        document.write('오늘 : ' + today + '<br>');
+        document.write('수료시점:'+ limitday + '<br>');
+
+        //가독성 높게
+        document.write('날짜시간:' + today.toLocaleString() + '<br>');
+        document.write('날짜 : ' + today.toLocaleDateString() + '<br>'); // today.toLocaleDateString() 
+        document.write('시간 : ' + today.toLocaleTimeString() + '<br>'); // today.toLocaleTimeString() 
+        document.write('수료시점:' + limitday.toLocaleString() + '<br>');
+
+        var intervalDay = today.getInterval(limitday);
+        document.write('남은 날짜는' + intervalDay);
+
+        //this.getInterval(that);  this날과 that날 사이의 날짜 계산
+        /*var todayMili = today.getTime();
+        var limitdaymili = limitday.getTime();
+        var intervalMili = limitday.getTime() - today.getTime();
+        var intervalDay = intervalMili / (1000*60*60*24); 
+                //****** 1000 milliseconds in a second, 60 seconds in a minute, 60 minutes in an hour, and 24 hours in a day. ********/
+        //var intervalDay = today.getInterval(limitday);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

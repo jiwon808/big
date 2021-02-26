@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- head 부분에는 웹문서의 디자인, 동적부분, 설정부분-->
+    <meta charset="utf-8" />
+    <title>첫 예제</title>
+    <style> /*디자인 부분 = CSS, CSS3*/
+        body{background-color:yellow;}
+    </style>
+    <script> /*동적인 부분(DB와 연동이 없는)*/
+        name = prompt("이름이 뭐니?", "홍길동");
+        document.write(name + "~Welcome<br>");
+        function chk() {
+            if (frm.tel.value.length < 4) {
+                alert("전화번호는 뒷 4자리 이상 입력해야됩니다");
+                return false;
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <!--body부분에는 브라우저에 출력될 정보 -->
+    안녕하세요.<br />
+    오늘부터 웹표준 수업 시작합니다. <br/>
+    <form action="http://www.naver.com" name="frm" onsubmit="return chk()"><!--태그 속성 = "속성값"--> <!--밑에가true면 form action작동-->
+        전화번호<input type="text" name="tel"/> <br/>
+        <input type="submit" value= "검색" />       <!--화면에 보이는value-->
+
+
+    </form>
+
+
+</body>
+</html>

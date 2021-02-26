@@ -1,0 +1,27 @@
+package com.lec.ex4_Object;
+
+public class Rectangle {
+	private int width;
+	private int height;
+	private String color;
+	public Rectangle(int width, int height, String color) {
+		this.width = width;
+		this.height = height;
+		this.color = color;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if(this ==obj) {
+			return true;
+		}
+		if(obj !=null && obj instanceof Rectangle) {
+			return false;
+		}
+	}
+	@Override
+	public String toString() {
+		String result =  ;
+		return "가로: "+ width + "새로: "+height+ "컬러: "+color;
+	}
+	}
+}

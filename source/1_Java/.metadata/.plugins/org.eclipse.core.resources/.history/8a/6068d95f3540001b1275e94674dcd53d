@@ -1,0 +1,27 @@
+package com.lec.ex3_set;
+//hash는key를 set는data를
+//string이 같으면 안됨 . key는 유일해야 (여기서 전화번호 다 달라)
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class CustomerMain {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String answer, name, phone, address;
+		ArrayList<Customer> customers = new ArrayList<Customer>();
+		HashMap<String,Customer> hashmap = new HashMap<String, Customer>();
+		hashmap.put(010-9999-9999 , "홍길동 서울시 용산구");
+		hashmap.put(010-8888-8888 , "김마동 서울시 종로구");
+		Iterator<String> iterator = hashmap.keySet().iterator();
+			System.out.println(key+"\t"+);
+		while(iterator.hasNext()) {
+			String key = iterator.next();
+			System.out.println( +"\t"+key+"\t"+ );
+		}
+
+	}
+
+}

@@ -1,0 +1,11 @@
+package com.lec.ex02;
+
+public class Child extends Super {
+	@Override
+	
+//왜method2는 해도되고 안해도되고
+	public void method3() {
+		System.out.println("Child의 method3");
+		}
+
+}

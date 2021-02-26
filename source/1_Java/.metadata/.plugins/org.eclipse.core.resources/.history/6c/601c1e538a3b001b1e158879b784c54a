@@ -1,0 +1,23 @@
+package com.lec.ex1_string;
+
+public class Ex01 {
+	public static void main(String[] args) {
+		String str1 = "java";
+		String str2 = "java";
+		String str3 = new String ("java"); //무조건 객체생성 
+//		'변수안에 들어 있는 값' 같니?
+		if(str1==str2) {
+			System.out.println("str1과str2는 같은 주소");
+		}else {
+			System.out.println("str1과str2는 다른 주소");
+		}
+	
+		
+		str1 = "java2"; //같은 class값이 있어야 같은 곳을 가리킨다
+		if(str1 ==str3) {
+			System.out.println("str1과str3은 같은 주소");
+		}else {
+			System.out.println("str1과str3은 다른 주소");
+		}
+	}
+}

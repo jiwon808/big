@@ -1,0 +1,5 @@
+package com.lex.ex13final;
+
+public class Rabbit extends Animal {
+
+}

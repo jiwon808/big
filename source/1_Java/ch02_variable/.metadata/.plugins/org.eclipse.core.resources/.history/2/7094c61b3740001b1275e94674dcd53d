@@ -1,0 +1,21 @@
+package com.lec.ex01;
+//interfaceEx1    interfaceEx2
+public interface TestMain {
+	public static void main(String[] args) {
+		//InterfaceEx1 ex1 = new InterfaceEx1();
+		//InterfaceEx1 ex1 = new InterfaceEx1();
+		InterfaceClass obj1 = new InterfaceClass();
+		obj1.method1();  //Interface형 변수; InterfaceClass에 method1이 있다. 따라서 실행가능
+		obj1.method2(); 
+		InterfaceEx1 obj2 = new InterfaceClass(); //인가은 동물이다
+		obj2.method1();
+		//obj.method2(); 불가; 왜냐하면 InterfaceEx1에는 method2()가 없음
+		InterfaceEx2 obj3 = new InterfaceClass(); //INTERFECE 두 군데에서 받아왔기 떄문에 TYPE이 다름
+		if(obj3 instanceof InterfaceClass) { //compile단계에서 이거 없음
+			((InterfaceClass)obj3).method1();
+		}
+		obj3.method2();
+	}
+	//obj3.method1();불가
+}//interface다중으로 물려받을 수 있다. 객체 I1,I2,I3다 물려받으면 나는 method1,method2,method3 다 사용할 수 있음. 그 안에서 요구에 따라 다르게 출력
+//interface(작업명세서)를 class가 물려받은거  implement

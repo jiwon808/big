@@ -1,0 +1,12 @@
+package com.lec.ex12_account;
+
+public class CheckingAccount {
+	
+	String carNo1 =
+	String cardNo2 =
+	if(cardNo1.equals(cardNo2)) {
+		System.out.println("둘은 같다");
+	}
+}
+// 내 계좌잔액과 비교. 작액 만원. 물건가격5000원 
+//string비교  .equals 가 안전 

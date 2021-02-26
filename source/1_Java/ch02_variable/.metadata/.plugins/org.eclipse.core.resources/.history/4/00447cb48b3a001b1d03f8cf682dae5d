@@ -1,0 +1,19 @@
+package com.lec.ex09lib;
+
+public class LibMain {
+	public static void main(String[] args) {
+		
+		else {
+			books[idx].checkIn();
+		}
+		break;
+		case3://for문을 이용해서 도서상태 출력
+			for(Book book: books) {
+				book.printState();
+			}
+	}
+	}while(fn!=0);
+	System.out.println("사스템 종료");
+
+
+}

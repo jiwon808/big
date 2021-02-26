@@ -1,0 +1,41 @@
+package com.lec.ex03actor;
+
+public class Actor implements FireFighter, PoliceMan, Chef {
+
+	@Override
+	public void makePizza() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void makeSpaghetti() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void canCatchCriminal() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void canSearch() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void outFire() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void saveMan() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

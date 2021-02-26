@@ -1,0 +1,5 @@
+package com.lec.ex05_override;
+
+public class ChildClass {
+
+}

@@ -1,0 +1,11 @@
+package strategy2.step5.modularization;
+
+import strategy2.step5.component.IEngine;
+import strategy2.step5.component.IFuel;
+import strategy2.step5.component.IKm;
+
+public class Car_same_part {
+	private IEngine engine;
+	private IKm     km;
+	private IFuel   fuel;
+}

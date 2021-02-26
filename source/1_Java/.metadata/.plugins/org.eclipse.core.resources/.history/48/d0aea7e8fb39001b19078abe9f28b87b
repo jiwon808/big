@@ -1,0 +1,12 @@
+package com.lec.ex06toy;
+
+public class AirplaneToy implements IMissile,ILight {
+	public AirplaneToy() {
+		System.out.println("비행기 장난감입니다");
+		can
+	}
+	@Override
+	public void canLight() {
+		System.out.println("불빛 발사 가능합니다");
+	}
+}

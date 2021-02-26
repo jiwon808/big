@@ -1,0 +1,22 @@
+package com.lec.ex2_map;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import com.lec.ex1_list.Customer;
+
+public class Ex01_HashMap {
+	public static void main(String[] args) {
+		String[] strArr = new String[5];
+		ArrayList<String> strlist = new ArrayList<String>(); //'객체 데이터 타입'만 들어간   //int같은 기초데이터 타입은 안들거감
+		strlist.add("str11");
+		HashMap<Integer, String> hashmap = new HashMap<Integer,String>();
+		hashmap.put(9,"str11"); //키값11으로 str11값을 넣겠다
+		hashmap.put(22, "str22"); //new Integer(22)
+		hashmap.put(39, "str39");
+		System.out.println(hashmap.get(23));
+		System.out.println("remove전:" +hashmap);
+		hashmap.remove(19);
+		System.out.println("remove후: "+hashmap);
+	}
+}

@@ -1,0 +1,21 @@
+package com.lec.ex08robot;
+
+public class RobotOrder {
+	public void action(SingRobot robot) {  //이 안에 있는 robot만 일시킬 수 있다            //Dance타입이면 Dance 시킴
+		if(robot instanceof DanceRobot) { //instance는 객체      instanceof   객체의 타입은
+			((DanceRobot)robot).dance();
+//			DanceRobot dRobot =(DanceRobot)robot;
+//			dRobot.dance();
+
+		}else if(robot instanceof SingRobot) {
+			((SingRobot)robot).sing();
+//			SingRobot sRobot = (SingRobot)robot;
+//			sRobot.sing();
+		}else if (robot instanceof DrawRobot) {
+			((DrawRobot)robot).draw();
+			//DrawRobot dRobot = (DrawRobot)robot;
+			//dRobot.draw();
+		}
+			
+	}
+}

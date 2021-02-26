@@ -1,0 +1,25 @@
+package com.lex.ex13final;
+
+public class TestMain {
+	public static void main(String[] args) { //main함수 써야 실행
+		Animal animal = new Animal();
+		animal.running();
+		animal.running();
+		animal.stop();
+		Dog dog = new Dog();
+		dog.running();
+		dog.stop();
+		dog.method(); //method를 dog에 추가했기에 가능
+		Animal dog2 = new Dog();
+		dog2.running();
+		dog2.stop();
+		//dog2.method();      //왜 running stop는 되는데 method는 안되는지
+		
+//		Object dog3 = new Dog();
+//		dog3.stop(); //는 object에 있는것 만 올 수 있어  따라서 이거 실행안됨
+		
+		Rabbit rabbit = new Rabbit();
+		rabbit.running();
+		rabbit.stop();
+	}
+}

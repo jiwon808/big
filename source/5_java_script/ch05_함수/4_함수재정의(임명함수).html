@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script> //익명함수의 재정의 
+        //funVar();  익명함수 선언, 함수를 정해놓고 쓸 수 있다. //익명함수는 정의 전에는 사용 불가  
+        var funVar = function () {
+            alert('함수A');
+        };
+        funVar(); //함수A 경고창
+        var funVar = function () {
+            alert('함수B');
+        };  //r,python은 중복선언 상관없음 
+        funVar(); //함수B 경고창
+    </script>
+</head>
+<body>
+
+</body>
+</html>

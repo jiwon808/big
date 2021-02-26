@@ -1,0 +1,22 @@
+package singleton.step1;
+
+public class SingletonClass {
+	private int i;
+	private static SingletonClass INSTANCE; //SingletonClass형 객체 주소 
+	public static SingletonClass getInstance()  // getInstnace는 메소드 이름
+		if(INSTANCE==null) {
+			INSTANCE = new SingletonClass();
+		} //이제 INSTANCE안에 주고 들어있어
+		return INSTANCE;
+	
+	private SingletonClass() {
+		i=10;
+	}
+	public int getI() {
+		return i;
+	}
+	public void setI(int i) {
+		this.i = i;
+	}
+
+}//변수에null, 객체만들어, 넣어, 그럼 이제 1000 -->singleton요 아이, return

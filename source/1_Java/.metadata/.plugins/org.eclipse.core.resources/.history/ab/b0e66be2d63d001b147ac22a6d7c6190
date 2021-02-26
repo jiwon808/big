@@ -1,0 +1,18 @@
+package com.lec.ex2_date;
+
+import com.lec.ex1_string.Friend;
+
+public class Ex07_birthDay {
+
+	public static void main(String[] args) {
+		Friend[]friends = {
+				new Friend ("홍길동","010-9999-9999","12-14"),
+				new Friend ("홍당무","010-9999-8888","01-01"),
+				new Friend ("신길동","010-9999-7777","12-14")};
+		//friends 배열에서 오늘이 생일 사람들의 목록 출력
+		//오늘 생일인 사람이 없으며 없다고 출력
+		//get이용   혹은  SimpleDateFormat이용
+
+	}//main
+
+}//class

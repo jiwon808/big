@@ -1,0 +1,9 @@
+package com.lec.ex10Test;
+
+public class BookInfo {
+	private String bookNo; // 책청구번호ex. 890 ㄱ-102나
+	private String bookTitle; //책제목 ex.자바
+	private String writer;   //저자
+	private String borrower; //대출인 (입력)
+	private String checkOutDate; //대출일(입력)
+}

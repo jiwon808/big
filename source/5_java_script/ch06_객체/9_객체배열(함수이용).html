@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function makeStudent(name,kor,mat,eng,sci) {
+            var resultObj = {
+                name: name, //앞에name은 key (속성이름) , 뒤에있는name은 위 function makeStudent매개변수에서 들어온 name
+                kor: kor,
+                mat: mat,
+                eng: eng,
+                sci: sci,
+                getSum: function () {
+                    return this.kor + this.mat + this.eng + this.sci; //객체여서 this를 꼭넣어주어야
+                },
+                getAvg: function () {
+                    return this.getSum() / 4; 
+                },
+                toString: function () {
+                    var output = '';
+                    for (var key in this) {
+                        if (key != 'toString' && key != 'getSum' && key != 'getAvg') {
+                            output += key + ':' + this[key] + '\t';
+                        } else if (key == 'getSum' || key == 'getAvg') {
+                            output += key.substring(3) + ':' + this[key]() + '\t'; //호출한 것을 뿌려
+                        }
+                    }
+                    return output;
+                },
+            }; //resultObj
+            return resultObj;
+        }//makeStudent 함수 끝 
+        var students = [];
+        students.push(makeStudent('홍철동', 100, 90, 100, 95));  // name이 nme으로 철자틀려도 상관없게됨
+        students.push(makeStudent('박철희', 100, 90, 80, 70));
+        students.push(makeStudent('김철희', 99, 90, 89, 70));
+        students.forEach(function (value, idx){
+            document.write(idx + "번째 : <br>" + value + '<hr>');
+        });
+
+        /*
+         makeStudent('홍길동', 100, 90, 100, 95)의 결과:
+         {name:'홍길동',kor:100, mat:90, eng:100, sci:95}
+         */
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

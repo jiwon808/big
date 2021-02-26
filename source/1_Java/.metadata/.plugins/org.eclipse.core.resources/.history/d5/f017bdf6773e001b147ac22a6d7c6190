@@ -1,0 +1,16 @@
+package com.lec.ex3_math;
+
+import java.util.Random;
+
+public class Ex03_random {
+	public static void main(String[] args) {
+		System.out.println((int)(Math.random()*45)+1);  //0-44까지        +1하면    1-45까지 
+		Random random = new Random(); //import Random
+		System.out.println("int 난수 : "+random.nextInt()); // 정수 
+		System.out.println("0~100까지 난수: "+ random.nextInt(101)); //0부터100까지   boundary 
+		System.out.println("0~44까지 int 난수 : "+random.nextInt(45));
+		System.out.println("1~45까지 int 난수: "+(random.nextInt(45))+1); //중간 괄호 필수 
+		
+		
+	}
+}

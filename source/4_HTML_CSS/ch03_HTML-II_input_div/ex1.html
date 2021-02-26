@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="ex1.css" rel="stylesheet" type="text/css" /> <!--rel   means  the relationship between the current document and the linked document-->
+    <script>
+        function chk() {
+            if (frm.name.value.length < 2) {
+                alert('이름은 2글자 이상 입력해야됩니다');
+                frm.name.focus();
+                return false;
+            } else if (frm.id.value.length < 4) {
+                alert('아이디는 3글자 이상 입력해야됩니다');
+                frm.id.focus();
+                return false;
+            } else if (frm.pw.value != frm.pwChk.value) {
+                alert('비밀번호를 확인하세요');
+                frm.pw.focus();
+                return false;
+            } else if (frm.pwChk.value.length < 1) {
+                alert('확인용비밀번호는 1글자 이상 입력해야됩니다');
+                frm.pwChk.focus();
+            } else if (!frm.email.value) {
+                alert('이메일를 입력하세요');
+                frm.pw.focus();
+                return false;
+            } else if (!frm.phone.value) {
+                alert('전화를 입력하세요');
+                frm.pw.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+    <form action="" method="get" name="frm" onsubmit="return chk()">
+        <fieldset>
+            <legend>필수 입력 사항</legend>
+            <ul>
+                <li>
+                    <label for="name">이름<b>*</b></label>
+                    <input type="text" name="name" id="name"
+                           placeholder="[a-zA-Z가-힣][a-zA-Z가-힣]+"
+                           autofocus="autofocus" />
+                </li>
+                <li>
+                    <label for="id">아이디<b>*</b></label>
+                    <input type="text" name="id" id="id"  />
+                </li>
+
+                <li>
+                    <label for="pw">비밀번호<b>*</b></label>
+                    <input type="password" name="pw" id="pw"/>
+                </li>
+
+                <li>
+                    <label for="pwChk">확인용 비밀번호<b>*</b></label>
+                    <input type="password" name="pwChk" id="pwChk"/>
+                </li>
+
+                <li> <!-- #9-->
+                    <label for="email">이메일<b>*</b></label>
+                    <input type="email" name="email" id="email" 
+                           placeholder="company아이디@domain.com/company아이디@domain.co.kr"  
+                           pattern="[a-zA-Z가-힣0-9]+@\w+[\.\w+]+" 
+                           title="이메일 형식을 지켜주세요"
+                           required="required"/>
+                </li>
+
+                <li>
+                    <label for="phone">전화번호<b>*</b></label>
+                    <input type="tel" name="phone" id="phone"  
+                           placeholder="00-000-0000/000-0000-0000/000-000-0000"
+                              pattern="\d{2,3}-[0-9]{3,4}-[0-9]{4}"
+                              title="전화번호 형식을 지켜주세요"
+                              required="required"/>
+                </li>
+
+            </ul>
+        </fieldset>
+          
+        <fieldset>
+            <legend>추가 입력 사항</legend>
+            <ul>
+                <li>
+                    <label for="region">출신지역</label>
+                    <select name="region">
+                        <option>서울</option>
+                        <option>인천</option>
+                        <option>광주</option>
+                        <option>기타</option>
+                    </select>
+
+                </li>
+
+                <li>
+                    결혼유무
+                    <input type="radio" name="marriage" value="y" checked="checked" /> 미혼
+                    <input type="radio" name="marriage" value="n" /> 기혼
+                </li>
+
+                <li>
+                    자식유무
+                    <input type="radio" name="child" value="y" checked="checked" /> 자식 없음
+                    <input type="radio" name="child" value="n" /> 자식 있음
+                </li>
+
+            </ul>
+            <p>
+                <center>
+                    <input type="submit" value="가입" />
+                    <input type="reset" value="취소" />
+                </center>
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>

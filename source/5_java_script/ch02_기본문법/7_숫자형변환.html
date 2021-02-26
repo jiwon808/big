@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        str = '100점';
+        i = Number(str);
+        document.write("<h3>1.str= '100'; i = Number(str);<h3/>");
+        document.write('str타입: ' + typeof (str) + '-값' + str + "<br>");
+        document.write('i 타입: ' + typeof (i) + '-값' + i + "<br>");
+        str = '100점';
+        i = parseInt(str); //알아서 number로 바꿔
+        document.write("<h3>2.str= '100'; i = Number(str);<h3/>");
+        document.write('str타입: ' + typeof (str) + '-값' + str + "<br>");
+        document.write('i 타입: ' + typeof (i) + '-값' + i + "<br>");
+        str = '100점';
+        i = Number(str);
+        document.write("<h3>3.str= '100'; i = Number(str);<h3/>");
+        document.write('str타입: ' + typeof (str) + '-값' + str + "<br>");
+        document.write('i 타입: ' + typeof (i) + '-값' + i + "<br>");  //값:NaN   비교하는순간 false return . 그러나 4번 paseInt에 넣는 순간 100점
+        str = '100점';
+        i = parseInt(str);
+        document.write("<h3>4.str= '100점'; i = parseInt(str);<h3/>");
+        document.write('str타입: ' + typeof (str) + '-값' + str + "<br>");
+        document.write('i 타입: ' + typeof (i) + '-값' + i + "<br>");
+        //********5번********
+        i = Number(str);
+        document.write("<h3>5.str= 'B'; i = Number(str);<h3/>");
+        document.write('str타입: ' + typeof (str) + '-값' + str + "<br>");
+        document.write('i 타입: ' + typeof (i) + '-값' + i + "<br>");  //값:NaN   비교하는순간 false return . 그러나 4번 paseInt에 넣는 순간 100점
+        str = '100점';
+        i = parseInt(str,16);
+        document.write("<h3>6.str= 'B'; i = parseInt(str,16);<h3/>");
+        document.write('str타입: ' + typeof (str) + '-값' + str + "<br>");
+        document.write('i 타입: ' + typeof (i) + '-값' + i + "<br>");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+package strategy3.step5.modularization;
+
+import strategy3.step5.component.*;
+
+//교육생 :  수업을 듣고 공부합니다(JobStudy). 교육급여를 받습니다(GetStudentPay). 	ID,이름,반을 출력함
+public class Student extends Same_Part {
+	private String id;
+	private String name;
+	private String ban;
+	public Student() {
+		setJobStudy(new JobStudy());
+		setGetStudentPay(new GetStudentPay());
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setBan(String ban) {
+		this.ban = ban;
+	}
+	
+}

@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        /*int i = 180;
+         * i.toString() 불가
+         * Integer ii =  180은 integer ii = new integer(180)같음;
+         * ii.toString()
+         */
+        var priNumber = 273.21; //priNum = new Number (273.21)
+        var objNumber = new Number(273.21);
+        document.write('priNumber의 타입은 ' + typeof (priNumber) + '<br>');
+        document.write('objNum의 타입은 ' + typeof (objNumber) + '<br>');
+        document.write('priNum.toFixed(1) : ' + priNumber.toFixed(1)+'<br>');
+        document.write('objNum.toFixed(1) : ' + objNumber.toFixed(1) + '<br>');
+        document.write('priNum 생성자 함수: ' + priNumber.constructor + '<br>');
+        document.write('objNum 생성자 함수: ' + objNumber.constructor + '<br>');
+        //.constructor -  생성자 함수를 출력 
+        if (priNumber.constructor == objNumber.constructor) {
+            document.write('priNum과 objNum의 저장된 타입이 같다');
+        } else {
+            document.write('priNum과objNum의 저장된 타입은 다르다');
+        }
+        //내장객체 Number에 메소드 추가 
+        Number.prototype.method1 = function () { alert('Number타입은 다 써') };
+        priNumber.method1();
+        objNumber.method1();
+        //objNumber에 메소드 추가 
+        objNumber.method2 = function () {
+            alert('objNum만 써');
+        }
+        //priNumber.method2();  사용불가 
+        objNumber.method2(); //method2는 objNumber에 있는 것이므로 objNumber에만 추가가능
+        //priNumber에 메소드 추가
+        priNumber.method3 = function () {
+            alert('되나보자');
+        }
+
+        priNumber.method3();
+        //priNumber과objNumber은 사용법 같음. priNumber에 메소드 추가 불가 
+        //(기초데이터타입 = number, string, boolean)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<!--특정한 곳을 찝어서 바꿀 수 있다-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>index</title>
+    <script>
+        window.onload = function () {
+
+            //h1태그 생성 - textNode 생성 - 생성된 textNode를 h1에 추가 - h1를바디에 추가  (강의자료10.1차트 참조)
+            var h1 = document.createElement('h1');
+            var textNode = document.createTextNode('추가한 텍스트');
+            // 생성된 textNode를 h1에 연결 
+            h1.appendChild(textNode);
+            //h1를 바디(document)에 연결 
+            document.body.appendChild(h1); // **원래 있는것에 h1이 더 추가  // img옆 h1하나 달라붙고 밑에 T (강의자료10.1차트 참조)
+            //img 태그 생성 - src속성 지정 - body에 연결 
+            var img = document.createElement('img');
+            img.setAttribute('src', 'ch10_img/orange.jpg');
+            img.setAttribute('alt', '추가한 오렌지');
+            document.body.appendChild(img);
+            document.body.innerHTML += '<h1>추가</h1>'; //+=를해야 앞에 게 남아 있어. 아니면 '추가'만 남아
+        }; //window가 다 떠질때 실행 
+        
+    </script>
+</head>
+<body>
+    <h1>Text Node</h1>
+    <img src="ch10_img/orange.jpg" />   <!--원래는 이거/  윗<script>내용을 통해 변경,추가-->
+</body>
+</html>

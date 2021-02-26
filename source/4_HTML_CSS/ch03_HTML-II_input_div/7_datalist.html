@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    전송안되는 파라미터 <input type="text" name="test"/>
+    <form action="" method="get">
+        <p>전화<input type="tel" placeholder="000-0000-0000"
+                        name="tel" required="required"/></p>    <!--도움말: 화면에 보이는데 실제로 입력된게 아님-->
+        <p>카드<input type="text" name="card"
+                    placeholder="xxxx-xxxx"
+                    pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}"
+                    title="카드번호는 숫자4자리- 숫자4자리입니다"/>  <!--0부터9까지 4번나와라--> <!--패턴을 숫자4자리 숫자4자리로 설정해서 이렇게 입력해야-->
+        </p>
+        <p>업무<input type="text" name="job" list="datalist"/>
+             <datalist id="datalist"> <!--id="datalist"가 들어가야-->
+                 <option value="분석"></option>
+                 <option value="설계"></option>
+                 <option value="구현"></option>
+                 <option value="테스트"></option>
+                 <option value="유지보수"></option>
+             </datalist>
+        </p>
+        <p> 업무2<select name="job2">
+                <option value="분석">분석</option>
+                <option value="설계">설계</option>
+                <option value="구현">구현</option>
+                <option value="테스트">테스트</option>
+                <option value="유지보수">유지보수</option>
+                </select>
+        </p>
+        
+         <input type="hidden" name="no" value="99" /> <!--안보임 화면에 보이고 싶으나 넘어가게하고 싶지 않을때-->  <!--5개 파라미터   test파라미터는 안넘어감 form tag안에 없어서-->
+
+        <input type="submit" value="전송합니다" />
+        
+    </form>
+</body>
+</html>

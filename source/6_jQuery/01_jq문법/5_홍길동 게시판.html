@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        tr:hover {background-color: orange;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+    $('tr').click(function (){
+        var no = $(this).children(0).eq(0).text(); //<td>제목4</td>  text만가져와 //!!철자주의 
+        //alert(no); //갖고온 게 number면 상세페이로 이동 
+        //***************children(0).eq(0).text()인 이유***************
+        //*********children() 자식거 가져옴 
+        /****그냥 eq(0)이면  '<tr><th>글번호</th> <th>글제목</th> <th>글쓴이</th> <th> 조회수</th> </tr>' 이줄 전체가 됨
+         * 그러나 children(0).eq(0)인경우  첫번째 라인의 첫번째 자식child 따라서 '<th>글번호</th>'이 부분이됨
+        */
+        if (isNaN(Number(no))) {
+            //맨위 타이틀을 클릭한 경우
+        } else {
+            //해당 글번호 상세보기 페이지로 넘어감 
+            location.href = "4_selector.html?no=" + no;
+          }
+        });
+       });
+    </script>
+</head>
+<body>
+    <table>
+        <tr><th>글번호</th> <th>글제목</th> <th>글쓴이</th> <th> 조회수</th> </tr>
+        <tr><td>4</td> <td>제목1</td>  <td>홍길동</td> <td>11</td>  </tr>
+        <tr><td>3</td> <td>제목2</td>  <td>이길동</td> <td>12</td>  </tr>
+        <tr><td>2</td> <td>제목3</td>  <td>신길동</td> <td>10</td>  </tr>
+        <tr><td>1</td> <td>제목4</td>  <td>박길동</td> <td>15</td>  </tr>
+    </table>
+</body>
+</html>

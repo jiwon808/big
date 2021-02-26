@@ -1,0 +1,6 @@
+package com.lec.ex12_account;
+
+public class CreditLineAccount extends CheckingAccount {
+
+	new CreditLineAccount("222-2222","성춘향",2000,"1234-1234,10000")
+}

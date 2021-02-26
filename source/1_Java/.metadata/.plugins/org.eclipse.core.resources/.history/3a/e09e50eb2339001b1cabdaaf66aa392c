@@ -1,0 +1,11 @@
+package com.lec.ex07Car;
+
+public class LowGradeCar extends Car {
+
+	@Override
+	public void getSpec() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

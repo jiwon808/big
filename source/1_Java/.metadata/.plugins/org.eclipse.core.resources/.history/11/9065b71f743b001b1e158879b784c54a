@@ -1,0 +1,11 @@
+package strategy2.step5.component;
+
+public class EngineLow implements IEngine {
+
+	@Override
+	public void engine() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

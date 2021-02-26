@@ -1,0 +1,23 @@
+package com.lec.ex08Employee;
+
+public abstract class Employee { //문의
+	private String name;
+	private final int computeIncentive;
+	private int computePay;
+	public Employee(String name, int computeIncentive, int computePay) {
+		this.name = name;
+		this.computeIncentive = computeIncentive;
+		this.computePay = computePay;
+	}
+	public abstract int computePay();
+	public String getName() {
+		return name;
+	}
+	public int getComputeIncentive() {
+		return computeIncentive;
+	}
+	public int getComputePay() {
+		return computePay;
+	}
+	
+}

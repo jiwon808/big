@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div{border: 1px solid lightgray;}
+        #header{
+            width: 600px; margin:0 auto; /*header의가로가600px*   div포함해서 총602px*/
+            background-color:yellow;
+            text-align:center;/*글씨 가운데 정렬*/
+        }
+        #wrap{
+            width:600px; margin:0 auto;
+            background-color:aqua;
+            overflow:hidden;
+        }
+        #wrap #content { /*content는 wrap의 자식*/
+            width: 350px; /* #content가 필요한 영역=width(350)+border(2)=352px;*/
+            float: left; /*left로 붙어라*/
+            text-align:center; /*글씨나 이미지 가운데 정렬*/
+            height:300px;
+        }
+        #wrap #content ul li.menu1{font-size:1.5em;}/*글씨크기를 원래크기의1.5배*/ /*!!class앞 . 붙여!!*/ /*나열하고싶을때 ,  */
+                                                     /*#wrap #content ul li에있는.menu1*//*li가menu1이어서 붙여주어야 li.menu1*/
+        #wrap #content ol li.menu2,
+        #wrap #content ol li.menu4 {font-weight: bold;} /*!! tag,id,class혼합*/
+        #wrap #side_banner{ /*banner가 쓸 수 있는 공간= 600-352=248px *   여기서 빼기border(2)  따라서246px*/
+            width:246px;
+            float:left; 
+            text-align:center;
+            height:300px;
+        }
+       #wrap #side_banner img {
+                width: 200px;
+            }
+      
+        #footer{
+            clear:both; /*float 속석을 제거 역할*/
+            width:600px; margin:0 auto;
+            background-color:yellow;
+            text-align:center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>HEADER</h1>
+    </div>
+    <div id="wrap">
+        <div id="content">
+            <h2>content</h2>
+            <ul>
+                <li class="menu1">menu1</li> <!--class는 유일하지 않아도됨-->
+                <li class="menu2">menu2</li>
+                <li class="menu1">menu3</li>
+
+            </ul>
+            <ol>
+                <li class="menu1">menu1</li> <!--class는 유일하지 않아도됨-->
+                <li class="menu2">menu2</li>
+                <li class="menu1">menu3</li>
+
+            </ol>
+        </div>
+        <div id="side_banner">
+          <h2>BANNER</h2>
+          <a href="http://www.daum.net" target="_blank">
+            <img src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png" 
+                 alt="다음아이콘" />
+          </a>
+        </div>
+    </div> <!--wrap의 /div-->
+    <div id="footer">
+        <h1>FOOTER</h1>
+    </div>
+</body>
+</html>

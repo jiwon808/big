@@ -1,0 +1,255 @@
+﻿/*font-face는 css맨 위에!*/
+@font-face {
+    font-family: 'Amarante'; 
+    src: url('../font/Amarante-Regular.ttf' ); /* .. ==그위로 부터 가져와*/
+}
+/**************페이지 초기화**************/
+* {
+    margin: 0; padding: 0;
+    font-family: 'Times New Roman', 'Amarante',Times, serif;
+}
+a{text-decoration:none; color:black;}
+li{list-style:none;}
+
+/***************#header_nav***********/
+#header_nav {
+    width: 100%;
+    min-width: 1000px; /*최소 1000px을유지한다*/ /*화면을 옆으로 줄일때 최소1000px로 짤리게. 이렇게 설정하지 않으면 이line에 있는 내용 밑으로 떨어져*/
+    height: 25px;
+    line-height: 25px;
+    background-color: #2d1152;
+    font-size: .9em;
+    overflow: hidden;
+}
+/*gnb*/
+#header_nav .gnb{    
+    background-color:purple;
+    display:block;
+    width:800px;
+}
+#header_nav .gnb ul{
+    margin:0 auto;
+}
+#header_nav .gnb ul li{
+    float:left;
+    margin-right:20px;
+}
+#header_nav .gnb ul li a{
+    color:white;
+}
+
+/*survivalFootball*/
+#header_nav .survivalFootball{
+    float:right;
+}
+#header_nav .survivalFootball a{
+    color:white;
+}
+#header_nav .survivalFootball a img{/*해골 이미지 사이즈 조정*/
+    width:15px;
+    height:15px;
+    }
+/***************#header_info****수정*******/
+/*logo*/
+#header_info{
+    overflow:hidden;
+    width:1000px; /*중요!!그래야 중간으로옴*/                             
+    margin:0 auto; 
+}
+
+#header_info div {
+    float: left;
+}
+
+#header_info .logo {
+    margin: 10px auto;
+    margin-right: 10px;
+}
+
+#header_info .search input {
+    width: 400px;                    /*#header_info .search input*/
+    height: 30px;
+    margin-top: 20px;
+    border:1px solid #3488d9;
+    outline:1px solid #3488d9;
+}
+#header_info .search .btn_search{ /**********background image**********/
+    margin-top:20px;                          /*positon:absolute (x) 버튼클릭안됨*/
+    width:124px; height:37px;                 /*버튼 size조정*/
+    background:url('../img/search_btn.png');  /* 다른 폴더에 있으면 .. */
+    outline: 0;                 /*버튼outline디자인 중요*/
+    border:0;                   /*버튼outline디자인 중요*/
+}
+
+#header_info .search input {
+    border-color:#3488d9;                             
+    margin-right:1px;
+
+}
+
+#header_info .service ul{
+    margin-top:10px;
+    margin-left:40px;                           /*service위치조정*/
+    text-align:center;
+}
+
+#header_info .service ul li{ /*수정*/
+    float:left;
+    width:70px;
+    margin-top:20px;
+    font-weight:bold;                                  
+
+}
+
+/***************#content***********/
+/*main menu*/
+#content {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 1000px;                    /* ***중요!!:block타입은 width를 지정해주지 않으면 부모꺼 다 쓰게된다 ****/
+}
+#content #main_menu{
+    float:left;                /*float*/
+    width:155px;
+}
+#content #main_menu ul li {
+    height:40px;
+    text-align:center;
+}
+
+#content #main .big{
+    width:600px;
+    height:300px;
+}
+#content #main .slide{
+    width:600px;
+    height:150px;
+}
+#content #main .middle_menu {
+    background-color: #500095;
+    overflow: hidden;
+    width: 600px;
+    height: 50px;
+    line-height:50px;
+    margin:0 auto;
+}
+
+#content #main .middle_menu ul li {
+    float:left;
+    display:block;
+    width: 100px;
+}
+#content #main .middle_menu ul li a{
+    color:white;
+    
+}
+/*main div*/
+#content #main{
+    float:left;                /*float*/
+
+} 
+
+
+#content #main div{
+    width:600px;
+    height:100px;
+    border:1px solid gray;
+    margin:0 auto;
+    margin-bottom:3px;
+}
+/*main banner*/
+ /*중간정렬*/
+ #content #main_banner{
+     float:left;                /*float*/
+    margin-left:3px;
+}
+
+#content #main_banner .hit {
+    width: 230px;
+    height: 100px;
+    margin:0 auto;
+    margin-bottom:3px;
+    border:1px solid gray;
+}
+#content #main_banner .ad1 {
+    width: 230px;
+    height: 100px;
+    margin: 0 auto;
+    margin-bottom: 3px;
+    border: 1px solid gray;
+}
+#content #main_banner .ad2 {
+    width: 230px;
+    height: 150px;
+    margin: 0 auto;
+    margin-bottom: 3px;
+    border: 1px solid gray;
+}
+#content #main_banner .ad3 {
+    width: 230px;
+    height: 150px;
+    margin: 0 auto;
+    margin-bottom: 3px;
+    border: 1px solid gray;
+}
+#content #main_banner .ad4 {
+    width: 230px;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 3px;
+    border: 1px solid gray;
+}
+footer {
+    overflow: hidden;
+    width: 1000px;
+    height: 100px;
+    border: 1px solid gray;
+    margin: 0 auto;
+}
+footer ul{
+    width:700px;
+    margin: 0 auto;
+}
+
+footer ul li{ /*li가 원래block type*/
+    float:left;
+    margin:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

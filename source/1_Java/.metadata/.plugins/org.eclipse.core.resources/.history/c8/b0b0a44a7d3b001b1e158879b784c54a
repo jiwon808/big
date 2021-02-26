@@ -1,0 +1,11 @@
+package strategy3.step5.component;
+
+public class GetSalary implements Iget {
+
+	@Override
+	public void get() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.lec.ex4_Object;
+
+public class RectangleMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

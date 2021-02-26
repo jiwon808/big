@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<!-- setinterval, var
+    0부터9 실수  0부터8까지 math.trunk       0부터8까지 -->
+<!--3단계:배열 방5개 -->
+
+
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        $('#n2').val(parseInt(math.random() * 10));
+        var opIdx = parseInt(Math.random() * 4); //0-3
+        $('#operation').html('<b>' + opArray[opIdx] + '</b>');
+                    //뿌려질 사칙연산: opArray[opIdx]
+        $('#cal').click(function () {
+            //정답계산부분
+            var n1 = Number($('#n1').val());
+            var n2 = Number($('#n2').val());
+            var answer Temp = [n1 + n2, n1 - n2, n1 * n2, n1 / n2];
+            var answer = answerTemp[opIdx];
+
+            if (!isFinite(answer)) {
+                $('.result').html('0으로 나누는 문제가 아닙니다.');
+            } else if ($('#answer').val() != '' &&
+                $('#answer').val() == answer) {
+                $('.result').html('맞습니다').css('color', 'blue');
+            } else {
+                $('.result').html('틀립니다').css('color', 'red');
+            }
+
+        });
+    </script>
+</head>
+<body>
+    1단계: <input type="" />
+    <onclick="">
+        <button value="다시해봐>"</button>
+        <button value="채점해봐"></button>
+
+
+
+
+</body>
+</html>

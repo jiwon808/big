@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form>
+        <input type="hidden" name="xx" value="hiddenData" /> <!--전달은 되는데 눈에 안보임 type="hidden"이기때문-->
+        disable data: <input type="text" disabled="disabled"
+                             name="disableData" value="disable" /> <br /><!--화면에만 보일뿐 바꿀 수 없어  disabled는 다음으로 안넘어가-->
+        <!--disabled="disabled" 는 function        name="disableData" 다음으로 넘어가게 하는 것           value="disable는 화면 빈칸안에 보여지는 것-->
+        readOnly data:<input type="text" readonly="readonly"
+                             name="readDate" value="readOnly" /> <br />
+        <input type="submit" />
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var cnt = 0; //변수 선언 
+        for (var key in window) {
+            if(key=='onload' || key =='cnt' ) //onload와cnt일 경우만 뿌려 
+            document.write(++cnt + '.' + key + ':' + window[key] + '<br>'); // ++cnt+'.'   == 숫자부여 
+        }
+
+        window.onload = function () { alert('윈도우가 로드됨'); };
+        function chk() { }  //************그냥 만드는method도 다  window내장 객체에 들어감 
+        document.write('<hr>');
+        for (var key in window) {
+            if (key == 'onload' || key == 'cnt') //onload와cnt일 경우만 뿌려 
+                document.write(++cnt + '.' + key + ':' + window[key] + '<br>'); // ++cnt+'.'   == 숫자부여 
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

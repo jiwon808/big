@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<!--td를 가져오면 5번째 td에 background color 노랑색. 숫자5를 눌렀다. td5의 background를 넣으면  5를 눌렀을때 5번째td 우선 다
+    하얗게. 0-8번 for문     5를  td/  event. 키코드 값. backgroundColor= yellow-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table {
+            width: 500px;
+            margin: 50px auto;
+            background-color: darkgreen;
+        }
+
+        td {
+            background-color: white;
+            padding: 50px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        window.onkeyup = function () {
+            var tds = document.getElementsByTagName('td');
+            if (event.keyCode >= 96 && event.keyCode <= 104) {   //96이0   104가8  
+                // 우측 키보드 숫자
+                for (var i = 0; i < tds.length; i++) { //일반for문 
+                    tds[i].style.backgroundColor = 'white'; // td우선 전부 흰색
+                }
+                tds[event.keyCode - 96].style.backgroundColor = 'yellow'; //키코드값-96 = 내가 누른 숫자    내가 누른숫자yellow로 바꿔라
+            }
+
+            if (event.keyCode >= 48 && event.keyCode <= 56) {
+                // ex1. 윗 키보드, 우측키보드 모두 yellow
+                // 윗 키보드 숫자 , ex2의 경우 윗 키보드 숫자는 red
+                for (var i = 0; i < tds.length; i++) {
+                    tds[i].style.backgroundColor = 'white';
+                }
+                tds[event.keyCode - 48].style.backgroundColor = 'yellow';
+            }
+        };
+    </script>
+</head>
+<body>
+    <table>
+        <tr><td>0</td><td>1</td><td>2</td></tr>
+        <tr><td>3</td><td>4</td><td>5</td></tr>
+        <tr><td>6</td><td>7</td><td>8</td></tr>
+    </table>
+</body>
+</html>

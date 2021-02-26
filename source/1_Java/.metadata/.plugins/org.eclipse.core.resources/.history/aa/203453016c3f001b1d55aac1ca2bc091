@@ -1,0 +1,8 @@
+package com.lec.ex5_Book;
+
+public interface Ilendable {
+	public byte STATE_BORROWED =1;
+	public byte STATE_NORMAL =0;
+	public void checkOut(String borrower, String checkOutDate); //예외발생
+	public void checkIn(); //예외발생
+}

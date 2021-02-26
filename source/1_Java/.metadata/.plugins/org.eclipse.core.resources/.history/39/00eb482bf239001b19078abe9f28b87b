@@ -1,0 +1,11 @@
+package com.lec.ex05;
+
+public interface IVolume {
+	public int TV_MAX_VOLUME =50;     //final변수 선언 
+	public int RADIO_MAX_VOLUME=30;   //final변수 선언 
+	public int MIN_VOLUME=0;          //final변수 선언 
+	public void volumeUp();
+	public void volumeUp(int level);
+	public void volumeDown();
+	public void volumeDown(int level);
+}

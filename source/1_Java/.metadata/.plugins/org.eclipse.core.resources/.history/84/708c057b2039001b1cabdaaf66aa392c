@@ -1,0 +1,8 @@
+package com.lec.ex06lunch;
+
+public class TestMain {
+	public static void main(String[] args) {
+		Child1 child1 = new Child1(300,1000,100,300,800,350); 
+		Child2 child2 = new Child2(300,1000,100,300,800,350); //왜 안좋은지. 숫자 바꾸는게 더 편리한게 아닌지 문의 
+	}
+}

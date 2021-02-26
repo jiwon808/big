@@ -1,0 +1,11 @@
+package strategy1.step4.modularization;
+import strategy1.step4.component.*; 
+public class LowRobot {
+	private IFly     fly;
+	private IMissile missile;
+	private IKnife   knife;
+	public LowRobot() { 
+		fly= new
+		
+	}
+}

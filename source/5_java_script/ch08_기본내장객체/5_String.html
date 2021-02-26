@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        String.prototype.replaceA = function (oldStr, newStr) {
+            //var s1 = this.split(oldStr);  //'abcd','abcd','abc'   //this가 string
+            //var s2 = s1.join(newStr);
+            //return s2;    밑에 대한 구체적 설명
+            return this.split(oldStr).join(newStr);
+        }                               //***************위에다 넣어야한다. 왜냐면 위에다 선언하지 않으면 않고 밑에다 선언하면 
+                                        //25line에 있는  replaceA는 replaceA변수가 없다고 함 따라서 에러나서 그 전단계까지 수행
+        var str = 'abcd@abcd@abc';
+        var str = new String('abcd@abcd@abc');
+        document.write('글씨길이 : ' + str.length + '<br>');
+        //substring(a,b): a번째부터b번째 앞까지
+        document.write('글씨더하기 : ' + str.concat('123') + '<br>');
+        //substring(a,b): a번째부터 b번째 앞까지 추출 
+        document.write('글씨추출:' + str.substring(3, 5) + '<br>'); //3번째부터 5번째 앞까지
+        //substr(a,b): a번째부터b글자 추출
+        document.write('글씨추출:' + str.substr(3, 5) + '<br>');
+        document.write('앞부터 일치하는 위치:' + str.indexOf('@') + '<br>'); //중요!! indexOf는 string안에서만 가능   str.indexOf('@') 
+        document.write('뒤부터 일치하는 위치:' + str.lastIndexOf('@') + '<br>');
+        document.write('@를 " "로:' + str.replaceA('@', '') + '<br>');
+        document.write('"yisy "를space없애기: ' + 'yi '.trim() + '<br>'); //trim은 앞뒤space다 없앰 
+        document.write("대문자로 변환:" + str.toUpperCase() + '<br>');
+        document.write("소문자로 변화:" + str.toLowerCase() + '<br>');
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<!--원래1x7 table. td 빨주노토파남보  첫번째td에 클릭하면 onmouseOver하면red /onmouseOut하면 다시 하얀색 -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table{width:280px; height:100px; margin:0 auto;}
+    </style>
+    <script>
+        var color = ['red', 'organge', 'yellow', 'green', 'blue', 'navy', 'violet', 'white']; //(1)우선color를 배열
+        window.onload = function(){
+            var td = document.querySelectorAll('td'); //(2) 모든td를 가져온다
+            for (var idx in td) {                     //(3) for문을 돌린다
+                //td[idx].style.backgroundColor = color[idx];
+                td[idx].style.cssText = 'background-color:' + color[idx]; //****** 마우스를table각 컬러위에 대면 background color가 바뀐다 
+            }
+        };
+        function backcolorChange(idx) {
+            document.body.style.backgroundColor = color[idx]; //****tr는 따로 어디 안 놓아도되는지
+        }
+    </script>
+</head>
+<body>
+    <h6>ex1.마우스를 올리면 바탕화면도 해당 색상으로 바꾸기</h6>
+    <table>
+        <tr onmouseout="backcolorChange(7)">
+            <td onmouseover="backcolorChange(0)"></td>
+            <td onmouseover="backcolorChange(1)"></td>
+            <td onmouseover="backcolorChange(2)"></td>
+            <td onmouseover="backcolorChange(3)"></td>
+            <td onmouseover="backcolorChange(4)"></td>
+            <td onmouseover="backcolorChange(5)"></td>
+            <td onmouseover="backcolorChange(6)"></td>
+        </tr>
+    </table>
+</body>
+</html>

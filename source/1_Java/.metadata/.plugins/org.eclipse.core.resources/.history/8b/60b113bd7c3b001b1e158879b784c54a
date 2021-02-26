@@ -1,0 +1,11 @@
+package strategy3.step5.component;
+
+public class JobLec implements IJob {
+
+	@Override
+	public void job() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

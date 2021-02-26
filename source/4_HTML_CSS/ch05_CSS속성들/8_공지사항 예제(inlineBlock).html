@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<!--div안에3개 div, 공지사항 url,   padding,margin,backgtound color:gray  안 white  display inline-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{color:blue;}
+        a{text-decoration:none;} /*페이지 초기화*/
+
+        #wrap {
+            width:660px;
+            margin:0 auto;
+            background-color:lightgrey;  
+        }
+            #wrap div {
+                display: inline-block; /* ***********inline-block! *********** */
+                width: 200px;
+                background-color: white;
+                margin: 10px;
+                border-radius: 10px;
+            }
+        #wrap div p{
+            padding: 0 20px; font-size:1.5em;
+        }
+        ul li{
+            list-style:none;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div>
+            <p>공지사항</p>
+            <ul>
+                <li> <a href="#">게시물_01</a></li>
+                <li> <a href="#">게시물_02</a></li>
+                <li> <a href="#">게시물_03</a></li>
+                <li> <a href="#">게시물_04</a></li>
+                <li> <a href="#">게시물_05</a></li>
+            </ul>
+        </div><div> <!--여기space없애야 한줄로 다 들어와-->
+            <p>공지사항</p>
+            <ul>
+                <li> <a href="#">게시물_01</a></li>
+                <li> <a href="#">게시물_02</a></li>
+                <li> <a href="#">게시물_03</a></li>
+                <li> <a href="#">게시물_04</a></li>
+                <li> <a href="#">게시물_05</a></li>
+            </ul>
+        </div><div> <!--여기space없애야 한줄로 다 들어와-->
+            <p>공지사항</p>
+            <ul>
+                <li a href="#">게시물_01</li>
+                <li a href="#">게시물_02</li>
+                <li a href="#">게시물_03</li>
+                <li a href="#">게시물_04</li>
+                <li a href="#">게시물_05</li>
+            </ul>
+            </div>
+    </div>
+
+
+
+</body>
+</html>

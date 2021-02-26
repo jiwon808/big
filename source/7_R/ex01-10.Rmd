@@ -1,0 +1,134 @@
+---
+title: "ex01-10"
+author: "Kim"
+date: '2021 3 8 '
+output: html_document
+---
+### ex01
+```{r}
+library(datasets)
+ggplot(data=cars   , aes(x=speed, y=dist)) + geom_point()+ 
+    coord_cartesian(xlim=c(0,20)) +  
+    coord_cartesian(ylim=c(0,100)) +        #y축 0부터2까지만 출력.  #줄235
+  geom_smooth(method='lm') 
+
+```
+
+
+### ex02
+```{r}
+library(gapminder)
+ggplot(data=gapminder,aes(x=gdpPercap, y=lifeExp)) + 
+  geom_point(aes(size=continent, color=continent)) + 
+  labs(x="gdpPercap",
+       y="lifeExp")
+
+```
+
+### ex03
+```{r}
+library(dplyr)
+gapminder %>%
+  filter(lifeExp >=70 )%>% 
+  group_by(continent) %>% 
+  summarise( n= n() ) %>%                         #데이터를 우선 뽑고 
+  ggplot(aes(x=continent,y=n,fill=continent)) +            #geom_point(aes(color=Month)) +   # 외관선 줄 244  
+  labs(title="기대수명이 70을 초과하는 데이터 빈도(대륙별)", x="대륙",y="빈도")+
+  #geom_bar(stat="identity)                                                       
+  geom_col()
+
+```
+
+
+### ex04
+```{r}
+gapminder %>%
+  filter(lifeExp >=70 )%>%                           
+  group_by(continent) %>% 
+  summarise( n= n_distinct(country) ) %>%    #대륙별 '나라 갯수'.                         ####
+  ggplot(aes(x=continent,y=n,fill=continent)) +    
+  labs(title="기대수명이 70을 초과하는 대륙별 나라 갯수", x="continent" ,y="나라빈도")+
+  #geom_bar(stat="identity)
+  geom_col()
+
+```
+
+
+
+### ex05 
+```{r}
+library(gapminder)
+ggplot(gapminder,aes(x=continent,y=lifeExp))+
+  geom_boxplot(aes(color=continent))     
+
+```
+
+
+
+### ex06 
+
+```{r}
+ggplot(gapminder,aes(x=gdpPercap,y=lifeExp))+
+  geom_point(aes(color=continent))+     
+  facet_wrap(~year) +
+  scale_x_log10()  
+
+```
+
+
+
+
+
+
+
+### ex07 
+```{r}
+gapminder%>%
+  filter( country %in% c ( 'Korea, Dem. Rep.'  , 'Korea, Rep.' )) %>%
+  ggplot(aes(x=year, y=gdpPercap)) +
+  geom_point(aes(shape=country, col=country)) +                               
+  labs(title="GDP의 변화(한국과 북한)")+
+  scale_shape_manual(values=c(1,3))  
+
+```
+
+
+### ex08 
+```{r}
+gapminder%>%
+  #filter(gdpPercap)%>% 
+  filter( country %in% c ( 'China', 'Japan' ,'Korea, Dem. Rep.'  , 'Korea, Rep.' )) %>%
+  ggplot(aes(x=year, y=gdpPercap, col=country) ) +  #x축,y축
+  geom_point(shape=1)+ 
+  geom_line() +    #추세선
+  labs(title="한중일 4개국의 GDP 변화를 산점도와 추세선")   
+
+```
+
+
+### ex09
+
+```{r}
+gapminder%>%
+  filter( country %in% c ( 'China', 'Japan' ,'Korea, Dem. Rep.'  , 'Korea, Rep.' )) %>%
+  ggplot(aes(x=year, y=pop, col=country) ) +  #x축,y축
+  geom_point(shape=1)+ 
+  geom_line() +    #추세선
+  labs(title="한중일 4개국의 인구변화의 산점도와 추세선")  
+
+```
+
+### ex10
+
+
+```{r}
+library(ggplot2)
+ggplot(data=economics, aes(x=date, y=psavert)) +  #x축,y축   #ggplot함수이름  #background초기화 
+  labs(title="개인저축률 시계열 그래프")+
+  geom_line(col='red', size=2) +    #추세선  두툼하게 
+  geom_smooth(col='pink')
+
+```
+
+
+

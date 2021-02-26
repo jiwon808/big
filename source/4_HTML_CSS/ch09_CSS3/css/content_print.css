@@ -1,0 +1,9 @@
+﻿/*content부분(프린트용): content_print.css*/
+/*인쇄 누를때 content_print용 css로 된다*/
+#wrap #content {
+    background-color: white;
+    color: red;
+    font-size: 16px;
+    padding: 30px 10px;
+}
+

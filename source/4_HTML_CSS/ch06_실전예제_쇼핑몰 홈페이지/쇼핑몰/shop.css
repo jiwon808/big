@@ -1,0 +1,238 @@
+﻿/* * * * * * 페이지 초기화 * * * * * * */
+*{ padding:0; margin:0;}
+
+
+/* * * * * header * * * * * * * * * */
+#header {
+    width:100%;
+}
+    /*gnb*/
+#header .gnb{
+    background-color:darkgrey;
+    height:30px;
+    overflow:hidden;
+}
+#header .gnb ul{
+    width:1000px;
+    margin: 0 auto;
+}
+#header .gnb li{
+    float:left;
+    list-style:none;
+    margin:2px;
+}
+
+#header .gnb li a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    display:block;                      
+    width:90px;
+    height:30px;
+    line-height:30px;
+}
+
+         /*logo*/
+.logo {               
+    text-align:center;
+    border: 1px solid gray;
+    width: 200px;
+    height: 80px;
+    line-height:80px;
+    margin: 10px auto; /*중간정렬 align center*/  /*상 우 하 좌  10 auto 10 auto*/
+}
+
+
+      /*hitmenu*/
+#header .hitmenu {
+    width: 1000px; margin: 0 auto; /***중요!! 이 천안에 들어와야**/
+    overflow: hidden;
+}
+
+#header .hitmenu li {
+    float:right;
+    list-style:none;
+    border:1px solid gray;
+}
+
+#header .hitmenu li a{
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+    display:block; 
+    width: 70px;
+    height: 40px;
+    line-height: 40px;
+    text-align:center;
+}
+
+#header .hitmenu li:first-child {
+    border-radius: 0 10px  10px 0;
+}
+#header .hitmenu li:last-child {
+    border-radius: 10px 0 0 10px;
+}
+
+            /*lnb*/
+#header .lnb{
+    width:100%;
+    height:30px;
+    overflow:hidden;
+    border: 1px solid gray;
+}
+
+#header .lnb ul{
+    width:1000px;
+    margin: 0 auto;
+}
+
+#header .lnb li{
+    float:left;
+    list-style:none;
+    margin:2px;
+}
+#header .lnb li a {
+     text-decoration: none;
+     font-weight: bold;
+     color:black;
+     display: block; /* display:block을해야 'height'가 적용됨. 왜냐하면 li는 inline tag.   block을 넣지 않으면 글자밖에 클릭안됨 */
+     width: 120px;
+     height: 30px;
+     line-height: 30px;
+}
+
+
+
+
+/* * * * * content * * * * * * * * * */
+#content{
+    width:1000px;
+    margin:0 auto;
+    
+}
+#content .section1{
+    overflow:hidden;
+}
+#content .section1 .slide_banner{
+    float:left;  /*float left 할 파트에 이것을 집어넣어. 윗단에 넣는거 아님*/
+    width:698px;
+    height:400px;
+    border:1px solid grey;
+    text-align:center;
+    line-height:400px;
+}
+#content .section1 .side_banner{  /*********************수정*******************/
+    float:left; /*float left 할 파트에 이것을 집어넣어. 윗단에 넣는거 아님*/
+    width:299px;
+    height:400px;
+    border:1px solid grey;
+    border-left:0px;
+    text-align:center;
+    line-height:400px;
+}
+
+          /*section2*/
+            /*hit p*/
+#content .section2  .hit_product{
+    border:1px solid grey;
+    height:400px;
+    overflow:hidden;  
+}
+
+#content .section2 .hit_product ul li {
+    box-sizing:border-box;
+    width:240px;
+    height: 400px;
+    border: 1px solid gray;
+    float: left;
+    list-style: none;
+    margin: 3.5px;
+    margin-top:0px;
+    text-align:center;
+}
+    #content .section2 .hit_product ul li:nth-child(1) {   /*nth-child앞에 space있으면 안됨*/
+    margin-left:7px;}        /* *********margin맞추기 중요!!!***********/
+
+#content .section2 .hit_product ul li a {
+    text-decoration:none;
+    color: blue;
+    line-height: 400px;
+}
+
+
+             /*md p*/
+#content .section2  .md_product{
+    border:1px solid gray;
+    height:400px;
+    overflow:hidden;               
+}
+#content .section2 .md_product ul li {
+     box-sizing:border-box;
+    width:240px;
+    height: 400px;
+    line-height: 400px;
+    border: 1px solid gray;
+    float: left;
+    list-style: none;
+    margin: 3.5px;
+    margin-top:0px;
+    text-align:center;
+}
+#content .section2 .md_product{
+    margin-top: 10px;
+}
+#content .section2 .md_product ul li:nth-child(1) {   /*nth-child앞에 space있으면 안됨*/
+    margin-left:7px;}  
+
+
+#content .section2 .md_product ul li a {
+    text-decoration:none;
+    color:blue;
+    display:block;
+    
+    
+}
+
+
+/* * * * * footer * * * * * * * * * */       /*위 안먹힘 +footer ul li*/
+#footer{
+    width:1000px;
+    margin:0 auto;
+    overflow:hidden;
+}
+#footer div{
+    float:left;
+}
+
+#footer .office_logo{
+    border:1px solid gray;
+    width: 180px;
+    height: 70px;
+    margin-right:1px;
+}
+
+#footer .office_address{
+    border:1px solid gray;
+    width: 530px;
+    height: 70px;
+    margin-right:1px;
+
+}
+
+#footer .shopping_info{
+    border:1px solid gray;
+    width: 280px;
+    height: 70px;
+}
+
+
+#footer .copyright{
+    width:1000px;
+    background-color:black;
+    color:white;
+    text-align:center;
+    clear:both;
+}
+
+
+

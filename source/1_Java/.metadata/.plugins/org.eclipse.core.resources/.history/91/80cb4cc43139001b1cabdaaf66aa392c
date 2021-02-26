@@ -1,0 +1,8 @@
+package com.lec.ex08Employee;
+
+public abstract class TestMain {
+	public static void main(String[] args) {
+		Employee saralyEmployee = new SalaryEmployee(“홍길동”,2800); 
+		Employee hourlyEmployee = new HourlyEmployee("신길동",100,8500);
+	}
+}

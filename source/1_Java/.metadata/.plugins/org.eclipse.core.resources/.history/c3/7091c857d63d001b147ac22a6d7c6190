@@ -1,0 +1,10 @@
+package com.lec.ex2_date;
+
+public class Ex07_birthDay {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

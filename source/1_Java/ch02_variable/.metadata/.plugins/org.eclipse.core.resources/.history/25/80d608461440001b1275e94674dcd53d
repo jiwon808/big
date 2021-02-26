@@ -1,0 +1,7 @@
+package com.lec.ex1_list;
+
+public class Customer {
+	private String name;
+	private String phone;
+	private String address;
+}

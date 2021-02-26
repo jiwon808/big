@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<!--onmouseover과 onmouseout의 차이-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table {width: 280px; height: 100px;margin: 0 auto;}
+    </style>
+    <script>
+        var color = ['red', 'orange', 'yellow', 'green', 'blue', 'navy', 'violet','black'];
+        window.onload = function () {
+            var td = document.querySelectorAll('td');
+            for (var idx = 0; idx < td.length; idx++) {
+                td[idx].style.cssText = 'background-color:' + color[idx]; // **'background-color:' 이거 css넣어줘야 컬러테이블이 나타남
+            }
+        };
+        
+        function colorChange(idx) {
+            document.body.style.color = color[idx];
+        }
+
+   
+        function backcolorChange() {
+            document.body.style.backgroundColor = 'black';
+        } //*****질문(?)
+        
+    </script>
+</head>
+<body>
+
+    <table>
+        <tr onmouseout="backcolorChange()">
+            <td onmouseover="colorChange(0)"></td>
+            <td onmouseover="colorChange(1)"></td>
+            <td onmouseover="colorChange(2)"></td>
+            <td onmouseover="colorChange(3)"></td>
+            <td onmouseover="colorChange(4)"></td>
+            <td onmouseover="colorChange(5)"></td>
+            <td onmouseover="colorChange(6)"></td>
+        </tr>
+    </table>
+
+
+    <!--createElement, innerhtml방법. 이렇게 그냥 넣어도되는지?-->
+    <ul> 야호 수요일이다</ul>  
+</body>
+</html>

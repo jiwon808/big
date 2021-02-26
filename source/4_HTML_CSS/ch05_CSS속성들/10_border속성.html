@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div{width:100px; height:100px;}
+        div:nth-child(1){
+            border-width:5px;
+            border-style:solid;
+            border-color:red;
+            border:5px solid red;
+            border-top-color: red;
+            border-left-color:lightpink;
+            border-right-color:blueviolet;
+            border-bottom-color:orange;
+        }
+        div:nth-child(2){
+            border-top:2px dashed red;
+            border-bottom:2px dotted red;
+        }
+        div:nth-child(3){
+            border-top-left-radius:50px; /*100px 뒹굴리면 원circle이 된다*/
+            border-top-right-radius:50px;
+            border-bottom-left-radius:50px;
+            border-bottom-right-radius:50px;
+            border-radius:50px; /*한번에*/
+            border:2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div>11111</div>
+    <div>22222</div>
+    <div>33333</div>
+</body>
+</html>

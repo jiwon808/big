@@ -1,0 +1,22 @@
+package strategy1.step4.modularization;
+
+public class TestMain {
+
+	public static void main(String[] args) {
+		Robot_same_part superRobot = new SuperRobot();
+		Robot_same_part standardRobot = new StandardRobot();
+		Robot_same_part lowRobot = new LowRobot();
+		Robot_same_part[] robots = {superRobot, standardRobot, lowRobot};
+		for(Robot_same_part robot : robots) {
+			robot.shape();
+			robot.actionWalk();
+			robot.actionRun();
+			robot.actionFly();
+			robot.actionMissile();
+			robot.actionKnife();
+		}
+		
+
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.lec.ex09_person;
+
+public class Baby extends Person {
+
+}

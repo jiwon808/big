@@ -1,0 +1,14 @@
+package strategy1.step2;
+//Super  로봇 : 날 수 O. 미사일을 쏠 수 O. 레이저검.
+public class SuperRobot extends Robot_same_part {
+
+	public void actionFly() {
+		System.out.println("날 수 있다");
+	}
+	public void actionMissile() {
+		System.out.println("미사일을 쏠 수 있다");
+	}
+	public void actionKnife() {
+		System.out.println("레이저 검이 있다.");
+	}
+}

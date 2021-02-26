@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <!--  <script src="~"></script>  -->
+    <script>
+        /*A가 만든 부분*/
+        //function square(x) { return x * x; } 안에다 넣어. 내부함수 
+        function pythagoras(width, height) {
+            // 내부 함수: 함수 내에 선언된 함수
+            // 내부 함수 사용 이유: 충돌을 피하고자.
+            function square(x) { return x * x; }
+            return Math.sqrt(square(width) + square(height)); //**Math.sqrt() :매개변수 안에 들어있는 아이의 'root'**
+        }
+    </script>
+    <script>
+        /*B가 만든 부분: 밑변, 높이, 빗변을 받아 직각삼각형 여부*/
+        function square(width, height, hypotenuse) {    //undefined
+            if (width * width + height * height == hypotenuse * hypotenuse) { // == 이렇게 써야  = (x)
+                return true;
+            } else {
+                return false; // "if (width * width + height * height == hypotenuse * hypotenuse)" 이 부분을 실행해서 root 0
+            }
+        }
+    </script>
+
+    <script>
+        alert(pythagoras(3, 4));  
+        alert(square(3, 4, 5));             //*********5, true어떻게 나오는지 
+    </script>
+</head>
+<body>
+
+</body>
+</html>

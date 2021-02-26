@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        //cf. 가변인자 함수: 매개변수의 갯수에 따라 변할 수 있는 함수 
+        var arr1 = [273, 2, 3, 'Hello'];
+        var arr2 = Array(273, 2, 3, 'Hello');
+        var arrr3 = [, , ,]; //방3개 짜리 배열 
+        var arr4 = Array(3);
+        var arr5 = []; //방의 갯수가 0인 빈 배열 
+        var arr6 = Array(); //빈0의 갯수인 빈배열
+        document.write('arr1=' + arr1 + '-방수=' + arr1.length + '<br>'); //arr1대신 arr2가 나오면 둘이 똑같음
+        document.write('arr2=' + arr2 + '-방수=' + arr2.length + '<br>');
+        document.write('arr3=' + arr3 + '-방수=' + arr3.length + '<br>');
+        document.write('arr4=' + arr4 + '-방수=' + arr4.length + '<br>');
+        document.write('arr5=' + arr5 + '-방수=' + arr5.length + '<br>');
+        document.write('arr6=' + arr6 + '-방수=' + arr6.length + '<br>');
+
+
+        /*수행로직 (이해돕기 위해 새롭게 나열)
+         * var arr1 = [273, 2, 3, 'Hello'];
+         document.write('arr1=' + arr1 + '-방수=' + arr1.length + '<br>');
+         
+         var arr2 = Array(273, 2, 3, 'Hello');
+         document.write('arr2=' + arr2 + '-방수=' + arr2.length + '<br>');
+         
+         var arrr3 = [, , ,]; //방3개 짜리 배열
+         document.write('arr3=' + arr3 + '-방수=' + arr3.length + '<br>');
+
+         var arr4 = Array(3);
+         document.write('arr4=' + arr4 + '-방수=' + arr4.length + '<br>');
+
+         var arr5 = [];
+         document.write('arr5=' + arr5 + '-방수=' + arr5.length + '<br>');
+
+         var arr6 = Array();
+         document.write('arr6=' + arr6 + '-방수=' + arr6.length + '<br>');
+         */
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

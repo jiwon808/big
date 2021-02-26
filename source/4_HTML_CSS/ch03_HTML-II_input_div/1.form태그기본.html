@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        td{text-align:center;}
+    </style>
+</head>
+<body>
+    <!-- 아이디와 비번를 입력 받아 파라미터name  (변수name. 넘기는 아이 || 이거 안치면 데이터가 안넘어간것) 
+        id, pw로 서버 프로그램 측에 전달         (GET방식.화면url창에 보임) (name부터 '256자 넘어가면' GET방식 짤린다)-->
+    <form action="http://www.naver.com" method="get">  <!--action안에 안쓰면 현재 페이지--> 
+    <table>
+        <caption >로그인</caption>
+        <tr>
+            <td>아이디</td>
+            <td><input type="text" name="uid" /><td/>
+            
+        </tr>
+        
+        <tr>
+        <td> 비밀번호</td>
+        <td><input type="password" name="upw"/></td>
+        </tr>
+
+        <tr>
+            <td colspan="2"> <input type="submit" value="로그인" />  </td>
+        </tr>
+    </table>
+    </form>  
+</body>
+</html>

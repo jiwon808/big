@@ -1,0 +1,53 @@
+﻿/* * * * * * 페이지 초기화 * * * * * * */
+*{ padding:0; margin:0;}
+ div{
+     border:1px solid gray;
+     margin:5px;
+     padding:5px;
+     text-align:center;
+ }
+
+/* * * * 페이지 전체를 가운데로 *  * * */
+#wrap{
+    width:1000px;
+    margin: 10px auto;
+    /*position:relative;*/
+}
+
+/* * * * * header * * * * * * * * * */
+#header{
+    width:1000px;
+    height:200px;
+}
+
+#header .gnb{
+    background-color:darkgrey;
+    height:30px;
+    overflow:hidden;
+}
+#header .gnb li{
+    float:left;
+    list-style:none;
+    margin:2px;
+}
+
+#header .gnb li a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    display:block; /* *********** */
+    width:150px;
+    height:30px;
+    line-height:30px;
+}
+
+
+/* * * * * content * * * * * * * * * */
+
+
+
+
+
+
+/* * * * * footer * * * * * * * * * */
+

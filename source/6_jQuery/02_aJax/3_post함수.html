@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<!--he $.post() method loads data from the server using a HTTP POST request.-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(function () {
+            $('button').click(function () {
+                //$.post('idConfirm.jsp', 전달될 파라미터들을 객체로, 콜백함수) //url위치에 파일만 쓴다
+                var Id = $('#mId').val();
+                $.post('idConfirm.html',
+                    { mId: Id, }, //앞에 속성, 뒤에 속성 값       body로감 // ****$.post(URL, {파라미터이름:전달파라미터값, callback);***
+                    function (data, status) {
+                        if (status == 'success') {
+                            $('#result').html(data);
+                        } else {
+                            alert('실패');
+                        }
+                    }
+                );//post함수
+            }); //click콜백함수
+        });//jQuery부분
+    </script>
+</head>
+<body>
+    <p>
+        아이디<input type="text" name="mId" id="mId" />
+        <button>중복확인</button>
+    </p>
+    <span id="result"></span>
+</body>
+</html>

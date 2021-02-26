@@ -1,0 +1,29 @@
+package com.lec.ex2_date;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Sawon {
+	private String num;
+	private String name;
+//	private String part;
+	private PartType part;
+	private Date enterDate;
+	public Sawon(String num, String name, PartType part) {
+		this.num = num;
+		this.name = name;
+		this.part = part;
+		enterDate = new Date();
+	}
+	public Sawon(String num, String name, PartType part, 
+			int i, int j, int k) {
+			this.num = num;
+			this.name = name;
+			this.part = part;
+			enterDate
+			=new Date(new GregorianCalendar(y,m-1,d).getTimeInMills)
+	}
+	
+
+	
+}

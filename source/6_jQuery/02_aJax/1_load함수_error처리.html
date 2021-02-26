@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () { //click하면 함수가져와
+                $('#div1').load('demo_test1.txt #p1', //일부러 틀린이름의 파일을 넣었어 test
+                    function (responseTxt,statusTxt,xhr) { //*****error처리********
+                        //responseTxt: 요청 성공시 가져올 데이터 ( responseText returns the text received from a server following a request being sent.)
+                        //statusTxt: 요청 상태 (success, error, timeout,...)
+                        //xhr:XMLHttpRequest객체 
+                        if (statusTxt == 'success') {
+                            alert('성공')
+                        } else {
+                            alert('load실패' + statusTxt + xhr.status
+                                + xhr.statusText);
+                            //xhr.statusText:에러 타입
+                            //xhr.status: 404없는 파일
+                            
+                        }
+                });//기존화면 그래도 일부화면만 변경
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="div1">
+        <h2>Ajax 첫 예제</h2>
+    </div>
+    <button>외부파일 가져오기</button>
+</body>
+</html>

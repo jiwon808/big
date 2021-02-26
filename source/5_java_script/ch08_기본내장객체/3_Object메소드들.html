@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var numLiteral = 273;//숫자 
+        var numObject = new Number(273); //객체
+        if (typeof (numLiteral) == 'number') { //typeof (numLiteral)는 number맞니
+            document.write('numLiteral은number이다<br>');
+        } else {
+            document.write('numLiteral은number가 아니다<br>');
+        }
+
+        if (typeof (numObject) == 'number') { //typeof (numLiteral)는 number맞니
+            document.write('numObject 은number이다<br>');
+        } else {
+            document.write('numObject 은number가 아니다<br>'); //객체이기 때문에 이쪽으로 빠진다
+        }
+
+        if (numLiteral.constructor == Number) {
+            document.write('numLiteral가Number다<br>');
+        }
+
+        if (numObject.constructor == Number) {
+            document.write('numObject가 Number다<br>');     //*****number인 이유: 여기서 는 'contructor 생성자'
+        }
+
+        var obj = { property: 273, name: 'hong' };
+        var output = '';
+        output += "hasOwnProperty('name'):" + obj.hasOwnProperty('name') + '<br>';
+        output += "반복문으로 열거할 수 있는지(name):" + obj.propertyIsEnumerable('name') + '<br>';
+
+        output += obj.toString();
+        document.write('<hr>' + output);
+
+        for (var key in obj) {
+            document.write(key + ':' + obj[key]); //key가 'name' 이렇게 들어옴   obj.key면 obj['name']이렇게되어서 실행안됨
+
+                                                        
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

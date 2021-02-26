@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div{width:70%;
+            margin:0 auto;
+            height:400px;
+            border:1px solid red;
+            background-image:url('sulhyun.jpg');
+        }/*브라우저 전체의 70%를 쓴다는 의미*/
+
+        div:nth-child(1){background-position:left top; /*디폴트(0 0)*/}
+        div:nth-child(3){background-position:center; /*디폴트(50% 50%)*/} /*right top이 중간으로 맞춰져*/ /*왜2안되는지*/ /*br가 2번째 자식*/
+        div:nth-child(5){background-position:100% 0%; /*right top*/}  
+        div:nth-child(7){background-position:right bottom; /*100% 100%*/} 
+        div:nth-child(9){background-repeat: no-repeat;}
+        div:nth-child(11){background-repeat:repeat-x;
+            background-attachment:fixed; /*브라우저의 left top을 사진의 left top과 맞춘다*/ /*사진고정.div만 움직여*//*설현사진이browser와 맞춰졌다*/
+        }
+
+    </style>
+</head>
+<body>
+    <div><h1>설현</h1></div>
+    <br />
+    <div><h1>설현</h1></div>
+    <br />
+    <div><h1>설현</h1></div>
+    <br />
+    <div><h1>설현</h1></div>
+    <br />
+    <div><h1>설현</h1></div>
+    <br />
+    <div><h1>설현</h1></div>
+    <br />
+
+</body>
+</html>

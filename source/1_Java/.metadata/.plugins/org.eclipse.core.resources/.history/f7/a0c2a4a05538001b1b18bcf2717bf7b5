@@ -1,0 +1,29 @@
+package com.lec.ex09_person;
+//Person p = new Person ("홍길동","착하다");
+public class Person {
+	private String name;
+	private String character;
+	public Person() {
+		System.out.println("매개변수 없는 Person 생성자 호출");
+	}
+	public Person(String name, String character) {
+		this.name = name;
+		this.character = character;
+	}
+	public void intro() {
+		System.out.println(name+ "은(는)"+character);
+	}
+	//getter&setter (상속받는-자식, 자손 class)
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getCharacter() {
+		return character;
+	}
+	public void setCharacter(String character) {
+		this.character = character;
+	}
+}

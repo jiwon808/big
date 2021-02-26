@@ -1,0 +1,7 @@
+package com.lec.ex10Test;
+
+public class BookLib {
+	private String borrower; //대출인 (입력)
+	private String checkOutDate; //대출일(입력)
+	private byte state;
+}
