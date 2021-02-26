@@ -1,0 +1,5 @@
+Python is easy 
+Python is smart프린트 함수로 파일 쓰기가 가능합니다.
+1 방법. Hello
+World
+2 방법.Python is easy.R is easy.Java is easy.3 방법.Python is easy.R is easy.Java is easy.
